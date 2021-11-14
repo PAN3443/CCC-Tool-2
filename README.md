@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Getting Started with CCC-Tool-2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Clone the project
 
-## Needed Packages
+git clone
+
+## Install React-App Packages
+
+npm i webpack babel-loader @babel/preset-react @babel/core babel-preset-react html-webpack-plugin webpack-dev-server css-loader style-loader @babel/plugin-proposal-class-properties webpack-cli -D && npm i react react-dom -S
+
+## Install CCC-Tool CMS Library
 
 npm -i ccctool-lib
 

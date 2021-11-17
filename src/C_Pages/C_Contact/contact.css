@@ -1,0 +1,18 @@
+.cl_coopImg {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+.cl_coopImg img {
+  height: 100%;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  -o-object-fit: contain;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.cl_coopImg:hover img {
+  transform: scale(0.95);
+}

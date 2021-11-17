@@ -28,10 +28,10 @@ function App() {
   return (
     <div className="App" style={{ width: "100vw", height: "100vh" }}>
       <Routes>
-        <Route path="/" element={<C_Opening />} />
-        <Route path="/git" element={<C_GitInfo />}></Route>
-        <Route path="/contact" element={<C_Contact />}></Route>
-        <Route path="/about" element={<C_About />}></Route>
+        <Route path="/CCC-Tool-2/" element={<C_Opening />} />
+        <Route path="/CCC-Tool-2/git" element={<C_GitInfo />}></Route>
+        <Route path="/CCC-Tool-2/contact" element={<C_Contact />}></Route>
+        <Route path="/CCC-Tool-2/about" element={<C_About />}></Route>
       </Routes>
     </div>
   );

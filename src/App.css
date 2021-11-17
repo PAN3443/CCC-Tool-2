@@ -1,5 +1,108 @@
+/*****************************************************
+/*
+/* Global Style Variables
+/*
+/****************************************************/
+
+:root {
+  /**************************************
+  **** background
+  ***************************************/
+
+  --bg-app: rgb(250, 250, 250);
+
+  --bg-dark: rgb(30, 30, 30);
+  --bg-bright: rgb(250, 250, 250);
+
+  --bg-dark-alpha-5: rgba(30, 30, 30, 0.05);
+  --bg-bright-alpha-5: rgba(250, 250, 250, 0.05);
+
+  --bg-dark-alpha-25: rgba(30, 30, 30, 0.25);
+  --bg-bright-alpha-25: rgba(250, 250, 250, 0.25);
+
+  --bg-dark-alpha-50: rgba(30, 30, 30, 0.5);
+  --bg-bright-alpha-50: rgba(250, 250, 250, 0.5);
+
+  --bg-dark-alpha-75: rgba(30, 30, 30, 0.75);
+  --bg-bright-alpha-75: rgba(250, 250, 250, 0.75);
+
+  --bg-dark-gradient: rgb(59, 31, 31);
+  --bg-bright-gradient: rgb(150, 150, 150);
+
+  --bg-active: rgb(255, 106, 51); /*rgb(255, 51, 0);*/
+
+  --bg-warning: rgb(255, 51, 51);
+  --bg-warning-alpha-5: rgba(255, 51, 51, 0.05);
+  --bg-warning-alpha-10: rgba(255, 51, 51, 0.1);
+  --bg-warning-alpha-25: rgba(255, 51, 51, 0.25);
+  --bg-warning-alpha-50: rgba(255, 51, 51, 0.5);
+  --bg-warning-alpha-75: rgba(255, 51, 51, 0.75);
+
+  /**************************************
+  **** Font
+  ***************************************/
+
+  --font-size-small: 1.3vh;
+  --line-height-small: 1.5vh;
+
+  --font-size-normal: 1.8vh;
+  --line-height-normal: 2.2vh;
+
+  --font-size-big: 2.2vh;
+  --line-height-big: 2.5vh;
+
+  --font-size-h3: 2.2vh;
+  --line-height-h3: 2.5vh;
+
+  --font-size-h2: 4vh;
+  --line-height-h2: 6vh;
+
+  --font-size-h1: 6vh;
+  --line-height-h1: 10vh;
+
+  --font-family-text: "CCCTextFont";
+  --font-family-button: "CCCButtonFont";
+  --font-family-section: "CCCSectionLabelFont";
+  --font-family-cccLabel: "CCCLableFont";
+  --font-family-figCaption: "CCCFigCaption";
+  --font-family-SpecialText: "CCCSpecialText";
+
+  --font-color-brightBG: var(--bg-dark); /*rgb(30, 30, 30);*/
+  --font-color-darkBG: var(--bg-bright); /*rgb(235, 235, 235);*/
+  --font-color-warning: var(--bg-warning); /*rgb(235, 235, 235);*/
+
+  /**************************************
+  **** Border
+  ***************************************/
+
+  --border-width: 1px;
+  --border-width-bold: 2px;
+  --border-radius: 0.5vh;
+  --borderColor-brightBG: rgb(30, 30, 30);
+  --borderColor-light-brightBG: rgb(180, 180, 180);
+  --borderColor-darkBG: rgb(225, 225, 225);
+  --borderColor-active: rgb(178, 74, 35);
+
+  /**************************************
+  **** Other
+  ***************************************/
+  --shadowColor-brightBG: rgba(30, 30, 30, 0.75);
+  --shadowColor-darkBG: rgba(235, 235, 235, 0.75);
+  --shadowColor-active: rgba(255, 106, 51, 0.75);
+
+  --disabledColor-brightBG: var(--bg-dark-alpha-50);
+  --disabledColor-BG-brightBG: var(--bg-dark-alpha-25);
+}
+
+/*****************************************************
+/*
+/* App css
+/*
+/****************************************************/
+
 .App {
   text-align: center;
+  background-color: var(--bg-app);
 }
 
 .App-logo {
@@ -35,4 +138,480 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+li,
+p {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+  color: var(--font-color-brightBG);
+  vertical-align: middle;
+  text-align: left;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*white-space: pre-line;*/
+}
+
+.cl_boldText {
+  font-weight: bold;
+}
+
+.cl_textBlock {
+  margin-top: 2.5vh;
+  width: 100%;
+  text-align: left;
+}
+
+.cl_smallText {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+a,
+a:link {
+  font-family: var(--font-family-text);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+  color: var(--font-color-brightBG);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* visited link */
+a:visited {
+  color: var(--font-color-brightBG);
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--font-color-brightBG);
+}
+
+/* selected link */
+a:active {
+  color: var(--font-color-brightBG);
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--font-family-cccLabel);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  color: var(--font-color-darkBG);
+  vertical-align: middle;
+  margin: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: var(--font-family-section);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  color: var(--font-color-brightBG);
+  vertical-align: middle;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  color: var(--font-color-brightBG);
+  vertical-align: middle;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+  color: var(--font-color-brightBG);
+  vertical-align: middle;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cl_textBorder_Dark {
+  -webkit-text-stroke: 2px var(--bg-dark);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  /*align-items: unset;*/
+}
+
+.cl_bigText {
+  font-size: var(--font-size-big);
+  line-height: var(--line-height-big);
+}
+
+.cl_smallText {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+svg {
+  pointer-events: auto;
+}
+/*****************************************************
+/*
+/* Input css
+/*
+/****************************************************/
+input {
+  pointer-events: auto;
+  background-color: var(--bg-app);
+}
+
+input {
+  height: 5vh;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--borderColor-brightBG);
+  padding-left: 1vw;
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+}
+
+input:focus,
+input:focus:hover {
+  outline: none;
+  border-color: var(--borderColor-active);
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-active);
+}
+
+input:hover {
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
+}
+
+/*input[type="checkbox"] {
+  height: var(--font-size-normal);
+}
+
+input[type="checkbox"] {
+  height: var(--font-size-normal);
+}
+
+input[type="checkbox"] label::after {
+  color: var(--bg-active);
+  background: var(--bg-active);
+}*/
+
+/* The cl_checkDiv */
+.cl_checkDiv {
+  width: fit-content;
+  height: 2.5vh;
+  display: flex;
+  position: relative;
+  padding-left: 2vw;
+  margin-bottom: 0.25vh;
+  cursor: pointer;
+  font-size: 1.7vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cl_checkDiv p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Hide the browser's default checkbox */
+.cl_checkDiv input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.cl_checkSpan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5vh;
+  width: 2.5vh;
+  border: var(--border-width) solid var(--borderColor-brightBG);
+  background-color: var(--bg-app);
+  border-radius: var(--border-radius);
+}
+
+/* On mouse-over, add a grey background color */
+.cl_checkDiv:hover input ~ .cl_checkSpan {
+  border: var(--border-width-bold) solid var(--borderColor-brightBG);
+}
+
+/* When the checkbox is checked, add a blue background */
+.cl_checkDiv input:checked ~ .cl_checkSpan {
+  border: var(--border-width) solid var(--bg-active);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-active);
+}
+
+.cl_checkDiv input:checked ~ .cl_checkSpan:hover {
+  border: var(--border-width-bold) solid var(--bg-active);
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
+}
+
+/* Create the cl_checkSpan/indicator (hidden when not checked) */
+.cl_checkSpan:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the cl_checkSpan when checked */
+.cl_checkDiv input:checked ~ .cl_checkSpan:after {
+  display: block;
+}
+
+/* Style the cl_checkSpan/indicator */
+.cl_checkDiv .cl_checkSpan:after {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0px 0px 0px 3px var(--bg-app);
+}
+
+/*****************************************************
+/*
+/* Select css
+/*
+/****************************************************/
+
+select {
+  /* A reset of styles, including removing the default dropdown arrow*/
+  /*-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+  /* Additional resets for further consistency*/
+  height: 5vh;
+  border-radius: var(--border-radius);
+  min-width: 5vw;
+  max-width: 10vw;
+  border: var(--border-width) solid var(--borderColor-brightBG);
+  padding: 0.25vh 0.5vw;
+  font-size: var(--font-size-normal);
+  cursor: pointer;
+  line-height: var(--line-height-normal);
+  background-color: var(--bg-bright);
+  background-image: linear-gradient(to top, var(--bg-bright), var(--bg-app) 33%);
+}
+
+select::after {
+  grid-area: select;
+  content: "";
+  width: 1vw;
+  height: 1vh;
+  background-color: var(--borderColor-brightBG);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+select:hover {
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
+}
+
+select:focus,
+select:focus:hover {
+  outline: none;
+  border-color: var(--borderColor-active);
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-active);
+}
+
+/*****************************************************
+/*
+/* Margin css
+/*
+/****************************************************/
+
+.cl_marginAutoTB {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cl_marginTB_0_5 {
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+}
+
+.cl_marginTB_2_5 {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+/*****************************************************
+/*
+/* Button css
+/*
+/****************************************************/
+
+button:focus {
+  outline: 0;
+}
+
+button {
+  border: var(--border-width) solid var(--borderColor-brightBG);
+  background-color: var(--bg-dark);
+  color: var(--font-color-darkBG);
+  border-radius: var(--border-radius);
+  /*padding: 0.5vh 1vw;*/
+  font-size: var(--font-size-normal);
+  height: 5vh;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.cl_button_Bright {
+  border: var(--border-width) solid var(--borderColor-darkBG);
+  background-color: var(--bg-bright);
+  color: var(--font-color-brightBG);
+  border-radius: var(--border-radius);
+  /*padding: 0.5vh 1vw;*/
+  font-size: var(--font-size-normal);
+  height: 5vh;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+button:hover {
+  border: none; /*var(--border-width) solid var(--borderColor-active);*/
+  background-color: var(--bg-active);
+}
+
+.cl_button_Bright:hover {
+  border: var(--border-width) solid var(--borderColor-active);
+  background-color: var(--bg-active);
+  color: var(--font-color-darkBG);
+}
+
+button:disabled,
+button[disabled] {
+  border: var(--border-width) solid var(--disabledColor-brightBG);
+  background-color: var(--disabledColor-BG-brightBG);
+  color: var(--disabledColor-brightBG);
+  cursor: not-allowed;
+}
+
+.cl_button_qa_Dark {
+  background-color: var(--bg-dark);
+  color: var(--font-color-darkBG);
+  height: 4vh;
+  max-height: 4vw;
+  width: 4vw;
+  max-width: 4vh;
+  border-radius: var(--border-radius);
+  margin: auto;
+  font-weight: bold;
+}
+
+.cl_button_qa_Dark:hover {
+  border: none;
+  background-color: var(--bg-active);
+}
+
+/*****************************************************
+/*
+/* Effects css
+/*
+/****************************************************/
+
+.cl_innerShadow {
+  -moz-box-shadow: inset 0 0 1vh var(--shadowColor-brightBG);
+  -webkit-box-shadow: inset 0 0 1vh var(--shadowColor-brightBG);
+  box-shadow: inset 0 0 1vh var(--shadowColor-brightBG);
+}
+
+/*****************************************************
+/*
+/* Other css
+/*
+/****************************************************/
+
+.cl_row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: initial;*/
+}
+
+.cl_noMark {
+  -ms-user-select: None;
+  -moz-user-select: None;
+  -webkit-user-select: None;
+  user-select: None;
+}
+
+.cl_Icon_S {
+  cursor: pointer;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.cl_Icon_F {
+  cursor: pointer;
+  stroke: none;
+}
+
+.cl_Icon_F_BrightBG {
+  fill: var(--bg-dark);
+}
+
+.cl_Icon_F_BrightBG:hover {
+  fill: var(--bg-active);
+}
+
+.cl_Icon_S_BrightBG {
+  stroke: var(--bg-dark);
+}
+
+.cl_Icon_S_BrightBG:hover {
+  stroke: var(--bg-active);
+}
+
+.cl_Icon_F_DarkBG {
+  fill: var(--bg-bright);
+}
+
+.cl_Icon_F_DarkBG:hover {
+  fill: var(--bg-active);
+}
+
+.cl_Icon_S_DarkBG {
+  stroke: var(--bg-bright);
+}
+
+.cl_Icon_S_DarkBG:hover {
+  stroke: var(--bg-active);
+}
+
+.cl_Icon_S_BrightBG_Disabled {
+  stroke: var(--bg-dark);
+  cursor: not-allowed;
 }

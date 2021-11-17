@@ -1,0 +1,7 @@
+.cl_blur {
+  backdrop-filter: blur(0.25vh);
+  -o-backdrop-filter: blur(0.25vh);
+  -ms-backdrop-filter: blur(0.25vh);
+  -moz-backdrop-filter: blur(0.25vh);
+  -webkit-backdrop-filter: blur(0.25vh);
+}

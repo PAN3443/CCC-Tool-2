@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="author" content="Pascal Nardini" />
+    <meta
+      name="keywords"
+      content="ccc, key, key color, cms, color optimization,color,visualization,colorbrewer,ccctool,ccc-tool,ccc,tool,colormap,colortable, color map, color table, continuous, continuous colormap, analysis colormap, analyse colormap, create colormap, export colormap, download colormap"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="description" content="Determine a colormap for visualization with the CCC toolbox" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +26,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <style>
+      @font-face {
+        font-family: "CCCSectionLabelFont";
+        src: url("%PUBLIC_URL%/fonts/Orbitron/static/Orbitron-Bold.ttf");
+      }
+      @font-face {
+        font-family: "CCCLableFont";
+        src: url("%PUBLIC_URL%/fonts/Orbitron/static/Orbitron-Black.ttf");
+      }
+      @font-face {
+        font-family: "CCCButtonFont";
+        src: url("%PUBLIC_URL%/fonts/Orbitron/static/Orbitron-SemiBold.ttf");
+      }
+      @font-face {
+        font-family: "CCCSpecialText";
+        src: url("%PUBLIC_URL%/fonts/Orbitron/static/Orbitron-Medium.ttf");
+      }
+      @font-face {
+        font-family: "CCCTextFont";
+        src: url("%PUBLIC_URL%/fonts/Ubuntu/Ubuntu-Medium.ttf");
+      }
+      @font-face {
+        font-family: "CCCFigCaption";
+        src: url("%PUBLIC_URL%/fonts/Ubuntu/Ubuntu-Light.ttf");
+      }
+    </style>
+
+    <title>CCC-Tool</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

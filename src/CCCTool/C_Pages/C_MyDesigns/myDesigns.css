@@ -1,0 +1,46 @@
+.cl_CMSView_Div {
+  width: 37vw;
+  margin-left: 2vw;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.cl_CMSView_Div:hover {
+  box-shadow: 0.2vw var(--border-width) 1vh var(--shadowColor-brightBG);
+}
+
+.cl_CMSGroup_Div {
+  width: "100%";
+}
+
+.cl_CMSGroup_Div .cl_CMSView_Div {
+  width: 36.5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+.cl_selectedCMS {
+  box-shadow: 0.75vh 0.75vh 0.5vh var(--shadowColor-active);
+}
+
+.cl_SelectedViewText {
+  max-width: 40%;
+  max-height: var(--line-height-normal);
+}
+
+.cl_SelectedViewLabel {
+  width: 40%;
+  max-width: 40%;
+  max-height: var(--line-height-normal);
+  margin-left: 10%;
+}
+
+.cl_SpecialColor {
+  height: 3vh;
+  width: 3vh;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--borderColor-brightBG);
+  margin-top: 0.5vh;
+}

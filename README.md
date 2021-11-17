@@ -1,16 +1,30 @@
 # Getting Started with CCC-Tool-2
 
-## Clone the project
+### Clone the project
 
-git clone
+git clone https://github.com/PAN3443/CCC-Tool-2.git
 
 ## Install React-App Packages
 
-npm i webpack babel-loader @babel/preset-react @babel/core babel-preset-react html-webpack-plugin webpack-dev-server css-loader style-loader @babel/plugin-proposal-class-properties webpack-cli -D && npm i react react-dom -S
+### Web Deployment Packages
+
+npm i webpack babel-loader @babel/preset-react @babel/core babel-preset-react html-webpack-plugin webpack-dev-server css-loader style-loader @babel/plugin-proposal-class-properties webpack-cli -D
+
+### Install React Dom
+
+npm i react react-dom -S &&
+
+### Install React Router Dom
+
+npm i react-router-dom
 
 ## Install CCC-Tool CMS Library
 
-npm -i ccctool-lib
+npm i ccctool-lib
+
+## Github Pages URL
+
+Github Pages Deployment under https://pan3443.github.io/CCC-Tool-2/
 
 ## Available Scripts
 

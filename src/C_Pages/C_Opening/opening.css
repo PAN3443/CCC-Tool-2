@@ -1,0 +1,22 @@
+.cl_OpeningSelect_Div {
+  width: 24vw;
+  pointer-events: auto;
+  cursor: pointer;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 4vw;
+  padding: 5vh 4vw;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--borderColor-light-brightBG);
+  background: var(--bg-bright-alpha-75);
+}
+
+.cl_OpeningText_Div {
+  width: 86vw;
+  pointer-events: auto;
+  margin: 3vh auto;
+  padding: 5vh 4vw;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--borderColor-light-brightBG);
+  background: var(--bg-bright);
+}

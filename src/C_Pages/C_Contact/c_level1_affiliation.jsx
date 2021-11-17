@@ -11,10 +11,6 @@ import React, { Component } from "react";
 import "./contact.css";
 
 class C_Affiliation extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return this.getElement_Img();
   }
@@ -22,7 +18,7 @@ class C_Affiliation extends Component {
   getElement_Img() {
     let imgUrl = process.env.PUBLIC_URL + "/img/Persons/defaultPerson.jpg";
     if ("img" in this.props.affiliation) {
-      if (this.props.affiliation.img != "") imgUrl = this.props.affiliation.img;
+      if (this.props.affiliation.img !== "") imgUrl = this.props.affiliation.img;
     }
 
     let imgStyle = { height: "10vh", marginTop: "2.5vh", marginBottom: "2.5vh", marginLeft: "2vw", marginRight: "2vw" };

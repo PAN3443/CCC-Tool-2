@@ -11,10 +11,6 @@ import React, { Component } from "react";
 import C_Header from "../../C_Elements/c_header";
 
 class C_Error404 extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <C_Header style={{ height: "25vh", width: "100vw" }}>

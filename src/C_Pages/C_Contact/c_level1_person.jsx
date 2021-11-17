@@ -10,10 +10,6 @@
 import React, { Component } from "react";
 
 class C_Person extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return <div>{React.createElement("div", { className: "cl_row", style: { marginTop: "5vh", marginBottom: "5vh" } }, [this.getElement_Img(), this.getElement_PersonData(), this.getElement_AffiliationData()])}</div>;
   }
@@ -21,7 +17,7 @@ class C_Person extends Component {
   getElement_Img() {
     let imgUrl = process.env.PUBLIC_URL + "/img/Persons/defaultPerson.jpg";
     if ("img" in this.props.person) {
-      if (this.props.person.img != "") imgUrl = this.props.person.img;
+      if (this.props.person.img !== "") imgUrl = this.props.person.img;
     }
     return React.createElement("img", { src: imgUrl, style: { height: "15vh", width: "15vh", borderRadius: "7.5vh", marginTop: "auto", marginBottom: "auto" } });
   }
@@ -66,7 +62,7 @@ class C_Person extends Component {
   getElement_AffiliationData() {
     if ("affiliation" in this.props.person) {
       let affiliation = this.props.getAffiliation(this.props.person.affiliation);
-      if (affiliation != undefined) {
+      if (affiliation !== undefined) {
         let name = "";
         if ("name" in affiliation) name = affiliation.name;
 

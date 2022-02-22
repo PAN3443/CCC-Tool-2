@@ -8,7 +8,7 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import C_Header from "../../C_Elements/c_header";
+import C_Header from "../../Elements/c_header";
 import C_Person from "./c_level1_person";
 import C_Affiliation from "./c_level1_affiliation";
 

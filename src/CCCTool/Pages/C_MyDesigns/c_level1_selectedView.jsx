@@ -12,8 +12,8 @@
 // React
 import React, { Component } from "react";
 // Components
-import C_Confirm from "../../../C_Elements/c_confirm";
-import C_CMSRendering from "../../../C_Elements/c_cmsRendering";
+import C_Confirm from "../../../Elements/c_confirm";
+import C_CMSRendering from "../../../Elements/c_cmsRendering";
 import C_KeyEntry from "./c_level2_keyEntry";
 // Functions
 import { helper_dateToString } from "../../../Helpers/other";

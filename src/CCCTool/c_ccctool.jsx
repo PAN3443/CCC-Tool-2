@@ -10,23 +10,23 @@
 
 // React
 import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 
 // Components
-import C_Confirm from "../C_Elements/c_confirm";
-import C_TextBox from "../C_Elements/c_textBox";
+import C_Confirm from "../Elements/c_confirm";
+import C_TextBox from "../Elements/c_textBox";
 
 // CCC-Tool Components
-import C_MyDesigns from "./C_Pages/C_MyDesigns/c_level0_mydesigns";
-import C_Edit from "./C_Pages/C_Edit/c_edit";
-import C_Export from "./C_Pages/C_Export/c_export";
-import C_TestSite from "./C_Pages/C_TestSite/c_testsite";
-import C_New from "./C_Pages/C_New/c_level0_new";
+/*import C_MyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
+import C_Edit from "./Pages/C_Edit/c_edit";
+import C_Export from "./Pages/C_Export/c_export";
+import C_TestSite from "./Pages/C_TestSite/c_testsite";
+import C_New from "./Pages/C_New/c_level0_new";*/
 
 // Libs
 import { CMS } from "ccctool-lib/lib/cms/class_cms";
 
-class CCCTool extends Component {
+class C_CCCTool extends Component {
   constructor() {
     super();
 
@@ -799,7 +799,21 @@ class CCCTool extends Component {
     return (
       <div className="App">
         <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
-        <Routes>
+        <Routes></Routes>
+
+        <C_Confirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
+          You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
+        </C_Confirm>
+        <C_TextBox ref={this.ref_WarningBox} warnText="Warning Text"></C_TextBox>
+      </div>
+    );
+  }
+}
+
+export default C_CCCTool;
+
+/*
+
           <Route path="/">
             <C_MyDesigns
               handleSelectCMS={this.handleSelectCMS}
@@ -827,15 +841,5 @@ class CCCTool extends Component {
           <Route path="/new">
             <C_New handleGo2Page={this.handleGo2Page} /> : <Navigate to="/login" />
           </Route>
-        </Routes>
 
-        <C_Confirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
-          You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
-        </C_Confirm>
-        <C_TextBox ref={this.ref_WarningBox} warnText="Warning Text"></C_TextBox>
-      </div>
-    );
-  }
-}
-
-export default CCCTool;
+*/

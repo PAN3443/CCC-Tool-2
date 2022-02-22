@@ -11,8 +11,8 @@
 import React, { Component } from "react";
 
 // Components
-import C_Header from "../../../C_Elements/c_header";
-import C_CMSRendering from "../../../C_Elements/c_cmsRendering";
+import C_Header from "../../../Elements/c_header";
+import C_CMSRendering from "../../../Elements/c_cmsRendering";
 
 // Style
 import "./export.css";

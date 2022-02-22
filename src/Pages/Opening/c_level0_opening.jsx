@@ -8,23 +8,13 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import C_SelectBox from "./c_level1_selectBox";
-import C_PixelAnimation from "../../C_ParticleAnimation/c_particleAnimation";
+import C_PixelAnimation from "../../ParticleAnimation/c_particleAnimation";
+import F_NavigateButton from "../../Elements/f_navigateButton";
 import "../../Style/CSS/filter.css";
 
 import "./opening.css";
 
 class C_Opening extends Component {
-  state = {
-    startButtons: [
-      {
-        name: "React CCC-Tool",
-        url: [true, "yopening"],
-        img: "",
-      },
-    ],
-  };
-
   constructor() {
     super();
     this.particleAni = React.createRef();
@@ -62,20 +52,18 @@ class C_Opening extends Component {
           </div>
 
           <div className="cl_row" style={{ width: "86vw", margin: "1vh auto" }}>
-            {this.state.startButtons.map((sBox) => (
-              <C_SelectBox key={"id_startbutton_" + sBox.name} onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()} sBox={sBox} />
-            ))}
-            <div className="cl_OpeningSelect_Div cl_blur">
-              <p style={{ margin: "auto" }}>Contact/Impressum</p>
-            </div>
-
-            <div onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()} className="cl_OpeningSelect_Div cl_blur">
-              <p style={{ margin: "auto" }}>About</p>
-            </div>
-
-            <div onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()} className="cl_OpeningSelect_Div cl_blur">
-              <p style={{ margin: "auto" }}>About</p>
-            </div>
+            <F_NavigateButton navURL="/tool" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+              CCC-Tool
+            </F_NavigateButton>
+            <F_NavigateButton navURL="/about" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+              About
+            </F_NavigateButton>
+            <F_NavigateButton navURL="/contact" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+              Contact
+            </F_NavigateButton>
+            <F_NavigateButton navURL="/git" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+              Git
+            </F_NavigateButton>
           </div>
         </div>
         <div className="cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "5vh", width: "100vw", zIndex: "2", top: "95vh", left: "0px" }}>

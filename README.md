@@ -12,7 +12,7 @@ npm i webpack babel-loader @babel/preset-react @babel/core babel-preset-react ht
 
 ### Install React Dom
 
-npm i react react-dom -S &&
+npm i react react-dom -S
 
 ### Install React Router Dom
 

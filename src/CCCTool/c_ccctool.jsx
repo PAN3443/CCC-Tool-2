@@ -17,8 +17,8 @@ import C_Confirm from "../Elements/c_confirm";
 import C_TextBox from "../Elements/c_textBox";
 
 // CCC-Tool Components
-/*import C_MyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
-import C_Edit from "./Pages/C_Edit/c_edit";
+import C_MyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
+/*import C_Edit from "./Pages/C_Edit/c_edit";
 import C_Export from "./Pages/C_Export/c_export";
 import C_TestSite from "./Pages/C_TestSite/c_testsite";
 import C_New from "./Pages/C_New/c_level0_new";*/
@@ -172,6 +172,10 @@ class C_CCCTool extends Component {
     this.determineTabID(true);
   }
 
+  handleGo2Page(url) {
+    alert(url);
+  }
+
   componentWillUnmount() {
     /////////////////////////////////////////////////////
     ////////              Events
@@ -300,68 +304,64 @@ class C_CCCTool extends Component {
       }
     }
 
-    // Check Login
-    if (localStorage.getItem("loggedIn") === "true") {
-      if (window.location.pathname === "/login") this.handleGo2Page("/mydesigns");
+    // Check Local Storage
+    let ls_session = window.localStorage.getItem("ccc_session");
+    if (ls_session !== null) {
+      let stateUpdate = {};
 
-      let ls_session = window.localStorage.getItem("ccc_session");
-      if (ls_session !== null) {
-        let stateUpdate = {};
+      stateUpdate.selectedCMS = undefined;
+      stateUpdate.filteredIndices = [];
+      stateUpdate.session = JSON.parse(ls_session);
+      stateUpdate.selectedCMSObjIndex = undefined;
+      stateUpdate.selectedCMSIndex = undefined;
 
-        stateUpdate.selectedCMS = undefined;
-        stateUpdate.filteredIndices = [];
-        stateUpdate.session = JSON.parse(ls_session);
-        stateUpdate.selectedCMSObjIndex = undefined;
-        stateUpdate.selectedCMSIndex = undefined;
+      if (this.state.selectedCMSObjIndex !== undefined) {
+        //we need to check if the selected CMS in this session exist in the new Session
 
-        if (this.state.selectedCMSObjIndex !== undefined) {
-          //we need to check if the selected CMS in this session exist in the new Session
+        let tmpCDate = undefined;
+        let tmpLUDate = undefined;
 
-          let tmpCDate = undefined;
-          let tmpLUDate = undefined;
-
-          if (this.state.session[this.state.selectedCMSObjIndex].isGroup) {
-            tmpCDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cmsObjects[this.state.selectedCMSIndex].creationDate);
-            tmpLUDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cmsObjects[this.state.selectedCMSIndex].lastUpdateDate);
-          } else {
-            tmpCDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cms.creationDate);
-            tmpLUDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cms.lastUpdateDate);
-          }
-
-          for (let objIndex = 0; objIndex < stateUpdate.session.length; objIndex++) {
-            if (stateUpdate.session[objIndex].isGroup) {
-              let found = false;
-              for (let cmsIndex = 0; cmsIndex < stateUpdate.session[objIndex].cmsObjects.length; cmsIndex++) {
-                if (tmpCDate === parseInt(stateUpdate.session[objIndex].cmsObjects[cmsIndex].creationDate) && tmpLUDate === parseInt(stateUpdate.session[objIndex].cmsObjects[cmsIndex].lastUpdateDate)) {
-                  stateUpdate.selectedCMSObjIndex = objIndex;
-                  stateUpdate.selectedCMSIndex = cmsIndex;
-                  found = true;
-                  break;
-                }
-              } // for loop (cmsIndex)
-              if (found) break; // break also outer for loop
-            } else {
-              if (tmpCDate === parseInt(stateUpdate.session[objIndex].cms.creationDate) && tmpLUDate === parseInt(stateUpdate.session[objIndex].cms.lastUpdateDate)) {
-                stateUpdate.selectedCMSObjIndex = objIndex;
-                stateUpdate.selectedCMSIndex = objIndex;
-                break;
-              }
-            }
-          } // for loop (objIndex)
-
-          if (stateUpdate.selectedCMSObjIndex === undefined) {
-            this.handleOpenTextBox("WARNING", "The activ CMS of this tab was removed in another tab. The tool has deselect the CMS and relocate this tab to the MyDesigns page.");
-          } else {
-            stateUpdate.selectedCMS = new CMS();
-            if (stateUpdate.session[stateUpdate.selectedCMSObjIndex].isGroup) stateUpdate.selectedCMS.setByJSON(stateUpdate.session[stateUpdate.selectedCMSObjIndex].cmsObjects[stateUpdate.selectedCMSIndex]);
-            else stateUpdate.selectedCMS.setByJSON(stateUpdate.session[stateUpdate.selectedCMSObjIndex].cms);
-          }
+        if (this.state.session[this.state.selectedCMSObjIndex].isGroup) {
+          tmpCDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cmsObjects[this.state.selectedCMSIndex].creationDate);
+          tmpLUDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cmsObjects[this.state.selectedCMSIndex].lastUpdateDate);
+        } else {
+          tmpCDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cms.creationDate);
+          tmpLUDate = parseInt(this.state.session[this.state.selectedCMSObjIndex].cms.lastUpdateDate);
         }
 
-        this.sessionUpdated = true;
-        this.setState(stateUpdate);
+        for (let objIndex = 0; objIndex < stateUpdate.session.length; objIndex++) {
+          if (stateUpdate.session[objIndex].isGroup) {
+            let found = false;
+            for (let cmsIndex = 0; cmsIndex < stateUpdate.session[objIndex].cmsObjects.length; cmsIndex++) {
+              if (tmpCDate === parseInt(stateUpdate.session[objIndex].cmsObjects[cmsIndex].creationDate) && tmpLUDate === parseInt(stateUpdate.session[objIndex].cmsObjects[cmsIndex].lastUpdateDate)) {
+                stateUpdate.selectedCMSObjIndex = objIndex;
+                stateUpdate.selectedCMSIndex = cmsIndex;
+                found = true;
+                break;
+              }
+            } // for loop (cmsIndex)
+            if (found) break; // break also outer for loop
+          } else {
+            if (tmpCDate === parseInt(stateUpdate.session[objIndex].cms.creationDate) && tmpLUDate === parseInt(stateUpdate.session[objIndex].cms.lastUpdateDate)) {
+              stateUpdate.selectedCMSObjIndex = objIndex;
+              stateUpdate.selectedCMSIndex = objIndex;
+              break;
+            }
+          }
+        } // for loop (objIndex)
+
+        if (stateUpdate.selectedCMSObjIndex === undefined) {
+          this.handleOpenTextBox("WARNING", "The activ CMS of this tab was removed in another tab. The tool has deselect the CMS and relocate this tab to the MyDesigns page.");
+        } else {
+          stateUpdate.selectedCMS = new CMS();
+          if (stateUpdate.session[stateUpdate.selectedCMSObjIndex].isGroup) stateUpdate.selectedCMS.setByJSON(stateUpdate.session[stateUpdate.selectedCMSObjIndex].cmsObjects[stateUpdate.selectedCMSIndex]);
+          else stateUpdate.selectedCMS.setByJSON(stateUpdate.session[stateUpdate.selectedCMSObjIndex].cms);
+        }
       }
-    } else this.handleGo2Page("/login");
+
+      this.sessionUpdated = true;
+      this.setState(stateUpdate);
+    }
   };
 
   onStorageEvent = () => {
@@ -799,8 +799,32 @@ class C_CCCTool extends Component {
     return (
       <div className="App">
         <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
-        <Routes></Routes>
-
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <C_MyDesigns
+                handleSelectCMS={this.handleSelectCMS}
+                handleEraseSelectedCMS={this.handleEraseSelectedCMS}
+                handleDuplicateSelectedCMS={this.handleDuplicateSelectedCMS}
+                handleSetFilter={this.handleSetFilter}
+                handleExportSession={this.handleExportSession}
+                handleImportSession={this.handleImportSession}
+                handleGetSessionCMSImg={this.handleGetSessionCMSImg}
+                handleClearSession={this.handleClearSession}
+                handleRefreshTabInfo={this.handleRefreshTabInfo}
+                handleOpenTextBox={this.handleOpenTextBox}
+                session={this.state.session}
+                filter={this.state.filter}
+                filteredIndices={this.state.filteredIndices}
+                selectedCMSObjIndex={this.state.selectedCMSObjIndex}
+                selectedCMSIndex={this.state.selectedCMSIndex}
+                selectedCMS={this.state.selectedCMS}
+                handleGo2Page={this.handleGo2Page}
+              />
+            }
+          />
+        </Routes>
         <C_Confirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
           You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
         </C_Confirm>
@@ -816,23 +840,7 @@ export default C_CCCTool;
 
           <Route path="/">
             <C_MyDesigns
-              handleSelectCMS={this.handleSelectCMS}
-              handleEraseSelectedCMS={this.handleEraseSelectedCMS}
-              handleDuplicateSelectedCMS={this.handleDuplicateSelectedCMS}
-              handleSetFilter={this.handleSetFilter}
-              handleExportSession={this.handleExportSession}
-              handleImportSession={this.handleImportSession}
-              handleGetSessionCMSImg={this.handleGetSessionCMSImg}
-              handleClearSession={this.handleClearSession}
-              handleRefreshTabInfo={this.handleRefreshTabInfo}
-              handleOpenTextBox={this.handleOpenTextBox}
-              session={this.state.session}
-              filter={this.state.filter}
-              filteredIndices={this.state.filteredIndices}
-              selectedCMSObjIndex={this.state.selectedCMSObjIndex}
-              selectedCMSIndex={this.state.selectedCMSIndex}
-              selectedCMS={this.state.selectedCMS}
-              handleGo2Page={this.handleGo2Page}
+              
             />
           </Route>
           <Route path="/edit" render={() => (this.isCMSSelected() ? <C_Edit selectedCMS={this.state.selectedCMS} handleGo2Page={this.handleGo2Page} /> : <Navigate to="/login" />)} />

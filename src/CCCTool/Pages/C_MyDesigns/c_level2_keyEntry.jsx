@@ -11,7 +11,7 @@
 import React, { Component } from "react";
 import "./myDesigns.css";
 
-import F_KeyRendering from "../../F_Elements/f_keyRendering";
+import F_KeyRendering from "../../Elements/f_keyRendering";
 
 class C_KeyEntry extends Component {
   constructor() {

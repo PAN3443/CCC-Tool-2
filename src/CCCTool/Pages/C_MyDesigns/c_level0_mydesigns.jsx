@@ -35,7 +35,7 @@ class C_MyDesigns extends Component {
     };
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     document.addEventListener("keydown", this.keyCheck);
   }
 
@@ -56,9 +56,9 @@ class C_MyDesigns extends Component {
    *  Description : Show the filter window in the <C_SelectedView> element.
    *  Ouput       : None
    *************************************************************************************************/
-  open_filer = () => {
+  /*open_filer = () => {
     this.props.handleOpenTextBox("WARNING", "The Filter functionality is not implemented so far.");
-  };
+  };*/
 
   /**************************************************************************************************
    **************************************************************************************************
@@ -87,16 +87,11 @@ class C_MyDesigns extends Component {
             MyDesigns
           </h2>
 
-          <div style={{ height: "100%", marginRight: "2vw" }}>
-            <img src={process.env.PUBLIC_URL + "/img/Persons/defaultPerson.jpg"} alt="User" style={{ borderRadius: "2.5vh", height: "5vh", width: "5vh", margin: "auto", marginBottom: "0vh" }}></img>
-            <p style={{ color: "var(--font-color-darkBG)", width: "100%", textAlign: "center", margin: "auto" }}>Guest</p>
-          </div>
-
           <svg
             title="logout"
             className="cl_Icon_S_DarkBG cl_Icon_S"
             onClick={() => this.ref_Confirm_LogOut.current.activate()}
-            style={{ height: "5vh", width: "5vh", margin: "auto 0vw", strokeWidth: "2" }}
+            style={{ height: "5vh", width: "5vh", margin: "auto 2vw", strokeWidth: "2" }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
@@ -203,16 +198,13 @@ class C_MyDesigns extends Component {
             </div>
           </div>
         </div>
-
         <C_Confirm ref={this.ref_Confirm_LogOut} accept={() => this.props.logout()}>
           You are about to log out. All locale storage from the MyDesigns section will be deleted. In case of a guest login the data is irrevocably gone. Make sure that you have saved all data in a session file. Click on <strong>"Accept"</strong> to
           continue the log out process.
         </C_Confirm>
-
         <C_Confirm ref={this.ref_Confirm_ClearSession} accept={() => this.props.handleClearSession()}>
           You are about to clear this session. All data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the process.
         </C_Confirm>
-
         <C_Menu ref={this.ref_Menu} handleGo2Page={this.props.handleGo2Page.bind(this)} handleRefreshTabInfo={this.props.handleRefreshTabInfo.bind(this)}>
           <button className="cl_button_Bright" style={{ width: "20vw", margin: "1vh auto", display: "none" }} disabled>
             Account Settings

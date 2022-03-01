@@ -5,9 +5,12 @@ import "../Style/CSS/filter.css";
 function F_NavigateButton(props) {
   let navigate = useNavigate();
   return (
-    <div className="cl_OpeningSelect_Div cl_blur" onClick={() => {
+    <div onClick={() => {
             if(props.navURL!=null){
-               navigate(props.navURL);
+              navigate(props.navURL);
+            }
+            else if(props.navExternURL!=null){
+              window.open(props.navExternURL, "_blank");
             }
       }}>
       {props.children}

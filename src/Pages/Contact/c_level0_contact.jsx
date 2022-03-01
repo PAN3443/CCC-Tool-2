@@ -11,6 +11,7 @@ import React, { Component } from "react";
 import C_Header from "../../Elements/c_header";
 import C_Person from "./c_level1_person";
 import C_Affiliation from "./c_level1_affiliation";
+import F_NavigateButton from "../../Elements/f_navigateButton";
 
 class C_Contact extends Component {
   state = {
@@ -85,21 +86,24 @@ class C_Contact extends Component {
     return (
       <div>
         <C_Header style={{ height: "25vh", width: "100vw" }}>
-          <img
-            onClick={() => this.props.handleGo2Page("/about")}
-            src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
-            alt="CCC-Tool Logo"
-            style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
-          ></img>
-          <h1
-            style={{
-              maxHeight: "25vh",
-              marginLeft: "0vw",
-              cursor: "default",
-            }}
-          >
-            Contact and Impressum
-          </h1>
+          <F_NavigateButton navURL="/">
+            <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+              <img
+                src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
+                alt="CCC-Tool Logo"
+                style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
+              ></img>
+              <h1
+                style={{
+                  maxHeight: "25vh",
+                  marginLeft: "0vw",
+                  cursor: "default",
+                }}
+              >
+                Contact and Impressum
+              </h1>
+            </div>
+          </F_NavigateButton>
         </C_Header>
 
         <div style={{ width: "60%", widthMax: "80%", margin: "auto", marginTop: "5vh", marginBottom: "5vh" }}>

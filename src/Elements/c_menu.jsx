@@ -36,12 +36,6 @@ class C_Menu extends Component {
           <button className="cl_button_Bright" onClick={() => this.refreshTabInfo()} style={{ width: "20vw", margin: "1vh auto" }}>
             Clear Tab Storage
           </button>
-          <button className="cl_button_Bright" onClick={() => this.props.handleGo2Page("/about")} style={{ width: "20vw", margin: "1vh auto" }}>
-            About
-          </button>
-          <button className="cl_button_Bright" onClick={() => this.props.handleGo2Page("/contact")} style={{ width: "20vw", margin: "1vh auto" }}>
-            Contact/Impressum
-          </button>
           <button className="cl_button_Bright" onClick={() => this.close()} style={{ width: "20vw", margin: "1vh auto" }}>
             Close Menu (ESC)
           </button>

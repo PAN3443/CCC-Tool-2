@@ -9,6 +9,7 @@
 //////////////////////////////////////////////
 import React, { Component } from "react";
 import C_Header from "../../Elements/c_header";
+import F_NavigateButton from "../../Elements/f_navigateButton";
 
 class C_About extends Component {
   state = {};
@@ -16,16 +17,20 @@ class C_About extends Component {
     return (
       <div>
         <C_Header style={{ height: "25vh", width: "100vw" }}>
-          <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw" }}></img>
-          <h1
-            style={{
-              maxHeight: "25vh",
-              marginLeft: "0vw",
-              cursor: "default",
-            }}
-          >
-            About
-          </h1>
+          <F_NavigateButton navURL="/">
+            <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+              <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw" }}></img>
+              <h1
+                style={{
+                  maxHeight: "25vh",
+                  marginLeft: "0vw",
+                  cursor: "default",
+                }}
+              >
+                About
+              </h1>
+            </div>
+          </F_NavigateButton>
         </C_Header>
         <div style={{ width: "100vw", height: "75vh", background: "var(--bg-dark-alpha-5)" }}>
           <p style={{ color: "var(--borderColor-brightBG)", width: "fit-content", maxWidth: "50%", margin: "auto" }}>This Page is not implemented so far. Below you will find the "about" information from the old CCC-Tool.</p>

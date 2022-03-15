@@ -25,7 +25,6 @@ class C_Opening extends Component {
       <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
         <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark)", zIndex: "0", top: "0px", left: "0px" }}></div>
         <C_PixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></C_PixelAnimation>
-        <F_NavigateButton navURL="/">
           <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
             <img
               src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
@@ -45,7 +44,6 @@ class C_Opening extends Component {
               The CCC-Tool
             </h1>
           </div>
-        </F_NavigateButton>
         <div className="cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "70vh", width: "100vw", zIndex: "2", top: "25vh", left: "0px", overflow: "auto" }}>
           <div className="cl_OpeningText_Div cl_blur">
             <p className="cl_bigText" style={{ marginBottom: "1vh", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}>

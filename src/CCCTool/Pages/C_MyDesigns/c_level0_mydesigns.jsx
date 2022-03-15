@@ -18,6 +18,7 @@ import C_Menu from "../../../Elements/c_menu";
 import C_CMSView from "./c_level1_cmsView";
 import C_CMSGroup from "./c_level1_cmsGroup";
 import C_SelectedView from "./c_level1_selectedView";
+import F_NavigateButton from "../../../Elements/f_navigateButton";
 
 // Libs
 //import { CMS } from "ccctool-lib/lib/cms/class_cms";
@@ -70,35 +71,38 @@ class C_MyDesigns extends Component {
     return (
       <div>
         <C_Header style={{ height: "8vh", width: "100vw" }}>
-          hallo
-          <img
-            onClick={() => this.props.handleGo2Page("/about")}
-            src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
-            alt="CCC-Tool Logo"
-            style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}
-          ></img>
-          <h2
-            style={{
-              color: "var(--font-color-darkBG)",
-              margin: "auto",
-              marginLeft: "0vw",
-              cursor: "default",
-            }}
-          >
-            MyDesigns
+          <F_NavigateButton navURL="/">
+            <div style={{ height: "1vh"}}></div>
+              <img
+                src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
+                alt="CCC-Tool Logo"
+                style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}
+              ></img>
+            </F_NavigateButton>
+              <h2
+                style={{
+                  color: "var(--font-color-darkBG)",
+                  margin: "auto",
+                  marginLeft: "0vw",
+                  cursor: "default",
+                }}
+              >
+                MyDesigns
           </h2>
+          <F_NavigateButton navURL="/">
+            <div style={{ height: "1vh"}}></div>
           <svg
-            title="logout"
+            // title="logout"
             className="cl_Icon_S_DarkBG cl_Icon_S"
-            onClick={() => this.ref_Confirm_LogOut.current.activate()}
             style={{ height: "5vh", width: "5vh", margin: "auto 2vw", strokeWidth: "2" }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
-            <path d="M 6 7.5 A 5 5 0 1 0  14 7.5" strokeLinecap="round"></path>
-            <polyline points="7 5 10 3 13 5" />
-            <line x1="10" y1="3" x2="10" y2="10" />
+            <polyline points="4 7 1 10 4 13" />
+            <line x1="10" y1="3" x2="10" y2="17" />
+            <line x1="2" y1="10" x2="10" y2="10" />
           </svg>
+            </F_NavigateButton>
         </C_Header>
         <div style={{ height: "92vh", width: "100vw", flexDirection: "row" }}>
           <C_SelectedView
@@ -211,16 +215,6 @@ class C_MyDesigns extends Component {
           </button>
           <button className="cl_button_Bright" style={{ width: "20vw", margin: "1vh auto", display: "none" }} disabled>
             Color Settings
-          </button>
-          <button
-            className="cl_button_Bright"
-            onClick={() => {
-              this.ref_Menu.current.close();
-              this.ref_Confirm_LogOut.current.activate();
-            }}
-            style={{ width: "20vw", margin: "1vh auto" }}
-          >
-            Log out
           </button>
           <button
             className="cl_button_Bright"

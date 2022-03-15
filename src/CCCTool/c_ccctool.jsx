@@ -18,10 +18,10 @@ import C_TextBox from "../Elements/c_textBox";
 
 // CCC-Tool Components
 import C_MyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
-/*import C_Edit from "./Pages/C_Edit/c_edit";
+import C_Edit from "./Pages/C_Edit/c_edit";
 import C_Export from "./Pages/C_Export/c_export";
 import C_TestSite from "./Pages/C_TestSite/c_testsite";
-import C_New from "./Pages/C_New/c_level0_new";*/
+import C_GenerateNew from "./Pages/C_GenerateNew/c_level0_generateNew";
 
 // Libs
 import { CMS } from "ccctool-lib/lib/cms/class_cms";
@@ -170,10 +170,6 @@ class C_CCCTool extends Component {
     this.sessionUpdated = true;
     this.setState(stateUpdate);
     this.determineTabID(true);
-  }
-
-  handleGo2Page(url) {
-    alert(url);
   }
 
   componentWillUnmount() {
@@ -739,50 +735,6 @@ class C_CCCTool extends Component {
 
   /**************************************************************************************************
    **************************************************************************************************
-   ******************************************** User ************************************************
-   **************************************************************************************************
-   *************************************************************************************************/
-
-  /**************************************************************************************************
-   *  Function    : logIn
-   *  Description : Log In for users
-   *  Ouput       : None
-   *************************************************************************************************/
-  /*logIn = (_id) => {
-    localStorage.setItem("userID", _id);
-    localStorage.setItem("loggedIn", true);
-    this.handleGo2Page("/ccctool/mydesigns");
-  };*/
-
-  /**************************************************************************************************
-   *  Function    : logout
-   *  Description :
-   *  Ouput       : None
-   *************************************************************************************************/
-  /*logout = () => {
-    localStorage.clear();
-    this.handleGo2Page("/login");
-  };*/
-
-  /**************************************************************************************************
-   *  Function    : isLoggedIn
-   *  Description : Allows to check if a user is logged in the tool.
-   *  Ouput       : Boolean
-   *************************************************************************************************/
-  /*isLoggedIn = () => {
-    switch (localStorage.getItem("loggedIn") === "true") {
-      case "true":
-      case true:
-      case "1":
-      case 1:
-        return true;
-      default:
-        return false;
-    }
-  };*/
-
-  /**************************************************************************************************
-   **************************************************************************************************
    *******************************************  OTHER  **********************************************
    **************************************************************************************************
    *************************************************************************************************/
@@ -820,10 +772,13 @@ class C_CCCTool extends Component {
                 selectedCMSObjIndex={this.state.selectedCMSObjIndex}
                 selectedCMSIndex={this.state.selectedCMSIndex}
                 selectedCMS={this.state.selectedCMS}
-                handleGo2Page={this.handleGo2Page}
               />
             }
           />
+          <Route path="/edit" render={() => (this.isCMSSelected() ? <C_Edit selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
+          <Route path="/testsite" render={() => (this.isCMSSelected() ? <C_TestSite selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
+          <Route path="/export" render={() => (this.isCMSSelected() ? <C_Export handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
+          <Route path="/generate" element={<C_GenerateNew />}></Route>
         </Routes>
         <C_Confirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
           You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
@@ -835,19 +790,3 @@ class C_CCCTool extends Component {
 }
 
 export default C_CCCTool;
-
-/*
-
-          <Route path="/">
-            <C_MyDesigns
-              
-            />
-          </Route>
-          <Route path="/edit" render={() => (this.isCMSSelected() ? <C_Edit selectedCMS={this.state.selectedCMS} handleGo2Page={this.handleGo2Page} /> : <Navigate to="/login" />)} />
-          <Route path="/testsite" render={() => (this.isCMSSelected() ? <C_TestSite selectedCMS={this.state.selectedCMS} handleGo2Page={this.handleGo2Page} /> : <Navigate to="/login" />)} />
-          <Route path="/export" render={() => (this.isCMSSelected() ? <C_Export handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} handleGo2Page={this.handleGo2Page} /> : <Navigate to="/login" />)} />
-          <Route path="/new">
-            <C_New handleGo2Page={this.handleGo2Page} /> : <Navigate to="/login" />
-          </Route>
-
-*/

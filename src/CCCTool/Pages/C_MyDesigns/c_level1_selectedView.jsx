@@ -117,28 +117,14 @@ class C_SelectedView extends Component {
                 </div>
 
                 <div className="cl_row" style={{ height: "10vh", width: "100%", marginTop: "auto" }}>
-                  <svg
-                    title="Edit"
-                    className="cl_Icon_F_BrightBG cl_Icon_F"
-                    onClick={() => this.props.handleGo2Page("/ccctool/edit")}
-                    style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto" }}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
+                  <svg title="Edit" className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <circle cx="10" cy="10" r="9"></circle>
                     <line x1="10" y1="6" x2="10" y2="14" stroke="var(--bg-bright)" strokeWidth="4" strokeLinecap="round" />
                     <rect x="4" y="6" width="10" height="1" />
                     <rect x="4" y="13" width="10" height="4" />
                     <polygon points="8,14 10,17 12,14" fill="var(--bg-bright)" />
                   </svg>
-                  <svg
-                    title="Download"
-                    className="cl_Icon_F_BrightBG cl_Icon_F"
-                    onClick={() => this.props.handleGo2Page("/ccctool/export")}
-                    style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
+                  <svg title="Download" className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <circle cx="10" cy="10" r="9"></circle>
                     <polyline points="7 12 10 15 13 12" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <line x1="6" y1="6.5" x2="14" y2="6.5" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />

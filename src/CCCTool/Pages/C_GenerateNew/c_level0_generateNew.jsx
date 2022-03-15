@@ -11,7 +11,7 @@
 import React, { Component } from "react";
 import C_Header from "../../../Elements/c_header";
 
-class C_New extends Component {
+class C_GenerateNew extends Component {
   constructor() {
     super();
   }
@@ -38,4 +38,4 @@ class C_New extends Component {
     );
   }
 }
-export default C_New;
+export default C_GenerateNew;

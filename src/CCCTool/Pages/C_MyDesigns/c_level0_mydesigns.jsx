@@ -72,43 +72,38 @@ class C_MyDesigns extends Component {
       <div>
         <C_Header style={{ height: "8vh", width: "100vw" }}>
           <F_NavigateButton navURL="/">
-            <div style={{ height: "1vh"}}></div>
-              <img
-                src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
-                alt="CCC-Tool Logo"
-                style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}
-              ></img>
-            </F_NavigateButton>
-              <h2
-                style={{
-                  color: "var(--font-color-darkBG)",
-                  margin: "auto",
-                  marginLeft: "0vw",
-                  cursor: "default",
-                }}
-              >
-                MyDesigns
+            <div style={{ height: "1vh" }}></div>
+            <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
+          </F_NavigateButton>
+          <h2
+            style={{
+              color: "var(--font-color-darkBG)",
+              margin: "auto",
+              marginLeft: "0vw",
+              cursor: "default",
+            }}
+          >
+            MyDesigns
           </h2>
           <F_NavigateButton navURL="/">
-            <div style={{ height: "1vh"}}></div>
-          <svg
-            // title="logout"
-            className="cl_Icon_S_DarkBG cl_Icon_S"
-            style={{ height: "5vh", width: "5vh", margin: "auto 2vw", strokeWidth: "2" }}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <polyline points="4 7 1 10 4 13" />
-            <line x1="10" y1="3" x2="10" y2="17" />
-            <line x1="2" y1="10" x2="10" y2="10" />
-          </svg>
-            </F_NavigateButton>
+            <div style={{ height: "1vh" }}></div>
+            <svg
+              // title="logout"
+              className="cl_Icon_S_DarkBG cl_Icon_S"
+              style={{ height: "5vh", width: "5vh", margin: "auto 2vw", strokeWidth: "2" }}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <polyline points="4 7 1 10 4 13" />
+              <line x1="10" y1="3" x2="10" y2="17" />
+              <line x1="2" y1="10" x2="10" y2="10" />
+            </svg>
+          </F_NavigateButton>
         </C_Header>
         <div style={{ height: "92vh", width: "100vw", flexDirection: "row" }}>
           <C_SelectedView
             handleEraseSelectedCMS={this.props.handleEraseSelectedCMS.bind(this)}
             handleDuplicateSelectedCMS={this.props.handleDuplicateSelectedCMS.bind(this)}
-            handleGo2Page={this.props.handleGo2Page.bind(this)}
             filterIsOpen={this.state.filterIsOpen}
             handleSetFilter={this.props.handleSetFilter.bind(this)}
             filter={this.props.filter}
@@ -164,7 +159,7 @@ class C_MyDesigns extends Component {
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
-              <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleGo2Page("/ccctool/new")} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <line x1="2" y1="10" x2="18" y2="10" />
                 <line x1="10" y1="2" x2="10" y2="18" />
               </svg>
@@ -192,11 +187,7 @@ class C_MyDesigns extends Component {
 
               {(() => {
                 if (this.props.selectedCMS !== undefined) {
-                  return (
-                    <button onClick={() => this.props.handleGo2Page("/ccctool/testsite")} style={{ padding: "0vh 2.5vw", margin: "auto", marginRight: "2.5vw" }}>
-                      Test Site
-                    </button>
-                  );
+                  return <button style={{ padding: "0vh 2.5vw", margin: "auto", marginRight: "2.5vw" }}>Test Site</button>;
                 }
               })()}
             </div>
@@ -209,7 +200,7 @@ class C_MyDesigns extends Component {
         <C_Confirm ref={this.ref_Confirm_ClearSession} accept={() => this.props.handleClearSession()}>
           You are about to clear this session. All data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the process.
         </C_Confirm>
-        <C_Menu ref={this.ref_Menu} handleGo2Page={this.props.handleGo2Page.bind(this)} handleRefreshTabInfo={this.props.handleRefreshTabInfo.bind(this)}>
+        <C_Menu ref={this.ref_Menu} handleRefreshTabInfo={this.props.handleRefreshTabInfo.bind(this)}>
           <button className="cl_button_Bright" style={{ width: "20vw", margin: "1vh auto", display: "none" }} disabled>
             Account Settings
           </button>

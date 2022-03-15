@@ -70,6 +70,7 @@ class C_MyDesigns extends Component {
     return (
       <div>
         <C_Header style={{ height: "8vh", width: "100vw" }}>
+          hallo
           <img
             onClick={() => this.props.handleGo2Page("/about")}
             src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
@@ -86,7 +87,6 @@ class C_MyDesigns extends Component {
           >
             MyDesigns
           </h2>
-
           <svg
             title="logout"
             className="cl_Icon_S_DarkBG cl_Icon_S"

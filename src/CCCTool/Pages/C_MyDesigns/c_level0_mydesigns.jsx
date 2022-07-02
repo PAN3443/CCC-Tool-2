@@ -159,10 +159,13 @@ class C_MyDesigns extends Component {
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
-              <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <line x1="2" y1="10" x2="18" y2="10" />
-                <line x1="10" y1="2" x2="10" y2="18" />
-              </svg>
+              <F_NavigateButton navURL="/tool/generate">
+                <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <line x1="2" y1="10" x2="18" y2="10" />
+                  <line x1="10" y1="2" x2="10" y2="18" />
+                </svg>
+              </F_NavigateButton>
+
               <svg title="Upload" className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleImportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <polyline points="6 9 10 5 14 9" />
                 <line x1="10" y1="7" x2="10" y2="18" />

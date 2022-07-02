@@ -10,18 +10,11 @@
 
 // React
 import React, { Component } from "react";
-import { Navigate, Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 // Components
 import C_Confirm from "../Elements/c_confirm";
 import C_TextBox from "../Elements/c_textBox";
-
-// CCC-Tool Components
-import C_MyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
-import C_Edit from "./Pages/C_Edit/c_edit";
-import C_Export from "./Pages/C_Export/c_export";
-import C_TestSite from "./Pages/C_TestSite/c_testsite";
-import C_GenerateNew from "./Pages/C_GenerateNew/c_level0_generateNew";
 
 // Libs
 import { CMS } from "ccctool-lib/lib/cms/class_cms";
@@ -507,7 +500,7 @@ class C_CCCTool extends Component {
    *  Ouput       :
    *************************************************************************************************/
   handleExportSession = () => {
-    if (this.state.session.length == 0) {
+    if (this.state.session.length === 0) {
       //openAlert("The MyDesigns list is empty");
       this.handleOpenTextBox("WARNING", "Your MyDesigns list is empty. An export is not possible.");
       return;
@@ -747,39 +740,18 @@ class C_CCCTool extends Component {
    ******************************************** Render **********************************************
    **************************************************************************************************
    *************************************************************************************************/
+
+  test() {
+    alert(123);
+  }
+
   render() {
     return (
       <div className="App">
         <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <C_MyDesigns
-                handleSelectCMS={this.handleSelectCMS}
-                handleEraseSelectedCMS={this.handleEraseSelectedCMS}
-                handleDuplicateSelectedCMS={this.handleDuplicateSelectedCMS}
-                handleSetFilter={this.handleSetFilter}
-                handleExportSession={this.handleExportSession}
-                handleImportSession={this.handleImportSession}
-                handleGetSessionCMSImg={this.handleGetSessionCMSImg}
-                handleClearSession={this.handleClearSession}
-                handleRefreshTabInfo={this.handleRefreshTabInfo}
-                handleOpenTextBox={this.handleOpenTextBox}
-                session={this.state.session}
-                filter={this.state.filter}
-                filteredIndices={this.state.filteredIndices}
-                selectedCMSObjIndex={this.state.selectedCMSObjIndex}
-                selectedCMSIndex={this.state.selectedCMSIndex}
-                selectedCMS={this.state.selectedCMS}
-              />
-            }
-          />
-          <Route path="/edit" render={() => (this.isCMSSelected() ? <C_Edit selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
-          <Route path="/testsite" render={() => (this.isCMSSelected() ? <C_TestSite selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
-          <Route path="/export" render={() => (this.isCMSSelected() ? <C_Export handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
-          <Route path="/generate" element={<C_GenerateNew />}></Route>
-        </Routes>
+
+        <Outlet test={() => this.test} />
+
         <C_Confirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
           You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
         </C_Confirm>

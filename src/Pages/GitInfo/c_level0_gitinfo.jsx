@@ -8,21 +8,17 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import C_Header from "../../Elements/c_header";
-import F_NavigateButton from "../../Elements/f_navigateButton";
+import CHeader from "../../Elements/c_header";
+import FNavigateButton from "../../Elements/f_navigateButton";
 
-class C_GitInfo extends Component {
+class CGitInfo extends Component {
   render() {
     return (
       <div>
-        <C_Header style={{ height: "25vh", width: "100vw" }}>
-          <F_NavigateButton navURL="/">
+        <CHeader style={{ height: "25vh", width: "100vw" }}>
+          <FNavigateButton navURL="/">
             <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-              <img
-                src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
-                alt="CCC-Tool Logo"
-                style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
-              ></img>
+              <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
               <h1
                 style={{
                   maxHeight: "25vh",
@@ -40,8 +36,8 @@ class C_GitInfo extends Component {
                 ></path>
               </svg>
             </div>
-          </F_NavigateButton>
-        </C_Header>
+          </FNavigateButton>
+        </CHeader>
         <div style={{ width: "100vw", height: "75vh", background: "var(--bg-dark-alpha-5)" }}>
           <p style={{ color: "var(--borderColor-brightBG)", width: "fit-content", maxWidth: "50%", margin: "auto" }}>This Page is not implemented so far.</p>
         </div>
@@ -49,4 +45,4 @@ class C_GitInfo extends Component {
     );
   }
 }
-export default C_GitInfo;
+export default CGitInfo;

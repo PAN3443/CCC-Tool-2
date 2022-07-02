@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Particle } from "./class_particle";
 import { Color } from "ccctool-lib/lib/color/class_Color";
 
-class C_PixelAnimation extends Component {
+class CPixelAnimation extends Component {
   numParticles = 0;
   particles = [];
   workColor = undefined;
@@ -157,4 +157,4 @@ class C_PixelAnimation extends Component {
   }
 }
 
-export default C_PixelAnimation;
+export default CPixelAnimation;

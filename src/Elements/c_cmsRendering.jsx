@@ -12,7 +12,7 @@
 // React
 import React, { Component } from "react";
 
-class C_CMSRendering extends Component {
+class CCMSRendering extends Component {
   state = {};
 
   constructor() {
@@ -62,4 +62,4 @@ class C_CMSRendering extends Component {
     }
   }
 }
-export default C_CMSRendering;
+export default CCMSRendering;

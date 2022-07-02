@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import "../Style/CSS/filter.css";
 
-class C_TextBox extends Component {
+class CTextBox extends Component {
   state = {
     display: "none",
     header: "WARNING",
     warnText: "Warning Text",
   };
-
-  constructor() {
-    super();
-  }
 
   render() {
     return (
@@ -24,7 +20,6 @@ class C_TextBox extends Component {
           top: "0px",
           left: "0px",
           bottom: "0px",
-          position: "fixed",
           zIndex: "100",
           background: "var(--bg-dark-alpha-50)",
         }}
@@ -79,4 +74,4 @@ class C_TextBox extends Component {
   };
 }
 
-export default C_TextBox;
+export default CTextBox;

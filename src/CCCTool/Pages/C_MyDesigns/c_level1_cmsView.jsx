@@ -13,7 +13,7 @@ import React, { Component } from "react";
 // style
 import "./myDesigns.css";
 
-class C_CMSView extends Component {
+class CCMSView extends Component {
   state = {};
 
   // State -> Sessional Storage we need to react depending on the sessional data
@@ -78,4 +78,4 @@ class C_CMSView extends Component {
   }
 }
 
-export default C_CMSView;
+export default CCMSView;

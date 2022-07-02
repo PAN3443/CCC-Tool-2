@@ -9,17 +9,14 @@
 //////////////////////////////////////////////
 
 import React, { Component } from "react";
-import C_Header from "../../../Elements/c_header";
+import CHeader from "../../../Elements/c_header";
 
 class C_GenerateNew extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
     return (
       <div>
-        <C_Header style={{ height: "25vh", width: "100vw" }}>
+        <CHeader style={{ height: "25vh", width: "100vw" }}>
           <img
             onClick={() => this.props.handleGo2Page("/about")}
             src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
@@ -35,7 +32,7 @@ class C_GenerateNew extends Component {
           >
             Add New CMS
           </h1>
-        </C_Header>
+        </CHeader>
         <div style={{ height: "75vh", width: "100vw" }}>
           <button onClick={this.props.test()}>Hello</button>
         </div>

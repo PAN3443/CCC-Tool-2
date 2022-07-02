@@ -8,12 +8,12 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import C_Header from "../../Elements/c_header";
+import CHeader from "../../Elements/c_header";
 
-class C_Error404 extends Component {
+class CError404 extends Component {
   render() {
     return (
-      <C_Header style={{ height: "25vh", width: "100vw" }}>
+      <CHeader style={{ height: "25vh", width: "100vw" }}>
         <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
         <h1
           style={{
@@ -24,8 +24,8 @@ class C_Error404 extends Component {
         >
           Error 404
         </h1>
-      </C_Header>
+      </CHeader>
     );
   }
 }
-export default C_Error404;
+export default CError404;

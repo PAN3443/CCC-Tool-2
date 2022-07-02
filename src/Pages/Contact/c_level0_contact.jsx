@@ -8,54 +8,57 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import C_Header from "../../Elements/c_header";
-import C_Person from "./c_level1_person";
-import C_Affiliation from "./c_level1_affiliation";
-import F_NavigateButton from "../../Elements/f_navigateButton";
+import CHeader from "../../Elements/c_header";
+import CPerson from "./c_level1_person";
+import CAffiliation from "./c_level1_affiliation";
+import FNavigateButton from "../../Elements/f_navigateButton";
 
-class C_Contact extends Component {
+class CContact extends Component {
   state = {
-    me: {
-      name: { title: "M.Sc.", givenName: "Pascal", surname: "Nardini" },
-      contact: {
-        phone: "+49 341 97-32255",
-        email: "nardini'at'informatik.uni-leipzig.de",
-        link: "https://www.informatik.uni-leipzig.de/bsv/homepage/de/people/pascal-nardini",
-        adress: "Postfach 100920",
-        postalNr: "D-04009",
-        city: "Leipzig",
-        country: "Germany",
-      },
-      affiliation: 0,
-      img: process.env.PUBLIC_URL + "/img/Persons/Pascal_Nardini.jpg",
-    },
-    partners: [
+    persons: [
       {
+        id: 0,
+        name: { title: "M.Sc.", givenName: "Pascal", surname: "Nardini" },
+        contact: {
+          phone: "+49 341 97-32255",
+          email: "nardini'at'informatik.uni-leipzig.de",
+          link: "https://www.informatik.uni-leipzig.de/bsv/homepage/de/people/pascal-nardini",
+        },
+        affiliation: 0,
+        img: process.env.PUBLIC_URL + "/img/Persons/Pascal_Nardini.jpg",
+      },
+      {
+        id: 1,
         name: { title: "Prof. Dr.", givenName: "Gerik", surname: "Scheuermann" },
         contact: { email: "scheuermann'at'informatik.uni-leipzig.de", link: "https://www.informatik.uni-leipzig.de/bsv/homepage/en/people/gerik-scheuermann", adress: "Postfach 100920", postalNr: "D-04009", city: "Leipzig", country: "Germany" },
         affiliation: 0,
         img: process.env.PUBLIC_URL + "/img/Persons/GerikScheuermann.jpg",
       },
-      { name: { title: "Prof. Dr.", givenName: "Min", surname: "Chen" }, contact: { link: "https://sites.google.com/site/drminchen/home" }, affiliation: 2, img: process.env.PUBLIC_URL + "/img/Persons/MinChen.jpg" },
+      { id: 2, name: { title: "Prof. Dr.", givenName: "Min", surname: "Chen" }, contact: { link: "https://sites.google.com/site/drminchen/home" }, affiliation: 2, img: process.env.PUBLIC_URL + "/img/Persons/MinChen.jpg" },
       {
+        id: 3,
         name: { title: "Dr.", givenName: "Roxana", surname: "Bujack" },
         contact: { adress: "P.O. Box 1663", postalNr: "Los Alamos, NM 87545", city: "", country: "USA", link: "https://sites.google.com/site/roxanabujack/" },
         affiliation: 4,
         img: process.env.PUBLIC_URL + "/img/Persons/bujack.jpg",
       },
       {
+        id: 4,
         name: { title: "M.Sc.", givenName: "Michael", surname: "Boettinger" },
         contact: { link: "https://www.dkrz.de/about/mitarbeiter/MichaelBoettinger" },
         affiliation: 5,
         img: process.env.PUBLIC_URL + "/img/Persons/Michael_Boettinger.jpg",
       },
       {
+        id: 5,
         name: { givenName: "Francesca", surname: "Samsel" },
         contact: { link: "http://www.francescasamsel.com/home_html/HOME.html" },
         affiliation: 6,
         img: process.env.PUBLIC_URL + "/img/Persons/Francesca_Samsel.jpg",
       },
     ],
+    contacts: [0, 1],
+    partners: [2, 3, 4, 5],
     affiliations: [
       { id: 0, name: "Leipiz University", contact: { adress: "Ritterstraße 26", postalNr: "D-04109", city: "Leipzig", country: "Germany", link: "https://www.uni-leipzig.de/en/" }, img: process.env.PUBLIC_URL + "/img/Logos/university_leipzig.png" },
       {
@@ -78,21 +81,13 @@ class C_Contact extends Component {
     ],
   };
 
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div>
-        <C_Header style={{ height: "25vh", width: "100vw" }}>
-          <F_NavigateButton navURL="/">
+        <CHeader style={{ height: "25vh", width: "100vw" }}>
+          <FNavigateButton navURL="/">
             <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-              <img
-                src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
-                alt="CCC-Tool Logo"
-                style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
-              ></img>
+              <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
               <h1
                 style={{
                   maxHeight: "25vh",
@@ -103,31 +98,33 @@ class C_Contact extends Component {
                 Contact and Impressum
               </h1>
             </div>
-          </F_NavigateButton>
-        </C_Header>
+          </FNavigateButton>
+        </CHeader>
 
         <div style={{ width: "60%", widthMax: "80%", margin: "auto", marginTop: "5vh", marginBottom: "5vh" }}>
           <h2>Contact</h2>
-          <C_Person key={"id_contac_" + this.state.me.title + "_" + this.state.me.givenName + "_" + this.state.me.surname} getAffiliation={this.getAffiliation} person={this.state.me} />
+          {this.state.contacts.map((c) => (
+            <CPerson key={"id_contact_" + c} getAffiliation={this.getAffiliation} person={this.state.persons[c]} />
+          ))}
           <h2>Partner</h2>
           {this.state.partners.map((p) => (
-            <C_Person key={"id_contac_" + p.title + "_" + p.givenName + "_" + p.surname} getAffiliation={this.getAffiliation} person={p} />
+            <CPerson key={"id_partner_" + p} getAffiliation={this.getAffiliation} person={this.state.persons[p]} />
           ))}
           <h2>Thanks to: </h2>
           <div className="cl_row" style={{ width: "100%", justifyContent: "center", padding: "5vh 0vw", overflow: "hidden", background: "var(--bg-dark)" }}>
             {this.state.affiliations.map((a) => (
-              <C_Affiliation affiliation={a} />
+              <CAffiliation key={"id_affiliations_" + a.id} affiliation={a} />
             ))}
           </div>
 
           <h2>Impressum (nach § 5 Allgemeine Informationspflichten)</h2>
           <p className="cl_textBlock">
             Diese Internet Seite mit dem Domainname "ccctool.com" ist ein Angebot von der Universit&auml;t Leipzig (
-            <a target="_blank" href="https://www.uni-leipzig.de/service/impressum.html">
+            <a target="_blank" rel="noreferrer" href="https://www.uni-leipzig.de/service/impressum.html">
               Impressum Universit&auml;t Leipzig
             </a>
             ) und wurde in der Abteilung Bild- und Signalverarbeitung BSV (
-            <a target="_blank" href="https://www.informatik.uni-leipzig.de/bsv/homepage/de/content/impressum">
+            <a target="_blank" rel="noreferrer" C_Home href="https://www.informatik.uni-leipzig.de/bsv/homepage/de/content/impressum">
               Impressum BSV
             </a>
             ) von Pascal Nardini entwickelt.
@@ -165,11 +162,11 @@ class C_Contact extends Component {
   getAffiliation = (_id) => {
     for (let index = 0; index < this.state.affiliations.length; index++) {
       //const element = array[index];
-      if (this.state.affiliations[index].id == _id) {
+      if (this.state.affiliations[index].id === _id) {
         return this.state.affiliations[index];
       }
     }
     return undefined;
   };
 }
-export default C_Contact;
+export default CContact;

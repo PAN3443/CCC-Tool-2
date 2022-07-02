@@ -12,9 +12,9 @@
 // React
 import React, { Component } from "react";
 // Components
-import C_Confirm from "../../../Elements/c_confirm";
-import C_CMSRendering from "../../../Elements/c_cmsRendering";
-import C_KeyEntry from "./c_level2_keyEntry";
+import CConfirm from "../../../Elements/c_confirm";
+import CCMSRendering from "../../../Elements/c_cmsRendering";
+import CKeyEntry from "./c_level2_keyEntry";
 // Functions
 import { helper_dateToString } from "../../../Helpers/other";
 // style
@@ -22,7 +22,7 @@ import "./myDesigns.css";
 // Lib
 import { colorToRGBString } from "ccctool-lib/lib/color/colorHelper";
 
-class C_SelectedView extends Component {
+class CSelectedView extends Component {
   state = {};
 
   // State -> Sessional Storage we need to react depending on the sessional data
@@ -58,7 +58,7 @@ class C_SelectedView extends Component {
               <div style={{ width: "100%", height: "100%", maxHeight: "100%", borderRight: "var(--border-width) solid var(--borderColor-brightBG)" }}>
                 <h3 style={{ margin: " 1vh auto" }}>{this.props.selectedCMS.getCMSName()}</h3>
 
-                <C_CMSRendering
+                <CCMSRendering
                   selectedCMS={this.props.selectedCMS}
                   style={{ width: "95%", height: "3vh", marginBottom: "1vh", marginLeft: "2.5%", borderRadius: "var(--border-radius)", border: "var(--border-width) solid var(--borderColor-brightBG)" }}
                 />
@@ -111,7 +111,7 @@ class C_SelectedView extends Component {
                   </div>
                   <div style={{ height: "38vh", background: "var(--bg-app)", overflowY: "scroll" }}>
                     {this.props.selectedCMS.p_keys.map((k) => (
-                      <C_KeyEntry cmsKey={k} />
+                      <CKeyEntry cmsKey={k} />
                     ))}
                   </div>
                 </div>
@@ -154,12 +154,12 @@ class C_SelectedView extends Component {
                     <line x1="6" y1="14" x2="14" y2="6" stroke="var(--bg-bright)" strokeWidth="2" />
                   </svg>
                 </div>
-                <C_Confirm ref={this.ref_Confirm_DeleteCMS} accept={() => this.deleteCMS()}>
+                <CConfirm ref={this.ref_Confirm_DeleteCMS} accept={() => this.deleteCMS()}>
                   You are about to erase this CMS. Click on <strong>"Accept"</strong> to continue this process.
-                </C_Confirm>
-                <C_Confirm ref={this.ref_Confirm_DuplicateCMS} accept={() => this.duplicateCMS()}>
+                </CConfirm>
+                <CConfirm ref={this.ref_Confirm_DuplicateCMS} accept={() => this.duplicateCMS()}>
                   You are about to duplicate this CMS. Click on <strong>"Accept"</strong> to continue this process.
-                </C_Confirm>
+                </CConfirm>
               </div>
             );
           }
@@ -169,4 +169,4 @@ class C_SelectedView extends Component {
   }
 }
 
-export default C_SelectedView;
+export default CSelectedView;

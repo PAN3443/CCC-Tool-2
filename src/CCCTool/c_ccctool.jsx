@@ -10,23 +10,23 @@
 
 // React
 import React, { Component } from "react";
-import { Navigate, Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route} from "react-router-dom";
 
 // Components
-import C_Confirm from "../Elements/c_confirm";
-import C_TextBox from "../Elements/c_textBox";
+import CConfirm from "../Elements/c_confirm";
+import CTextBox from "../Elements/c_textBox";
 
 // CCC-Tool Components
-import C_MyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
-import C_Edit from "./Pages/C_Edit/c_edit";
-import C_Export from "./Pages/C_Export/c_export";
-import C_TestSite from "./Pages/C_TestSite/c_testsite";
-import C_GenerateNew from "./Pages/C_GenerateNew/c_level0_generateNew";
+import CMyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
+import CEdit from "./Pages/C_Edit/c_edit";
+import CExport from "./Pages/C_Export/c_export";
+import CTestSite from "./Pages/C_TestSite/c_testsite";
+import CGenerateNew from "./Pages/C_GenerateNew/c_level0_generateNew";
 
 // Libs
 import { CMS } from "ccctool-lib/lib/cms/class_cms";
 
-class C_CCCTool extends Component {
+class CCCCTool extends Component {
   constructor() {
     super();
 
@@ -507,7 +507,7 @@ class C_CCCTool extends Component {
    *  Ouput       :
    *************************************************************************************************/
   handleExportSession = () => {
-    if (this.state.session.length == 0) {
+    if (this.state.session.length === 0) {
       //openAlert("The MyDesigns list is empty");
       this.handleOpenTextBox("WARNING", "Your MyDesigns list is empty. An export is not possible.");
       return;
@@ -681,6 +681,7 @@ class C_CCCTool extends Component {
         this.sessionUpdated = true;
         this.setState(this.uploadedSessionContent);
         break;
+      default:
     }
     this.uploadedSessionContent = undefined;
     this.uploadedSessioType = undefined;
@@ -747,15 +748,23 @@ class C_CCCTool extends Component {
    ******************************************** Render **********************************************
    **************************************************************************************************
    *************************************************************************************************/
+
+  test() {
+    alert(123);
+  }
+
+  test2() {
+    alert(6666);
+  }
+
   render() {
     return (
       <div className="App">
-        <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
         <Routes>
-          <Route
+        <Route
             path="/"
             element={
-              <C_MyDesigns
+              <CMyDesigns
                 handleSelectCMS={this.handleSelectCMS}
                 handleEraseSelectedCMS={this.handleEraseSelectedCMS}
                 handleDuplicateSelectedCMS={this.handleDuplicateSelectedCMS}
@@ -775,18 +784,22 @@ class C_CCCTool extends Component {
               />
             }
           />
-          <Route path="/edit" render={() => (this.isCMSSelected() ? <C_Edit selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
-          <Route path="/testsite" render={() => (this.isCMSSelected() ? <C_TestSite selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
-          <Route path="/export" render={() => (this.isCMSSelected() ? <C_Export handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
-          <Route path="/generate" element={<C_GenerateNew />}></Route>
+          <Route path="edit" render={() => (this.isCMSSelected() ? <CEdit selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
+          <Route path="testsite" render={() => (this.isCMSSelected() ? <CTestSite selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
+          <Route path="export" render={() => (this.isCMSSelected() ? <CExport handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} /> : <Navigate to="/" />)} />
+          <Route path="generate" element={<CGenerateNew />}></Route>
         </Routes>
-        <C_Confirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
+
+        <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
+        
+
+        <CConfirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
           You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
-        </C_Confirm>
-        <C_TextBox ref={this.ref_WarningBox} warnText="Warning Text"></C_TextBox>
+        </CConfirm>
+        <CTextBox ref={this.ref_WarningBox} warnText="Warning Text"></CTextBox>
       </div>
     );
   }
 }
 
-export default C_CCCTool;
+export default CCCCTool;

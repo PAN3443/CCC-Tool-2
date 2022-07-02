@@ -11,12 +11,9 @@
 import React, { Component } from "react";
 import "./myDesigns.css";
 
-import F_KeyRendering from "../../Elements/f_keyRendering";
+import FKeyRendering from "../../Elements/f_keyRendering";
 
-class C_KeyEntry extends Component {
-  constructor() {
-    super();
-  }
+class CKeyEntry extends Component {
 
   keyRender() {
     let keyInput = [];
@@ -48,6 +45,7 @@ class C_KeyEntry extends Component {
       case "dual":
         backgroundColor = this.props.cmsKey.getCL().getRGBString(false);
         break;
+      default:
     }
 
     return React.createElement(
@@ -96,7 +94,7 @@ class C_KeyEntry extends Component {
           {this.props.cmsKey.getRef()}
         </p>
 
-        <F_KeyRendering cmsKey={this.props.cmsKey} />
+        <FKeyRendering cmsKey={this.props.cmsKey} />
 
         <p title={this.props.cmsKey.getType()} style={{ margin: "auto 0vw", width: "20%", overflow: "hidden" }}>
           {this.props.cmsKey.getType()}
@@ -106,6 +104,6 @@ class C_KeyEntry extends Component {
   }
 }
 
-export default C_KeyEntry;
+export default CKeyEntry;
 
 //{this.keyRender()}

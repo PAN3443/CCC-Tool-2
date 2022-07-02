@@ -1,6 +1,6 @@
 import React from "react";
 
-function F_KeyRendering(props) {
+function FKeyRendering(props) {
   let keyInput = [];
   let backgroundColor = "none";
 
@@ -35,6 +35,7 @@ function F_KeyRendering(props) {
     case "dual":
       backgroundColor = props.cmsKey.getCL().getRGBString(false);
       break;
+    default:
   }
 
   return React.createElement(
@@ -76,4 +77,4 @@ function getNilKeySVG(doHalf, doMarginLeft) {
   );
 }
 
-export default F_KeyRendering;
+export default FKeyRendering;

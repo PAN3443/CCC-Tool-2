@@ -11,8 +11,8 @@
 import React, { Component } from "react";
 
 // Components
-import C_Header from "../../../Elements/c_header";
-import C_CMSRendering from "../../../Elements/c_cmsRendering";
+import CHeader from "../../../Elements/c_header";
+import CCMSRendering from "../../../Elements/c_cmsRendering";
 
 // Style
 import "./export.css";
@@ -170,7 +170,7 @@ class C_Export extends Component {
   render() {
     return (
       <div style={{ height: "100vh", width: "100vw" }}>
-        <C_Header style={{ height: "8vh", width: "100vw" }}>
+        <CHeader style={{ height: "8vh", width: "100vw" }}>
           <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
           <h2
             style={{
@@ -182,7 +182,7 @@ class C_Export extends Component {
           >
             Export
           </h2>
-        </C_Header>
+        </CHeader>
 
         <div className="cl_row cl_marginTB_0_5" style={{ height: "80vh", width: "100vw" }}>
           <div style={{ overflow: "hidden", margin: "auto", width: "25vw", height: "70vh", borderRadius: "var(--border-radius)", background: "var(--bg-bright-alpha-75)", border: "var(--border-width) solid var(--borderColor-brightBG)" }}>
@@ -275,7 +275,7 @@ class C_Export extends Component {
         </div>
 
         <div className="cl_row" style={{ marginTop: "auto" }}>
-          <C_CMSRendering selectedCMS={this.props.selectedCMS} style={{ width: "86vw", height: "6vh", margin: "3vh 2vw", border: "var(--border-width) solid var(--borderColor-brightBG)", borderRadius: "var(--border-radius)" }} />
+          <CCMSRendering selectedCMS={this.props.selectedCMS} style={{ width: "86vw", height: "6vh", margin: "3vh 2vw", border: "var(--border-width) solid var(--borderColor-brightBG)", borderRadius: "var(--border-radius)" }} />
 
           <svg
             title="Download"

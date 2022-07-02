@@ -12,18 +12,18 @@
 import React, { Component } from "react";
 
 // Components
-import C_Header from "../../../Elements/c_header";
-import C_Confirm from "../../../Elements/c_confirm";
-import C_Menu from "../../../Elements/c_menu";
-import C_CMSView from "./c_level1_cmsView";
-import C_CMSGroup from "./c_level1_cmsGroup";
-import C_SelectedView from "./c_level1_selectedView";
-import F_NavigateButton from "../../../Elements/f_navigateButton";
+import CHeader from "../../../Elements/c_header";
+import CConfirm from "../../../Elements/c_confirm";
+import CMenu from "../../../Elements/c_menu";
+import CCMSView from "./c_level1_cmsView";
+import CCMSGroup from "./c_level1_cmsGroup";
+import CSelectedView from "./c_level1_selectedView";
+import FNavigateButton from "../../../Elements/f_navigateButton";
 
 // Libs
 //import { CMS } from "ccctool-lib/lib/cms/class_cms";
 
-class C_MyDesigns extends Component {
+class CMyDesigns extends Component {
   constructor() {
     super();
     this.ref_Confirm_LogOut = React.createRef();
@@ -70,11 +70,11 @@ class C_MyDesigns extends Component {
   render() {
     return (
       <div>
-        <C_Header style={{ height: "8vh", width: "100vw" }}>
-          <F_NavigateButton navURL="/">
+        <CHeader style={{ height: "8vh", width: "100vw" }}>
+          <FNavigateButton navURL="/">
             <div style={{ height: "1vh" }}></div>
             <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
-          </F_NavigateButton>
+          </FNavigateButton>
           <h2
             style={{
               color: "var(--font-color-darkBG)",
@@ -85,7 +85,7 @@ class C_MyDesigns extends Component {
           >
             MyDesigns
           </h2>
-          <F_NavigateButton navURL="/">
+          <FNavigateButton navURL="/">
             <div style={{ height: "1vh" }}></div>
             <svg
               // title="logout"
@@ -98,10 +98,10 @@ class C_MyDesigns extends Component {
               <line x1="10" y1="3" x2="10" y2="17" />
               <line x1="2" y1="10" x2="10" y2="10" />
             </svg>
-          </F_NavigateButton>
-        </C_Header>
+          </FNavigateButton>
+        </CHeader>
         <div style={{ height: "92vh", width: "100vw", flexDirection: "row" }}>
-          <C_SelectedView
+          <CSelectedView
             handleEraseSelectedCMS={this.props.handleEraseSelectedCMS.bind(this)}
             handleDuplicateSelectedCMS={this.props.handleDuplicateSelectedCMS.bind(this)}
             filterIsOpen={this.state.filterIsOpen}
@@ -109,13 +109,13 @@ class C_MyDesigns extends Component {
             filter={this.props.filter}
             selectedCMS={this.props.selectedCMS}
             style={{ height: "92vh", maxHeight: "92vh", width: "20vw", background: "var(--bg-dark-alpha-5)" }}
-          ></C_SelectedView>
+          ></CSelectedView>
           <div style={{ height: "92vh", width: "80vw" }}>
             <div style={{ height: "82vh", maxHeight: "82vh" }}>
               <div className="cl_row" style={{ height: "fit-content", width: "80vw", paddingTop: "5vh", paddingBottom: "5vh", overflowY: "auto" }}>
                 {this.props.filteredIndices.map((filteredObj) =>
                   filteredObj[0] ? (
-                    <C_CMSGroup
+                    <CCMSGroup
                       key={"id_cmsG_" + filteredObj[1]}
                       handleSelectCMS={this.props.handleSelectCMS.bind(this)}
                       selectedCMSObjIndex={this.props.selectedCMSObjIndex}
@@ -127,7 +127,7 @@ class C_MyDesigns extends Component {
                       handleGetSessionCMSImg={this.props.handleGetSessionCMSImg.bind(this)}
                     />
                   ) : (
-                    <C_CMSView
+                    <CCMSView
                       key={"id_cmsV_" + filteredObj[1] + "_" + filteredObj[2]}
                       handleSelectCMS={this.props.handleSelectCMS.bind(this)}
                       selectedCMSObjIndex={this.props.selectedCMSObjIndex}
@@ -159,10 +159,13 @@ class C_MyDesigns extends Component {
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
-              <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <line x1="2" y1="10" x2="18" y2="10" />
-                <line x1="10" y1="2" x2="10" y2="18" />
-              </svg>
+              <FNavigateButton navURL="/tool/generate">
+                <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <line x1="2" y1="10" x2="18" y2="10" />
+                  <line x1="10" y1="2" x2="10" y2="18" />
+                </svg>
+              </FNavigateButton>
+
               <svg title="Upload" className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleImportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <polyline points="6 9 10 5 14 9" />
                 <line x1="10" y1="7" x2="10" y2="18" />
@@ -193,14 +196,14 @@ class C_MyDesigns extends Component {
             </div>
           </div>
         </div>
-        <C_Confirm ref={this.ref_Confirm_LogOut} accept={() => this.props.logout()}>
+        <CConfirm ref={this.ref_Confirm_LogOut} accept={() => this.props.logout()}>
           You are about to log out. All locale storage from the MyDesigns section will be deleted. In case of a guest login the data is irrevocably gone. Make sure that you have saved all data in a session file. Click on <strong>"Accept"</strong> to
           continue the log out process.
-        </C_Confirm>
-        <C_Confirm ref={this.ref_Confirm_ClearSession} accept={() => this.props.handleClearSession()}>
+        </CConfirm>
+        <CConfirm ref={this.ref_Confirm_ClearSession} accept={() => this.props.handleClearSession()}>
           You are about to clear this session. All data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the process.
-        </C_Confirm>
-        <C_Menu ref={this.ref_Menu} handleRefreshTabInfo={this.props.handleRefreshTabInfo.bind(this)}>
+        </CConfirm>
+        <CMenu ref={this.ref_Menu} handleRefreshTabInfo={this.props.handleRefreshTabInfo.bind(this)}>
           <button className="cl_button_Bright" style={{ width: "20vw", margin: "1vh auto", display: "none" }} disabled>
             Account Settings
           </button>
@@ -217,10 +220,10 @@ class C_MyDesigns extends Component {
           >
             Clear Session
           </button>
-        </C_Menu>
+        </CMenu>
       </div>
     );
   }
 }
 
-export default C_MyDesigns;
+export default CMyDesigns;

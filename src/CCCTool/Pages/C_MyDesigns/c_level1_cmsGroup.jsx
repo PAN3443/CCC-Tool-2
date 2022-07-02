@@ -9,17 +9,11 @@
 //////////////////////////////////////////////
 
 import React, { Component } from "react";
-import C_CMSView from "./c_level1_cmsView";
+import CCMSView from "./c_level1_cmsView";
 import "./myDesigns.css";
 
-class C_CMSGroup extends Component {
+class CCMSGroup extends Component {
   state = {};
-
-  // State -> Sessional Storage we need to react depending on the sessional data
-
-  constructor() {
-    super();
-  }
 
   render() {
     return (
@@ -45,7 +39,7 @@ class C_CMSGroup extends Component {
 
         <div className="cl_CMSGroup_Div cl_row">
           {this.props.groupIndices.map((filteredIndex) => (
-            <C_CMSView
+            <CCMSView
               key={"id_cmsV_" + this.props.cmsObjID + "_" + filteredIndex}
               selectedCMSObjIndex={this.props.selectedCMSObjIndex}
               selectedCMSIndex={this.props.selectedCMSIndex}
@@ -62,4 +56,4 @@ class C_CMSGroup extends Component {
   }
 }
 
-export default C_CMSGroup;
+export default CCMSGroup;

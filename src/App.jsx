@@ -11,33 +11,39 @@
 // React
 import React from "react";
 
-import { Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, useRoutes } from "react-router-dom";
 //import { withRouter } from "react-router-dom";
 //import { j } from "react-router";
 
 // Components
-import C_CCCTool from "./CCCTool/c_ccctool";
-import C_Opening from "./Pages/Opening/c_level0_opening";
-import C_Contact from "./Pages/Contact/c_level0_contact";
-import C_GitInfo from "./Pages/GitInfo/c_level0_gitinfo";
-import C_About from "./Pages/About/c_level0_about";
+import CCCCTool from "./CCCTool/c_ccctool";
+import CHome from "./Pages/Home/c_level0_home";
+import CContact from "./Pages/Contact/c_level0_contact";
+import CGitInfo from "./Pages/GitInfo/c_level0_gitinfo";
+import CAbout from "./Pages/About/c_level0_about";
+import CError404 from "./Pages/Error/c_level0_error404";
 
 // Style
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App" style={{ width: "100vw", height: "100vh" }}>
-      <Routes>
-        <Route path="/" element={<C_Opening />} />
-        <Route path="/git" element={<C_GitInfo />}></Route>
-        <Route path="/contact" element={<C_Contact />}></Route>
-        <Route path="/about" element={<C_About />}></Route>
-        <Route path="/tool" element={<C_CCCTool />}></Route>
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-    </div>
-  );
+const App = () => {
+  const routes = useRoutes([
+      { path: '/', element: <CHome /> },
+      { path: 'tool/*', element: <CCCCTool /> },
+      { path: 'git', element: <CGitInfo /> },
+      { path: 'contact', element: <CContact /> },
+      { path: 'about', element: <CAbout /> },
+      { path: '*', element: <CError404 /> }
+  ]);
+  return routes;
 }
 
-export default App;
+const AppWrapper = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+};
+
+export default AppWrapper;

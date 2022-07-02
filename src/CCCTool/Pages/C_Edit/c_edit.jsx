@@ -9,12 +9,12 @@
 //////////////////////////////////////////////
 import React, { Component } from "react";
 
-import C_CCCEdit from "./C_Edit_CCC/c_level0_edit_ccc";
+import CCCCEdit from "./C_Edit_CCC/c_level0_edit_ccc";
 
 // Libs
 import { CMS } from "ccctool-lib/lib/cms/class_cms";
 
-class C_Edit extends Component {
+class CEdit extends Component {
   state = {};
 
   render() {
@@ -23,7 +23,7 @@ class C_Edit extends Component {
         {(() => {
           switch (true) {
             case this.props.selectedCMS instanceof CMS:
-              return <C_CCCEdit></C_CCCEdit>;
+              return <CCCCEdit></CCCCEdit>;
             default:
               return <p>Error (CMS Undefined Type)</p>;
           }
@@ -33,4 +33,4 @@ class C_Edit extends Component {
   }
 }
 
-export default C_Edit;
+export default CEdit;

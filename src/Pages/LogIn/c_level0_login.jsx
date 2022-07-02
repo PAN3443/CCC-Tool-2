@@ -8,11 +8,11 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import C_PixelAnimation from "../../ParticleAnimation/c_particleAnimation";
+import CPixelAnimation from "../../ParticleAnimation/c_particleAnimation";
 import "../../Style/CSS/filter.css";
 import { Link } from "react-router-dom";
 
-class C_LogIn extends Component {
+class CLogIn extends Component {
   constructor() {
     super();
     this.emailInputRef = React.createRef();
@@ -25,7 +25,7 @@ class C_LogIn extends Component {
     return (
       <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
         <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark)", zIndex: "0", top: "0px", left: "0px" }}></div>
-        <C_PixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></C_PixelAnimation>
+        <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
         <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
           <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
           <h1
@@ -130,4 +130,4 @@ class C_LogIn extends Component {
   }
 }
 
-export default C_LogIn;
+export default CLogIn;

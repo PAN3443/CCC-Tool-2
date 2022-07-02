@@ -1,18 +1,10 @@
 import React, { Component } from "react";
 import "../Style/CSS/filter.css";
 
-class C_Menu extends Component {
+class CMenu extends Component {
   state = {
     display: "none",
   };
-
-  constructor() {
-    super();
-  }
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
 
   render() {
     return (
@@ -26,7 +18,6 @@ class C_Menu extends Component {
           top: "0px",
           left: "0px",
           bottom: "0px",
-          position: "fixed",
           zIndex: "100",
           background: "var(--bg-dark-alpha-50)",
         }}
@@ -58,4 +49,4 @@ class C_Menu extends Component {
   };
 }
 
-export default C_Menu;
+export default CMenu;

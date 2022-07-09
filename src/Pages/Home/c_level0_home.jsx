@@ -9,7 +9,7 @@
 //////////////////////////////////////////////
 import React, { Component } from "react";
 import CPixelAnimation from "../../ParticleAnimation/c_particleAnimation";
-import FNavigateButton from "../../Elements/f_navigateButton";
+import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 import "../../Style/CSS/filter.css";
 
 import "./home.css";
@@ -45,7 +45,7 @@ class CHome extends Component {
           </h1>
         </div>
         <div className="cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "70vh", width: "100vw", zIndex: "2", top: "25vh", left: "0px", overflow: "auto" }}>
-          <div className="cl_OpeningText_Div cl_blur">
+          <div className="cl_HomeText_Div cl_blur">
             <p className="cl_bigText" style={{ marginBottom: "1vh", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}>
               Welcome
             </p>
@@ -53,16 +53,21 @@ class CHome extends Component {
 
           <div className="cl_row" style={{ width: "86vw", margin: "1vh auto" }}>
             <FNavigateButton navURL="/tool" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_OpeningSelect_Div cl_blur">CCC-Tool</div>
+              <div className="cl_HomeSelect_Div cl_blur">
+                CCC-Tool
+              </div>
+            </FNavigateButton>
+            <FNavigateButton navURL="/theme" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+              <div className="cl_HomeSelect_Div cl_blur">Theme</div>
             </FNavigateButton>
             <FNavigateButton navURL="/about" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_OpeningSelect_Div cl_blur">About</div>
+              <div className="cl_HomeSelect_Div cl_blur">About</div>
             </FNavigateButton>
             <FNavigateButton navURL="/contact" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_OpeningSelect_Div cl_blur">Contact</div>
+              <div className="cl_HomeSelect_Div cl_blur">Contact</div>
             </FNavigateButton>
             <FNavigateButton navURL="/git" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_OpeningSelect_Div cl_blur">Git</div>
+              <div className="cl_HomeSelect_Div cl_blur">Git</div>
             </FNavigateButton>
           </div>
         </div>
@@ -88,7 +93,7 @@ class CHome extends Component {
         
       </div>
     );
-  } //backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/Background/whitePaper.png)", backgroundRepeat: "repeat",
+  } 
 
   particleStop = () => {
     const pAni = this.particleAni.current;

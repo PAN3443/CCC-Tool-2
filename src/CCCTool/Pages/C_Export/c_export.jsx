@@ -12,7 +12,7 @@ import React, { Component } from "react";
 
 // Components
 import CHeader from "../../../Elements/c_header";
-import CCMSRendering from "../../../Elements/c_cmsRendering";
+import CCMSRendering from "../../../Elements/ColorRelated/c_cmsRendering";
 
 // Style
 import "./export.css";

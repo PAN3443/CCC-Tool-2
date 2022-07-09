@@ -11,7 +11,7 @@ import React, { Component } from "react";
 import CHeader from "../../Elements/c_header";
 import CPerson from "./c_level1_person";
 import CAffiliation from "./c_level1_affiliation";
-import FNavigateButton from "../../Elements/f_navigateButton";
+import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 
 class CContact extends Component {
   state = {

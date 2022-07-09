@@ -13,12 +13,11 @@ import React, { Component } from "react";
 
 // Components
 import CHeader from "../../../Elements/c_header";
-import CConfirm from "../../../Elements/c_confirm";
-import CMenu from "../../../Elements/c_menu";
+import CConfirm from "../../../Elements/PopUps/c_confirm";
 import CCMSView from "./c_level1_cmsView";
 import CCMSGroup from "./c_level1_cmsGroup";
 import CSelectedView from "./c_level1_selectedView";
-import FNavigateButton from "../../../Elements/f_navigateButton";
+import FNavigateButton from "../../../Elements/Functionality/f_navigateButton";
 
 // Libs
 //import { CMS } from "ccctool-lib/lib/cms/class_cms";
@@ -29,28 +28,13 @@ class CMyDesigns extends Component {
     this.ref_Confirm_LogOut = React.createRef();
     this.ref_CMS_Container = React.createRef();
     this.ref_Confirm_ClearSession = React.createRef();
-    this.ref_Menu = React.createRef();
 
     this.state = {
       filterIsOpen: false,
     };
   }
 
-  /*componentDidMount() {
-    document.addEventListener("keydown", this.keyCheck);
-  }
 
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.keyCheck);
-  }
-
-  keyCheck = (e) => {
-    if (e.key === "Escape" && !(e.ctrlKey || e.altKey || e.shiftKey)) {
-      let elem_Menu = this.ref_Menu.current;
-      if (elem_Menu.state.display === "none") this.ref_Menu.current.open();
-      else this.ref_Menu.current.close();
-    }
-  };
 
   /**************************************************************************************************
    *  Function    : open_filer
@@ -140,18 +124,6 @@ class CMyDesigns extends Component {
               </div>
             </div>
             <div className="cl_row" style={{ height: "10vh", width: "100%", background: "var(--bg-dark-alpha-5)" }}>
-              <svg
-                title="Menu"
-                className="cl_Icon_F_BrightBG cl_Icon_F"
-                onClick={() => this.ref_Menu.current.open()}
-                style={{ height: "5vh", width: "5vh", margin: "auto 1vw", marginLeft: "2vw" }}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <circle cx="5" cy="10" r="2" />
-                <circle cx="10" cy="10" r="2" />
-                <circle cx="15" cy="10" r="2" />
-              </svg>
 
               <svg title="Save" className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleExportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
@@ -201,24 +173,6 @@ class CMyDesigns extends Component {
         <CConfirm ref={this.ref_Confirm_ClearSession} accept={() => this.props.handleClearSession()}>
           You are about to clear this session. All data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the process.
         </CConfirm>
-        <CMenu ref={this.ref_Menu} handleRefreshTabInfo={this.props.handleRefreshTabInfo.bind(this)}>
-          <button className="cl_button_Bright" style={{ width: "20vw", margin: "1vh auto", display: "none" }} disabled>
-            Account Settings
-          </button>
-          <button className="cl_button_Bright" style={{ width: "20vw", margin: "1vh auto", display: "none" }} disabled>
-            Color Settings
-          </button>
-          <button
-            className="cl_button_Bright"
-            onClick={() => {
-              this.ref_Menu.current.close();
-              this.ref_Confirm_ClearSession.current.activate();
-            }}
-            style={{ width: "20vw", margin: "1vh auto" }}
-          >
-            Clear Session
-          </button>
-        </CMenu>
       </div>
     );
   }

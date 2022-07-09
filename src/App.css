@@ -295,7 +295,7 @@ input {
   line-height: var(--line-height-normal);
 }
 
-input:focus,
+/*input:focus,
 input:focus:hover {
   outline: none;
   border-color: var(--borderColor-active);
@@ -304,7 +304,12 @@ input:focus:hover {
 
 input:hover {
   box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
-}
+}*/
+
+/*input[type="range"][orient="vertical"] {
+  writing-mode: bt-lr; /* IE * /
+  -webkit-appearance: slider-vertical; /* Chromium * /
+}*/
 
 /*input[type="checkbox"] {
   height: var(--font-size-normal);

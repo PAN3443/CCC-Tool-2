@@ -9,7 +9,7 @@
 //////////////////////////////////////////////
 import React, { Component } from "react";
 import CHeader from "../../Elements/c_header";
-import FNavigateButton from "../../Elements/f_navigateButton";
+import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 
 class CAbout extends Component {
   state = {};

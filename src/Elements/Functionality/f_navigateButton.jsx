@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../Style/CSS/filter.css";
+import "../../Style/CSS/filter.css";
 
 function FNavigateButton(props) {
   let navigate = useNavigate();

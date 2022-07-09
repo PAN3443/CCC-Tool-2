@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Style/CSS/filter.css";
+import "../../Style/CSS/filter.css";
 
 class CTextBox extends Component {
   state = {

@@ -12,10 +12,10 @@
 // React
 import React, { Component } from "react";
 // Components
-import CConfirm from "../../../Elements/c_confirm";
-import CCMSRendering from "../../../Elements/c_cmsRendering";
+import CConfirm from "../../../Elements/PopUps/c_confirm";
+import CCMSRendering from "../../../Elements/ColorRelated/c_cmsRendering";
 import CKeyEntry from "./c_level2_keyEntry";
-import FNavigateButton from "../../../Elements/f_navigateButton";
+import FNavigateButton from "../../../Elements/Functionality/f_navigateButton";
 // Functions
 import { helper_dateToString } from "../../../Helpers/other";
 // style
@@ -128,8 +128,8 @@ class CSelectedView extends Component {
                         <polygon points="8,14 10,17 12,14" fill="var(--bg-bright)" />
                       </svg>
                   </FNavigateButton>
-                  <FNavigateButton navURL="/tool/export" style={{ margin: "auto" }}>
-                    <svg className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <FNavigateButton navURL="/tool/export" style={{ margin: "auto", marginLeft: "0px" }}>
+                    <svg className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <title>Export</title>
                       <circle cx="10" cy="10" r="9"></circle>
                       <polyline points="7 12 10 15 13 12" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

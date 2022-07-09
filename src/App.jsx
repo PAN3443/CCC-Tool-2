@@ -23,6 +23,7 @@ import CGitInfo from "./Pages/GitInfo/c_level0_gitinfo";
 import CAbout from "./Pages/About/c_level0_about";
 import CImpressum from "./Pages/Impressum/c_level0_impressum";
 import CError404 from "./Pages/Error/c_level0_error404";
+import CTheme from "./Pages/Theme/c_level0_theme.jsx"
 
 // Style
 import "./App.css";
@@ -35,6 +36,7 @@ const App = () => {
       { path: 'contact', element: <CContact /> },
       { path: 'about', element: <CAbout /> },
       { path: 'impressum', element: <CImpressum /> },
+      { path: 'theme', element: <CTheme /> },
       { path: '*', element: <CError404 /> }
   ]);
   return routes;

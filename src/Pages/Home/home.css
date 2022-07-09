@@ -1,17 +1,26 @@
-.cl_OpeningSelect_Div {
+.cl_HomeSelect_Div {
   width: 24vw;
+  height: 20vh;
+  line-height: 20vh;
   pointer-events: auto;
   cursor: pointer;
   margin-top: 1vh;
   margin-bottom: 1vh;
   margin-left: 4vw;
-  padding: 5vh 4vw;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--borderColor-light-brightBG);
   background: var(--bg-bright-alpha-75);
+  font-size: var(--font-size-big);
+  
+  text-align: center;
+  font-weight: bold;
 }
 
-.cl_OpeningText_Div {
+.cl_HomeSelect_Div:hover {
+  scale: 1.05;
+}
+
+.cl_HomeText_Div {
   width: 86vw;
   pointer-events: auto;
   margin: 3vh auto;
@@ -19,4 +28,5 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--borderColor-light-brightBG);
   background: var(--bg-bright);
+  
 }

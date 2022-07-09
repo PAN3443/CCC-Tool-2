@@ -13,8 +13,8 @@ import React, { Component } from "react";
 import { Navigate, Routes, Route} from "react-router-dom";
 
 // Components
-import CConfirm from "../Elements/c_confirm";
-import CTextBox from "../Elements/c_textBox";
+import CConfirm from "../Elements/PopUps/c_confirm";
+import CTextBox from "../Elements/PopUps/c_textBox";
 
 // CCC-Tool Components
 import CMyDesigns from "./Pages/C_MyDesigns/c_level0_mydesigns";
@@ -748,14 +748,6 @@ class CCCCTool extends Component {
    ******************************************** Render **********************************************
    **************************************************************************************************
    *************************************************************************************************/
-
-  test() {
-    alert(123);
-  }
-
-  test2() {
-    alert(6666);
-  }
 
   render() {
     return (

@@ -10,6 +10,7 @@
 
 import React, { Component } from "react";
 import CHeader from "../../../Elements/c_header";
+import FNavigateButton from "../../../Elements/f_navigateButton";
 
 class C_GenerateNew extends Component {
 
@@ -17,12 +18,9 @@ class C_GenerateNew extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <img
-            onClick={() => this.props.handleGo2Page("/about")}
-            src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
-            alt="CCC-Tool Logo"
-            style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
-          ></img>
+        <FNavigateButton navURL="/" style={{margin: "auto", marginRight: "5vw"}}>
+                <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
+              </FNavigateButton>
           <h1
             style={{
               maxHeight: "25vh",
@@ -33,9 +31,7 @@ class C_GenerateNew extends Component {
             Add New CMS
           </h1>
         </CHeader>
-        <div style={{ height: "75vh", width: "100vw" }}>
-          <button onClick={this.props.test()}>Hello</button>
-        </div>
+
       </div>
     );
   }

@@ -21,6 +21,7 @@ import CHome from "./Pages/Home/c_level0_home";
 import CContact from "./Pages/Contact/c_level0_contact";
 import CGitInfo from "./Pages/GitInfo/c_level0_gitinfo";
 import CAbout from "./Pages/About/c_level0_about";
+import CImpressum from "./Pages/Impressum/c_level0_impressum";
 import CError404 from "./Pages/Error/c_level0_error404";
 
 // Style
@@ -33,10 +34,13 @@ const App = () => {
       { path: 'git', element: <CGitInfo /> },
       { path: 'contact', element: <CContact /> },
       { path: 'about', element: <CAbout /> },
+      { path: 'impressum', element: <CImpressum /> },
       { path: '*', element: <CError404 /> }
   ]);
   return routes;
 }
+
+
 
 const AppWrapper = () => {
   return (

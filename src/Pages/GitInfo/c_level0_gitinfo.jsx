@@ -16,18 +16,18 @@ class CGitInfo extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <FNavigateButton navURL="/">
-            <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-              <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
+            <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+              <FNavigateButton navURL="/" style={{margin: "auto", marginRight: "5vw"}}>
+                <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
+              </FNavigateButton>
               <h1
                 style={{
                   maxHeight: "25vh",
-                  marginLeft: "0vw",
+                  margin: "auto 0vw",
                   cursor: "default",
                 }}
               >
-                The CCC-Tool <br></br>
-                Double Open Source
+                Open Source
               </h1>
               <svg style={{ height: "20vh", margin: "auto", marginLeft: "5vw", fill: "var(--bg-bright)" }} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
                 <path
@@ -36,7 +36,6 @@ class CGitInfo extends Component {
                 ></path>
               </svg>
             </div>
-          </FNavigateButton>
         </CHeader>
         <div style={{ width: "100vw", height: "75vh", background: "var(--bg-dark-alpha-5)" }}>
           <p style={{ color: "var(--borderColor-brightBG)", width: "fit-content", maxWidth: "50%", margin: "auto" }}>This Page is not implemented so far.</p>

@@ -4,7 +4,7 @@ import "../Style/CSS/filter.css";
 function FNavigateButton(props) {
   let navigate = useNavigate();
   return (
-    <div
+    <div style={{...props.style, ...{cursor:"pointer", pointerEvents:"auto"}}}
       onClick={() => {
         if (props.navURL != null) {
           navigate(props.navURL);

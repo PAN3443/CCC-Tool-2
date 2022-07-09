@@ -89,7 +89,7 @@ class CKeyEntry extends Component {
 
   render() {
     return (
-      <div className="cl_row" style={{ width: "100%", minHeight: "3vh", margin: "1vh auto", overflow: "hidden" }}>
+      <div key={this.props.key} className="cl_row" style={{ width: "100%", minHeight: "3vh", margin: "1vh auto", overflow: "hidden" }}>
         <p title={this.props.cmsKey.getRef()} style={{ margin: "auto 0vw", marginLeft: "1vw", width: "40%", overflow: "hidden" }}>
           {this.props.cmsKey.getRef()}
         </p>

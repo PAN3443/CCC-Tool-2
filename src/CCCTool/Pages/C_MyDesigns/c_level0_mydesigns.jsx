@@ -71,9 +71,8 @@ class CMyDesigns extends Component {
     return (
       <div>
         <CHeader style={{ height: "8vh", width: "100vw" }}>
-          <FNavigateButton navURL="/">
-            <div style={{ height: "1vh" }}></div>
-            <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
+          <FNavigateButton navURL="/" style={{margin: "auto", marginLeft: "5vw", marginRight: "2vw"}}>
+            <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh",  cursor: "pointer" }}></img>
           </FNavigateButton>
           <h2
             style={{
@@ -85,12 +84,11 @@ class CMyDesigns extends Component {
           >
             MyDesigns
           </h2>
-          <FNavigateButton navURL="/">
-            <div style={{ height: "1vh" }}></div>
+          <FNavigateButton navURL="/" style={{ margin: "auto 2vw" }}>
             <svg
               // title="logout"
               className="cl_Icon_S_DarkBG cl_Icon_S"
-              style={{ height: "5vh", width: "5vh", margin: "auto 2vw", strokeWidth: "2" }}
+              style={{ height: "5vh", width: "5vh", strokeWidth: "2" }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -159,8 +157,8 @@ class CMyDesigns extends Component {
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
-              <FNavigateButton navURL="/tool/generate">
-                <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <FNavigateButton navURL="/tool/generate" style={{ margin: "auto 1vw" }}>
+                <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <line x1="2" y1="10" x2="18" y2="10" />
                   <line x1="10" y1="2" x2="10" y2="18" />
                 </svg>

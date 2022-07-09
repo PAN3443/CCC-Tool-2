@@ -15,6 +15,7 @@ import React, { Component } from "react";
 import CConfirm from "../../../Elements/c_confirm";
 import CCMSRendering from "../../../Elements/c_cmsRendering";
 import CKeyEntry from "./c_level2_keyEntry";
+import FNavigateButton from "../../../Elements/f_navigateButton";
 // Functions
 import { helper_dateToString } from "../../../Helpers/other";
 // style
@@ -110,45 +111,51 @@ class CSelectedView extends Component {
                     <h4 style={{ margin: "auto 0vw", width: "50%", overflow: "hidden", color: "var(--font-color-darkBG)" }}>Key</h4>
                   </div>
                   <div style={{ height: "38vh", background: "var(--bg-app)", overflowY: "scroll" }}>
-                    {this.props.selectedCMS.p_keys.map((k) => (
-                      <CKeyEntry cmsKey={k} />
+                    {this.props.selectedCMS.p_keys.map((k,index) => (
+                      <CKeyEntry key={"selectedCMS_key_"+index} cmsKey={k} />
                     ))}
                   </div>
                 </div>
 
                 <div className="cl_row" style={{ height: "10vh", width: "100%", marginTop: "auto" }}>
-                  <svg title="Edit" className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <circle cx="10" cy="10" r="9"></circle>
-                    <line x1="10" y1="6" x2="10" y2="14" stroke="var(--bg-bright)" strokeWidth="4" strokeLinecap="round" />
-                    <rect x="4" y="6" width="10" height="1" />
-                    <rect x="4" y="13" width="10" height="4" />
-                    <polygon points="8,14 10,17 12,14" fill="var(--bg-bright)" />
-                  </svg>
-                  <svg title="Download" className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <circle cx="10" cy="10" r="9"></circle>
-                    <polyline points="7 12 10 15 13 12" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <line x1="6" y1="6.5" x2="14" y2="6.5" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />
-                    <line x1="10" y1="7.5" x2="10" y2="13" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
+                  <FNavigateButton navURL="/tool/edit" style={{ margin: "auto" }}>
+                    <svg className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <title>Edit</title>
+                        <circle cx="10" cy="10" r="9"></circle>
+                        <line x1="10" y1="6" x2="10" y2="14" stroke="var(--bg-bright)" strokeWidth="4" strokeLinecap="round" />
+                        <rect x="4" y="6" width="10" height="1" />
+                        <rect x="4" y="13" width="10" height="4" />
+                        <polygon points="8,14 10,17 12,14" fill="var(--bg-bright)" />
+                      </svg>
+                  </FNavigateButton>
+                  <FNavigateButton navURL="/tool/export" style={{ margin: "auto" }}>
+                    <svg className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <title>Export</title>
+                      <circle cx="10" cy="10" r="9"></circle>
+                      <polyline points="7 12 10 15 13 12" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <line x1="6" y1="6.5" x2="14" y2="6.5" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="10" y1="7.5" x2="10" y2="13" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />
+                    </svg>
+                  </FNavigateButton>
                   <svg
-                    title="Duplicate"
                     className="cl_Icon_F_BrightBG cl_Icon_F"
                     onClick={() => this.ref_Confirm_DuplicateCMS.current.activate()}
                     style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
+                    <title>Duplicate</title>
                     <circle cx="7" cy="10" r="7"></circle>
                     <circle cx="13" cy="10" r="7" opacity="0.3"></circle>
                   </svg>
                   <svg
-                    title="Delete"
                     className="cl_Icon_F_BrightBG cl_Icon_F"
                     onClick={() => this.ref_Confirm_DeleteCMS.current.activate()}
                     style={{ height: "5vh", width: "4vw", maxHeight: "4vw", maxWidth: "5vh", margin: "auto", marginLeft: "0px" }}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
+                    <title>Delete</title>
                     <circle cx="10" cy="10" r="9"></circle>
                     <line x1="6" y1="6" x2="14" y2="14" stroke="var(--bg-bright)" strokeWidth="2" />
                     <line x1="6" y1="14" x2="14" y2="6" stroke="var(--bg-bright)" strokeWidth="2" />

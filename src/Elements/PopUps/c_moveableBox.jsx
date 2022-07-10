@@ -43,7 +43,7 @@ class CMoveableBox extends Component {
           className="cl_row"
           style={{ padding: "1vh 2vw", background: "var(--bg-dark)", zIndex: "101", cursor: "move" }}
         >
-          <h3 style={{ margin: "auto", color: "var(--bg-bright)" }}>{this.props.header}</h3>
+          <h3 className="cl_notSelectable" style={{ margin: "auto", color: "var(--bg-bright)" }}>{this.props.header}</h3>
         </div>
         <div style={{ background: "white" }}>{this.props.children}</div>
       </div>

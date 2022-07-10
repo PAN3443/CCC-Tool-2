@@ -17,7 +17,7 @@ class CRadioCluser extends Component {
 
   activateRadioButton(_index) {
     this.setState({ index: _index });
-    this.props.handleActivation(this.props.elements[_index]);
+    this.props.handleActivation(_index);
   }
 
   getActiveIndex = () => {

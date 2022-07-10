@@ -18,8 +18,8 @@ import CMoveableBox from "../PopUps/c_moveableBox";
 
 class CColorpicker extends Component {
   state = {
-    colorspaces: ["rgb", "hsv", "lab", "DIN99"],
-    selectedColorspace: 0,
+    colorspaces: ["RGB", "HSV"],// "lab", "DIN99"],
+    variations: [],
     color: { space: "rgb", c1: 0, c2: 0, c3: 0 },
   };
 
@@ -27,13 +27,13 @@ class CColorpicker extends Component {
     super();
     this.colorObj = new Color();
     this.ref_Canvas = React.createRef();
-    this.ref_ColorRadioButtons = React.createRef();
+    this.ref_ColorspaceRadioButtons = React.createRef();
+    this.ref_VariationsRadioButtons = React.createRef();
   }
 
   componentDidMount() {
-    let selectedRadioButtonIndex = this.ref_ColorRadioButtons.current.getActiveIndex();
     this.colorObj.setColorJSON(this.state.color);
-    this.setState({ selectedColorspace: selectedRadioButtonIndex });
+    this.setState({ variations: this.getVariations(0) });
   }
 
   componentDidUpdate() {
@@ -54,25 +54,52 @@ class CColorpicker extends Component {
     }
   }
 
-  setColorspace(_colorspace) {
-    alert(_colorspace);
+  getVariations = (_colorspaceIndex) => {
+    switch(this.state.colorspaces[_colorspaceIndex]){
+      case 'RGB':
+        return ["R_GB","G_RB","B_RG"];
+      case 'HSV':
+        return ["H_SV","S_HV","V_HS"];
+      default:
+        return [];
+    }
+  }
+
+  setColorspace = (_colorspaceIndex) => {
+    console.log(this.getVariations(_colorspaceIndex));
+    this.setState({ variations: this.getVariations(_colorspaceIndex) });
+  }
+
+  setVariation(_colorvariation) {
+    //alert(_colorvariation);
   }
 
   render() {
     return (
+      <div style={{display: "flex", zIndex:"99", cursor: "not-allowed", width: "100%",
+      height: "100%",
+      position: "fixed",
+      top: "0px",
+      left: "0px",
+      bottom: "0px",
+      zIndex: "99"}}>
       <CMoveableBox header="Colorpicker">
-        <div className="cl_row" style={{ padding: "3.5vh 2vw", margin: "auto", zIndex: "100" }}>
+        <div className="cl_row" style={{ padding: "3.5vh 2vw", margin: "auto", cursor:"default" }}>
           <div>
             <canvas ref={this.ref_Canvas} style={{ height: "25vh", maxHeight: "15vw", width: "15vw", maxWidth: "25vh", border: "var(--border-width) solid var(--borderColor-brightBG)" }}></canvas>
             <input type="range" style={{ width: "15vw", maxWidth: "25vh" }} />
           </div>
 
-          <div className="cl_row" style={{ marginLeft: "1vw" }}>
-            <h3>Color</h3>
-            <CRadioCluser ref={this.ref_ColorRadioButtons} elements={this.state.colorspaces} handleActivation={this.setColorspace}></CRadioCluser>
+          <div style={{ marginLeft: "1vw" }}>
+            <h3>Space</h3>
+            <CRadioCluser ref={this.ref_ColorspaceRadioButtons} elements={this.state.colorspaces} handleActivation={this.setColorspace}></CRadioCluser>
+            <h3>Variations</h3>
+            <CRadioCluser ref={this.ref_VariationsRadioButtons} elements={this.state.variations} handleActivation={this.setVariation}></CRadioCluser>
           </div>
         </div>
       </CMoveableBox>
+      </div>
+      
     );
   }
 }

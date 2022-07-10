@@ -168,6 +168,15 @@ p {
   font-weight: bold;
 }
 
+.cl_notSelectable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .cl_textBlock {
   margin-top: 2.5vh;
   width: 100%;

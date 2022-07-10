@@ -21,7 +21,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: var(--bg-active);
+  background-color: var(--bg-hover);
 }
 
 li.dropdown {

@@ -29,6 +29,8 @@
   --bg-dark-gradient: rgb(59, 31, 31);
   --bg-bright-gradient: rgb(150, 150, 150);
 
+  --bg-hover: rgb(255, 167, 126); /*rgb(255, 51, 0);*/
+
   --bg-active: rgb(255, 106, 51); /*rgb(255, 51, 0);*/
 
   --bg-warning: rgb(255, 51, 51);
@@ -320,8 +322,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] label::after {
-  color: var(--bg-active);
-  background: var(--bg-active);
+  color: var(--bg-hover);
+  background: var(--bg-hover);
 }*/
 
 /* The cl_checkDiv */
@@ -373,13 +375,13 @@ input[type="checkbox"] label::after {
 
 /* When the checkbox is checked, add a blue background */
 .cl_checkDiv input:checked ~ .cl_checkSpan {
-  border: var(--border-width) solid var(--bg-active);
+  border: var(--border-width) solid var(--bg-hover);
   border-radius: var(--border-radius);
-  background-color: var(--bg-active);
+  background-color: var(--bg-hover);
 }
 
 .cl_checkDiv input:checked ~ .cl_checkSpan:hover {
-  border: var(--border-width-bold) solid var(--bg-active);
+  border: var(--border-width-bold) solid var(--bg-hover);
   box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
 }
 
@@ -506,12 +508,12 @@ button {
 
 button:hover {
   border: none; /*var(--border-width) solid var(--borderColor-active);*/
-  background-color: var(--bg-active);
+  background-color: var(--bg-hover);
 }
 
 .cl_button_Bright:hover {
   border: var(--border-width) solid var(--borderColor-active);
-  background-color: var(--bg-active);
+  background-color: var(--bg-hover);
   color: var(--font-color-darkBG);
 }
 
@@ -537,7 +539,7 @@ button[disabled] {
 
 .cl_button_qa_Dark:hover {
   border: none;
-  background-color: var(--bg-active);
+  background-color: var(--bg-hover);
 }
 
 /*****************************************************
@@ -589,7 +591,7 @@ button[disabled] {
 }
 
 .cl_Icon_F_BrightBG:hover {
-  fill: var(--bg-active);
+  fill: var(--bg-hover);
 }
 
 .cl_Icon_S_BrightBG {
@@ -597,7 +599,7 @@ button[disabled] {
 }
 
 .cl_Icon_S_BrightBG:hover {
-  stroke: var(--bg-active);
+  stroke: var(--bg-hover);
 }
 
 .cl_Icon_F_DarkBG {
@@ -605,7 +607,7 @@ button[disabled] {
 }
 
 .cl_Icon_F_DarkBG:hover {
-  fill: var(--bg-active);
+  fill: var(--bg-hover);
 }
 
 .cl_Icon_S_DarkBG {
@@ -613,10 +615,14 @@ button[disabled] {
 }
 
 .cl_Icon_S_DarkBG:hover {
-  stroke: var(--bg-active);
+  stroke: var(--bg-hover);
 }
 
 .cl_Icon_S_BrightBG_Disabled {
   stroke: var(--bg-dark);
   cursor: not-allowed;
+}
+
+.cl_Icon_S_BrightBG_Activated {
+  stroke: var(--bg-active);
 }

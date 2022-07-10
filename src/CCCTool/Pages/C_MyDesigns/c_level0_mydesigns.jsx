@@ -70,12 +70,12 @@ class CMyDesigns extends Component {
           </h2>
           <FNavigateButton navURL="/" style={{ margin: "auto 2vw" }}>
             <svg
-              // title="logout"
               className="cl_Icon_S_DarkBG cl_Icon_S"
               style={{ height: "5vh", width: "5vh", strokeWidth: "2" }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
+              <title>Back To Home</title>
               <polyline points="4 7 1 10 4 13" />
               <line x1="10" y1="3" x2="10" y2="17" />
               <line x1="2" y1="10" x2="10" y2="10" />
@@ -125,7 +125,8 @@ class CMyDesigns extends Component {
             </div>
             <div className="cl_row" style={{ height: "10vh", width: "100%", background: "var(--bg-dark-alpha-5)" }}>
 
-              <svg title="Save" className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleExportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <svg className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleExportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <title>Save</title>
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
@@ -136,20 +137,21 @@ class CMyDesigns extends Component {
                 </svg>
               </FNavigateButton>
 
-              <svg title="Upload" className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleImportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <svg className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleImportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <title>Session or CMS Upload</title>
                 <polyline points="6 9 10 5 14 9" />
                 <line x1="10" y1="7" x2="10" y2="18" />
                 <line x1="2" y1="18" x2="18" y2="18" />
               </svg>
 
               <svg
-                title="Filter"
                 className="cl_Icon_S_BrightBG_Disabled cl_Icon_S"
                 onClick={() => this.open_filer()}
                 style={{ height: "5vh", width: "5vh", margin: "auto 1vw", fill: "var(--bg-bright)" }}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 30 30"
               >
+                <title>Filter</title>
                 <line x1="6" y1="2" x2="6" y2="28" />
                 <line x1="15" y1="2" x2="15" y2="28" />
                 <line x1="24" y1="2" x2="24" y2="28" />

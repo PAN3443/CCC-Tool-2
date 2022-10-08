@@ -257,7 +257,6 @@ h4 {
   line-height: var(--line-height-normal);
   color: var(--font-color-brightBG);
   vertical-align: middle;
-  text-align: center;
   margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;

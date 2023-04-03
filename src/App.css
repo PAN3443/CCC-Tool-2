@@ -297,7 +297,7 @@ input {
 }
 
 input {
-  height: 5vh;
+  height: 3vh;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--borderColor-brightBG);
   padding-left: 1vw;

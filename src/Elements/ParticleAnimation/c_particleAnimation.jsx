@@ -48,7 +48,10 @@ class CPixelAnimation extends Component {
     cancelAnimationFrame(this.rAF);
     const canvas = this.canvasRef.current;
     canvas.removeEventListener("mousemove", this.mouseMove);
-    canvas.removeEventListener("click", this.mouseClick);
+    canvas.removeEventListener("mousedown", this.mouseDown);
+    canvas.removeEventListener("mouseup", this.mouseUp);
+    canvas.removeEventListener("mouseleave", this.mouseLeave);
+    canvas.removeEventListener("mouseenter", this.mouseEnter);
   }
 
   render() {

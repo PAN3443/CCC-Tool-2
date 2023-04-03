@@ -8,7 +8,7 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import CPixelAnimation from "../../ParticleAnimation/c_particleAnimation";
+import CPixelAnimation from "../../Elements/ParticleAnimation/c_particleAnimation";
 import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 import "../../Style/CSS/filter.css";
 

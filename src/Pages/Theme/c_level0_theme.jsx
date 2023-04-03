@@ -39,7 +39,7 @@ class CTheme extends Component {
               <div style={{cursor:"pointer", height:"2vh", width:"2vw", border:"0.2vh solid black", marginLeft:"2vw"}}></div>
 
         </div>
-        <CColorpicker></CColorpicker>
+        <CColorpicker ></CColorpicker>
       </div>
     );
   }

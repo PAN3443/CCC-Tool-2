@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CPixelAnimation from "../ParticleAnimation/c_particleAnimation";
+import CPixelAnimation from "./ParticleAnimation/c_particleAnimation";
 import "../Style/CSS/filter.css";
 
 class CHeader extends Component {

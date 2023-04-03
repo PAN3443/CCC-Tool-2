@@ -8,7 +8,7 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 import React, { Component } from "react";
-import CPixelAnimation from "../../ParticleAnimation/c_particleAnimation";
+import CPixelAnimation from "../../Elements/ParticleAnimation/c_particleAnimation";
 import "../../Style/CSS/filter.css";
 import { Link } from "react-router-dom";
 

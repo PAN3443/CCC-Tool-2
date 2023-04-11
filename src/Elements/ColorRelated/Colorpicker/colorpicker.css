@@ -1,0 +1,6 @@
+.cl_ColorProposal_Div {
+    width: 6.25%;
+    height: 2vh;
+    border-right: var(--border-width) solid var(--borderColor-brightBG);
+    cursor: pointer;
+}

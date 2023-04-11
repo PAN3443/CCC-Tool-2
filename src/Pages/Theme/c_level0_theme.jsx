@@ -9,7 +9,7 @@
 //////////////////////////////////////////////
 import React, { Component } from "react";
 import CHeader from "../../Elements/c_header";
-import CColorpicker from "../../Elements/ColorRelated/c_colorpicker";
+import CColorpicker from "../../Elements/ColorRelated/Colorpicker/c_colorpicker";
 import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 
 class CTheme extends Component {

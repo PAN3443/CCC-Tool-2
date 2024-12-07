@@ -1,12 +1,3 @@
-//////////////////////////////////////////////
-//////////////      HEADER      //////////////
-//////////////////////////////////////////////
-// File :: c_level0_opening.jsx (Component)
-// Author :: Pascal Nardini
-// License :: MIT
-
-//////////////////////////////////////////////
-//////////////////////////////////////////////
 import React, { Component } from "react";
 import CPixelAnimation from "../../Elements/ParticleAnimation/c_particleAnimation";
 import FNavigateButton from "../../Elements/Functionality/f_navigateButton";

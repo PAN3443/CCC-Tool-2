@@ -41,5 +41,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-folder
+      - name: List build directory content
+        run: ls -a
       - name: Deploy to GitHub Pages
         run: npm run deploy

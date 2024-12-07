@@ -14,17 +14,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '22'
-
       - name: Install dependencies
         run: npm install
-
       - name: Build project
         run: npm run build
+      - name: List build directory content
+        run: ls -R build
 
   deploy:
     runs-on: ubuntu-latest
@@ -33,9 +32,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Install dependencies
         run: npm install
-
       - name: Deploy to GitHub Pages
         run: npm run deploy

@@ -27,7 +27,7 @@ class CLogIn extends Component {
         <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark)", zIndex: "0", top: "0px", left: "0px" }}></div>
         <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
         <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-          <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
+          <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
           <h1
             style={{
               maxHeight: "25vh",
@@ -97,7 +97,7 @@ class CLogIn extends Component {
         </div>
       </div>
     );
-  } //backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/Background/whitePaper.png)", backgroundRepeat: "repeat",
+  } //backgroundImage: "url(" + "/img/Background/whitePaper.png)", backgroundRepeat: "repeat",
 
   showPassword() {
     var x = this.passwdInputRef.current;

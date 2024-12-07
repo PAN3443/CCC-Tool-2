@@ -56,7 +56,7 @@ class CMyDesigns extends Component {
       <div>
         <CHeader style={{ height: "8vh", width: "100vw" }}>
           <FNavigateButton navURL="/" style={{margin: "auto", marginLeft: "5vw", marginRight: "2vw"}}>
-            <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh",  cursor: "pointer" }}></img>
+            <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh",  cursor: "pointer" }}></img>
           </FNavigateButton>
           <h2
             style={{

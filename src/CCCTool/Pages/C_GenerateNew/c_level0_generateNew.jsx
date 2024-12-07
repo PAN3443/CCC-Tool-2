@@ -19,7 +19,7 @@ class C_GenerateNew extends Component {
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
         <FNavigateButton navURL="/" style={{margin: "auto", marginRight: "5vw"}}>
-                <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
+                <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
               </FNavigateButton>
           <h1
             style={{

@@ -25,59 +25,59 @@ class CContact extends Component {
           link: "https://www.informatik.uni-leipzig.de/bsv/homepage/de/people/pascal-nardini",
         },
         affiliation: 0,
-        img: process.env.PUBLIC_URL + "/img/Persons/Pascal_Nardini.jpg",
+        img: "/img/Persons/Pascal_Nardini.jpg",
       },
       {
         id: 1,
         name: { title: "Prof. Dr.", givenName: "Gerik", surname: "Scheuermann" },
         contact: { email: "scheuermann'at'informatik.uni-leipzig.de", link: "https://www.informatik.uni-leipzig.de/bsv/homepage/en/people/gerik-scheuermann", adress: "Postfach 100920", postalNr: "D-04009", city: "Leipzig", country: "Germany" },
         affiliation: 0,
-        img: process.env.PUBLIC_URL + "/img/Persons/GerikScheuermann.jpg",
+        img: "/img/Persons/GerikScheuermann.jpg",
       },
-      { id: 2, name: { title: "Prof. Dr.", givenName: "Min", surname: "Chen" }, contact: { link: "https://sites.google.com/site/drminchen/home" }, affiliation: 2, img: process.env.PUBLIC_URL + "/img/Persons/MinChen.jpg" },
+      { id: 2, name: { title: "Prof. Dr.", givenName: "Min", surname: "Chen" }, contact: { link: "https://sites.google.com/site/drminchen/home" }, affiliation: 2, img: "/img/Persons/MinChen.jpg" },
       {
         id: 3,
         name: { title: "Dr.", givenName: "Roxana", surname: "Bujack" },
         contact: { adress: "P.O. Box 1663", postalNr: "Los Alamos, NM 87545", city: "", country: "USA", link: "https://sites.google.com/site/roxanabujack/" },
         affiliation: 4,
-        img: process.env.PUBLIC_URL + "/img/Persons/bujack.jpg",
+        img: "/img/Persons/bujack.jpg",
       },
       {
         id: 4,
         name: { title: "M.Sc.", givenName: "Michael", surname: "Boettinger" },
         contact: { link: "https://www.dkrz.de/about/mitarbeiter/MichaelBoettinger" },
         affiliation: 5,
-        img: process.env.PUBLIC_URL + "/img/Persons/Michael_Boettinger.jpg",
+        img: "/img/Persons/Michael_Boettinger.jpg",
       },
       {
         id: 5,
         name: { givenName: "Francesca", surname: "Samsel" },
         contact: { link: "http://www.francescasamsel.com/home_html/HOME.html" },
         affiliation: 6,
-        img: process.env.PUBLIC_URL + "/img/Persons/Francesca_Samsel.jpg",
+        img: "/img/Persons/Francesca_Samsel.jpg",
       },
     ],
     contacts: [0, 1],
     partners: [2, 3, 4, 5],
     affiliations: [
-      { id: 0, name: "Leipiz University", contact: { adress: "Ritterstraße 26", postalNr: "D-04109", city: "Leipzig", country: "Germany", link: "https://www.uni-leipzig.de/en/" }, img: process.env.PUBLIC_URL + "/img/Logos/university_leipzig.png" },
+      { id: 0, name: "Leipiz University", contact: { adress: "Ritterstraße 26", postalNr: "D-04109", city: "Leipzig", country: "Germany", link: "https://www.uni-leipzig.de/en/" }, img: "/img/Logos/university_leipzig.png" },
       {
         id: 1,
         name: "Image and Signal Processing Group (BSV)",
         contact: { adress: "Ritterstraße 26", postalNr: "D-04109", city: "Leipzig", country: "Germany", link: "https://www.informatik.uni-leipzig.de/bsv/homepage/en" },
-        img: process.env.PUBLIC_URL + "/img/Logos/bsv.png",
+        img: "/img/Logos/bsv.png",
       },
-      { id: 4, name: "Los Alamos National Laboratory", contact: { postalNr: "Los Alamos, NM 87545", city: "", country: "USA", link: "https://www.lanl.gov/" }, img: process.env.PUBLIC_URL + "/img/Logos/logo_LANLsm.png" },
+      { id: 4, name: "Los Alamos National Laboratory", contact: { postalNr: "Los Alamos, NM 87545", city: "", country: "USA", link: "https://www.lanl.gov/" }, img: "/img/Logos/logo_LANLsm.png" },
       {
         id: 5,
         name: "German Climate Computing Center (DKRZ)",
         contact: { address: "Bundesstraße 45a", postalNr: "D-20146", city: "Hamburg", country: "Germany", link: "https://www.dkrz.de/dkrz-partner-for-climate-research?set_language=en&cl=en" },
-        img: process.env.PUBLIC_URL + "/img/Logos/DKRZ.png",
+        img: "/img/Logos/DKRZ.png",
       },
-      { id: 2, name: "Oxford e-Research Centre", contact: { adress: "7 Keble Road", postalNr: "OX1 3QG", city: "Oxford", country: "Britain", link: "https://www.oerc.ox.ac.uk/" }, img: process.env.PUBLIC_URL + "/img/Logos/oxford.png" },
-      { id: 3, name: "U.S. Department of Energy", contact: { link: "https://www.energy.gov/" }, img: process.env.PUBLIC_URL + "/img/Logos/usDepEnergy.png" },
+      { id: 2, name: "Oxford e-Research Centre", contact: { adress: "7 Keble Road", postalNr: "OX1 3QG", city: "Oxford", country: "Britain", link: "https://www.oerc.ox.ac.uk/" }, img: "/img/Logos/oxford.png" },
+      { id: 3, name: "U.S. Department of Energy", contact: { link: "https://www.energy.gov/" }, img: "/img/Logos/usDepEnergy.png" },
 
-      { id: 6, name: "The University of Texas at Austin", contact: { address: "110 Inner Campus Drive", postalNr: "Austin, TX 78705", city: "", country: "USA", link: "https://www.utexas.edu/" }, img: process.env.PUBLIC_URL + "/img/Logos/UT.png" },
+      { id: 6, name: "The University of Texas at Austin", contact: { address: "110 Inner Campus Drive", postalNr: "Austin, TX 78705", city: "", country: "USA", link: "https://www.utexas.edu/" }, img: "/img/Logos/UT.png" },
     ],
   };
 
@@ -87,7 +87,7 @@ class CContact extends Component {
         <CHeader style={{ height: "25vh", width: "100vw" }}>
             <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
               <FNavigateButton navURL="/" style={{margin: "auto", marginRight: "5vw"}}>
-                <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
+                <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
               </FNavigateButton>
                <h1
                 style={{

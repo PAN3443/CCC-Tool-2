@@ -17,7 +17,7 @@ class CPerson extends Component {
   }
 
   getElement_Img() {
-    let imgUrl = process.env.PUBLIC_URL + "/img/Persons/defaultPerson.jpg";
+    let imgUrl = "/img/Persons/defaultPerson.jpg";
     if ("img" in this.props.person) {
       if (this.props.person.img !== "") imgUrl = this.props.person.img;
     }

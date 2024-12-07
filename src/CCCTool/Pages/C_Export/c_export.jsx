@@ -171,7 +171,7 @@ class C_Export extends Component {
     return (
       <div style={{ height: "100vh", width: "100vw" }}>
         <CHeader style={{ height: "8vh", width: "100vw" }}>
-          <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
+          <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
           <h2
             style={{
               color: "var(--font-color-darkBG)",

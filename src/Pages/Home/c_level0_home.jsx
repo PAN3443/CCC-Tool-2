@@ -27,7 +27,7 @@ class CHome extends Component {
         <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
         <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
           <img
-            src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"}
+            src={"/img/Logos/CCC-LOGO.png"}
             alt="CCC-Tool Logo"
             style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
             // style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", marginLeft: "5vw", marginTop: "2vw", cursor: "pointer" }}

@@ -44,6 +44,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Deploy
+        if: github.ref == 'refs/heads/master'
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email

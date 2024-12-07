@@ -14,7 +14,7 @@ class CError404 extends Component {
   render() {
     return (
       <CHeader style={{ height: "25vh", width: "100vw" }}>
-        <img src={process.env.PUBLIC_URL + "/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
+        <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
         <h1
           style={{
             maxHeight: "25vh",

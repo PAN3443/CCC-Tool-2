@@ -1,3 +1,4 @@
+# Deployment Workflow from https://vite.dev/guide/static-deploy.html#github-pages
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
@@ -33,7 +34,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
       - name: Install dependencies
         run: npm ci

@@ -8,20 +8,20 @@ class CAbout extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-            <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-              <FNavigateButton navURL="/" style={{margin: "auto", marginRight: "5vw"}}>
-                <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh"}}></img>
-              </FNavigateButton>
-              <h1
-                style={{
-                  maxHeight: "25vh",
-                  marginLeft: "0vw",
-                  cursor: "default",
-                }}
-              >
-                About
-              </h1>
-            </div>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+            <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "5vw" }}>
+              <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
+            </FNavigateButton>
+            <h1
+              style={{
+                maxHeight: "25vh",
+                marginLeft: "0vw",
+                cursor: "default",
+              }}
+            >
+              About
+            </h1>
+          </div>
         </CHeader>
         <div style={{ width: "100vw", height: "75vh", background: "var(--bg-dark-alpha-5)" }}>
           <p style={{ color: "var(--borderColor-brightBG)", width: "fit-content", maxWidth: "50%", margin: "auto" }}>This Page is not implemented so far. Below you will find the "about" information from the old CCC-Tool.</p>
@@ -40,7 +40,7 @@ class CAbout extends Component {
             </div>
 
             <div style={{ margin: "auto", width: "40%" }}>
-              <img alt="" src={"/img/AboutPage/edit_Example.png"} style={{ width: "100%" }}></img>
+              <img alt="" src={"/CCC-Tool-2/img/AboutPage/edit_Example.png"} style={{ width: "100%" }}></img>
               <p className="cl_smallText">1. Figure: Screenshot of the Edit section.</p>
             </div>
           </div>
@@ -58,7 +58,7 @@ class CAbout extends Component {
             </div>
 
             <div style={{ margin: "auto", width: "40%" }}>
-              <img alt="" src={"/img/AboutPage/navi_Example.png"} style={{ width: "100%" }}></img>
+              <img alt="" src={"/CCC-Tool-2/img/AboutPage/navi_Example.png"} style={{ width: "100%" }}></img>
               <p className="cl_smallText">2. Figure: Screenshot of the Navigator Map.</p>
             </div>
           </div>
@@ -94,7 +94,7 @@ class CAbout extends Component {
             </div>
 
             <div style={{ margin: "auto", width: "40%" }}>
-              <img alt="" src={"/img/AboutPage/cms_Example.png"} style={{ width: "100%" }}></img>
+              <img alt="" src={"/CCC-Tool-2/img/AboutPage/cms_Example.png"} style={{ width: "100%" }}></img>
               <p className="cl_smallText">3. Figure: Examples for the use of the CMS keys.</p>
             </div>
           </div>
@@ -112,7 +112,7 @@ class CAbout extends Component {
             </div>
 
             <div style={{ margin: "auto", width: "40%" }}>
-              <img alt="" src={"/img/AboutPage/cmsVis_Example.png"} style={{ width: "100%" }}></img>
+              <img alt="" src={"/CCC-Tool-2/img/AboutPage/cmsVis_Example.png"} style={{ width: "100%" }}></img>
               <p className="cl_smallText">4. Figure: Examples for the CMS visualization.</p>
             </div>
           </div>

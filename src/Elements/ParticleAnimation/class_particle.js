@@ -1,4 +1,4 @@
-import random from "ccctool-lib/lib/helper/random";
+import * as random from "ccctool-lib/lib/helper/random";
 import { vec_Diff, vecScalMulti, vecLength, vecNorm } from "ccctool-lib/lib/helper/math";
 
 class Particle {

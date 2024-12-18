@@ -8,7 +8,7 @@ class CPerson extends Component {
   }
 
   getElement_Img() {
-    let imgUrl = "/img/Persons/defaultPerson.jpg";
+    let imgUrl = "/CCC-Tool-2/img/Persons/defaultPerson.jpg";
     if ("img" in this.props.person) {
       if (this.props.person.img !== "") imgUrl = this.props.person.img;
     }

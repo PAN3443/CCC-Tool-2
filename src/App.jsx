@@ -32,7 +32,7 @@ const App = () => {
 
 const AppWrapper = () => {
   return (
-    <Router>
+    <Router basename="/CCC-Tool-2">
       <App />
     </Router>
   );

@@ -9,7 +9,7 @@ import CSelectedView from "./c_level1_selectedView";
 import FNavigateButton from "../../../Elements/Functionality/f_navigateButton";
 
 // Libs
-//import { CMS } from "ccctool-lib/lib/cms/class_cms";
+import { CMS } from "ccctool-lib/lib/cms/class_cms";
 
 class CMyDesigns extends Component {
   constructor() {
@@ -22,8 +22,6 @@ class CMyDesigns extends Component {
       filterIsOpen: false,
     };
   }
-
-
 
   /**************************************************************************************************
    *  Function    : open_filer
@@ -44,8 +42,8 @@ class CMyDesigns extends Component {
     return (
       <div>
         <CHeader style={{ height: "8vh", width: "100vw" }}>
-          <FNavigateButton navURL="/" style={{margin: "auto", marginLeft: "5vw", marginRight: "2vw"}}>
-            <img src={"/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh",  cursor: "pointer" }}></img>
+          <FNavigateButton navURL="/" style={{ margin: "auto", marginLeft: "5vw", marginRight: "2vw" }}>
+            <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", cursor: "pointer" }}></img>
           </FNavigateButton>
           <h2
             style={{
@@ -58,12 +56,7 @@ class CMyDesigns extends Component {
             MyDesigns
           </h2>
           <FNavigateButton navURL="/" style={{ margin: "auto 2vw" }}>
-            <svg
-              className="cl_Icon_S_DarkBG cl_Icon_S"
-              style={{ height: "5vh", width: "5vh", strokeWidth: "2" }}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
+            <svg className="cl_Icon_S_DarkBG cl_Icon_S" style={{ height: "5vh", width: "5vh", strokeWidth: "2" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <title>Back To Home</title>
               <polyline points="4 7 1 10 4 13" />
               <line x1="10" y1="3" x2="10" y2="17" />
@@ -113,14 +106,13 @@ class CMyDesigns extends Component {
               </div>
             </div>
             <div className="cl_row" style={{ height: "10vh", width: "100%", background: "var(--bg-dark-alpha-5)" }}>
-
               <svg className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleExportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <title>Save</title>
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
               <FNavigateButton navURL="/tool/generate" style={{ margin: "auto 1vw" }}>
-                <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <line x1="2" y1="10" x2="18" y2="10" />
                   <line x1="10" y1="2" x2="10" y2="18" />
                 </svg>
@@ -133,13 +125,7 @@ class CMyDesigns extends Component {
                 <line x1="2" y1="18" x2="18" y2="18" />
               </svg>
 
-              <svg
-                className="cl_Icon_S_BrightBG_Disabled cl_Icon_S"
-                onClick={() => this.open_filer()}
-                style={{ height: "5vh", width: "5vh", margin: "auto 1vw", fill: "var(--bg-bright)" }}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 30 30"
-              >
+              <svg className="cl_Icon_S_BrightBG_Disabled cl_Icon_S" onClick={() => this.open_filer()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw", fill: "var(--bg-bright)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                 <title>Filter</title>
                 <line x1="6" y1="2" x2="6" y2="28" />
                 <line x1="15" y1="2" x2="15" y2="28" />

@@ -7,7 +7,7 @@ class CAffiliation extends Component {
   }
 
   getElement_Img() {
-    let imgUrl = "/img/Persons/defaultPerson.jpg";
+    let imgUrl = "/CCC-Tool-2/img/Persons/defaultPerson.jpg";
     if ("img" in this.props.affiliation) {
       if (this.props.affiliation.img !== "") imgUrl = this.props.affiliation.img;
     }

@@ -11,7 +11,6 @@ class CContact extends Component {
         id: 0,
         name: { title: "M.Sc.", givenName: "Pascal", surname: "Nardini" },
         contact: {
-          phone: "+49 341 97-32255",
           email: "nardini'at'informatik.uni-leipzig.de",
           link: "https://www.informatik.uni-leipzig.de/bsv/homepage/de/people/pascal-nardini",
         },
@@ -101,8 +100,10 @@ class CContact extends Component {
           {this.state.partners.map((p) => (
             <CPerson key={"id_partner_" + p} getAffiliation={this.getAffiliation} person={this.state.persons[p]} />
           ))}
-          <h2>Thanks to: </h2>
-          <div className="cl_row" style={{ width: "100%", justifyContent: "center", padding: "5vh 0vw", overflow: "hidden", background: "var(--bg-dark)" }}>
+        </div>
+        <div style={{ width: "100%", widthMax: "100%", margin: "0px", background: "var(--bg-dark)"}}>
+          <h2 style={{color: "var(--font-color-darkBG)", marginLeft:"1vw"}}>Thanks to: </h2>
+          <div className="cl_row" style={{ width: "100%", justifyContent: "center", padding: "0vh 0vw 5vh 0vw", overflow: "hidden"}}>
             {this.state.affiliations.map((a) => (
               <CAffiliation key={"id_affiliations_" + a.id} affiliation={a} />
             ))}

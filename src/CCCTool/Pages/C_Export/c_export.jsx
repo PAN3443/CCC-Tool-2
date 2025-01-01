@@ -161,10 +161,10 @@ class C_Export extends Component {
     return (
       <div style={{ height: "100vh", width: "100vw" }}>
         <CHeader style={{ height: "8vh", width: "100vw" }}>
-          <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
+          <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", margin: "auto", marginLeft: "5vw", marginRight: "2vw", cursor: "pointer" }}></img>
           <h2
             style={{
-              color: "var(--font-color-darkBG)",
+              color: "var(--font-color-point-out)",
               margin: "auto",
               marginLeft: "0vw",
               cursor: "default",
@@ -175,8 +175,8 @@ class C_Export extends Component {
         </CHeader>
 
         <div className="cl_row cl_marginTB_0_5" style={{ height: "80vh", width: "100vw" }}>
-          <div style={{ overflow: "hidden", margin: "auto", width: "25vw", height: "70vh", borderRadius: "var(--border-radius)", background: "var(--bg-bright-alpha-75)", border: "var(--border-width) solid var(--borderColor-brightBG)" }}>
-            <h2 style={{ background: "var(--borderColor-brightBG)", width: "100%", color: "var(--font-color-darkBG)" }}>Options</h2>
+          <div style={{ overflow: "hidden", margin: "auto", width: "25vw", height: "70vh", borderRadius: "var(--border-radius)", background: "var(--bg-alpha-alpha-75)", border: "var(--border-width) solid var(--borderColor)" }}>
+            <h2 style={{ background: "var(--borderColor)", width: "100%", color: "var(--font-color-point-out)" }}>Options</h2>
 
             <div className="cl_row cl_marginTB_0_5">
               <p className="cl_optionLabel">Probes : </p>
@@ -207,7 +207,7 @@ class C_Export extends Component {
               </select>
             </div>
 
-            <hr style={{ width: " 100%", color: "var(--borderColor-brightBG)" }}></hr>
+            <hr style={{ width: " 100%", color: "var(--borderColor)" }}></hr>
 
             <div className="cl_row cl_marginTB_0_5">
               <p className="cl_optionLabel ">Handle Twin Issue : </p>
@@ -231,7 +231,7 @@ class C_Export extends Component {
               </button>
             </div>
 
-            <hr style={{ width: " 100%", color: "var(--borderColor-brightBG)" }}></hr>
+            <hr style={{ width: " 100%", color: "var(--borderColor)" }}></hr>
 
             <div className="cl_row cl_marginTB_0_5">
               <p className="cl_optionLabel">Sampling : </p>
@@ -256,16 +256,16 @@ class C_Export extends Component {
               width: "60vw",
               height: "70vh",
               borderRadius: "var(--border-radius)",
-              background: "var(--bg-bright-alpha-75)",
-              border: "var(--border-width) solid var(--borderColor-brightBG)",
+              background: "var(--bg-alpha-alpha-75)",
+              border: "var(--border-width) solid var(--borderColor)",
             }}
           >
-            <h2 style={{ background: "var(--borderColor-brightBG)", width: "100%", color: "var(--font-color-darkBG)" }}>Export Table</h2>
+            <h2 style={{ background: "var(--borderColor)", width: "100%", color: "var(--font-color-point-out)" }}>Export Table</h2>
           </div>
         </div>
 
         <div className="cl_row" style={{ marginTop: "auto" }}>
-          <CCMSRendering selectedCMS={this.props.selectedCMS} style={{ width: "86vw", height: "6vh", margin: "3vh 2vw", border: "var(--border-width) solid var(--borderColor-brightBG)", borderRadius: "var(--border-radius)" }} />
+          <CCMSRendering selectedCMS={this.props.selectedCMS} style={{ width: "86vw", height: "6vh", margin: "3vh 2vw", border: "var(--border-width) solid var(--borderColor)", borderRadius: "var(--border-radius)" }} />
 
           <svg
             title="Download"
@@ -276,9 +276,9 @@ class C_Export extends Component {
             viewBox="0 0 20 20"
           >
             <circle cx="10" cy="10" r="9"></circle>
-            <polyline points="7 12 10 15 13 12" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <line x1="6" y1="6.5" x2="14" y2="6.5" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />
-            <line x1="10" y1="7.5" x2="10" y2="13" stroke="var(--bg-bright)" strokeWidth="2" strokeLinecap="round" />
+            <polyline points="7 12 10 15 13 12" stroke="var(--bg-app)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <line x1="6" y1="6.5" x2="14" y2="6.5" stroke="var(--bg-app)" strokeWidth="2" strokeLinecap="round" />
+            <line x1="10" y1="7.5" x2="10" y2="13" stroke="var(--bg-app)" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </div>
       </div>

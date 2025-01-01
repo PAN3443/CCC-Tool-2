@@ -145,7 +145,7 @@ class CColorpicker extends Component {
           <div className="cl_row" style={{ padding: "1vh 0.5vw 0vh 0.5vw", margin: "auto", cursor: "default" }}>
             <div style={{ marginRight: "0.5vw" }}>
               <h4 style={{ textAlign: "center" }}>{this.state.c1Label}</h4>
-              <canvas ref={this.ref_CanvasC1} style={{ height: "25vh", maxHeight: "15vw", width: "2vw", border: "var(--border-width) solid var(--borderColor-brightBG)", cursor: "pointer" }}></canvas>
+              <canvas ref={this.ref_CanvasC1} style={{ height: "25vh", maxHeight: "15vw", width: "2vw", border: "var(--border-width) solid var(--borderColor)", cursor: "pointer" }}></canvas>
               <div style={{ ...this.state.c1LabelVisibility, ...{ maxWidth: "100%", overflow: "hidden" } }}>
                 <p style={{ fontSize: "var(--font-size-small)" }}>
                   {" "}
@@ -159,7 +159,7 @@ class CColorpicker extends Component {
                 {this.state.c2Label}
                 {this.state.c3Label}
               </h4>
-              <canvas ref={this.ref_CanvasC2C3} style={{ height: "25vh", maxHeight: "15vw", width: "15vw", maxWidth: "25vh", border: "var(--border-width) solid var(--borderColor-brightBG)", cursor: "pointer" }}></canvas>
+              <canvas ref={this.ref_CanvasC2C3} style={{ height: "25vh", maxHeight: "15vw", width: "15vw", maxWidth: "25vh", border: "var(--border-width) solid var(--borderColor)", cursor: "pointer" }}></canvas>
               <div style={{ ...this.state.c2c3LabelVisibility, ...{ maxWidth: "100%", overflow: "hidden" } }}>
                 <p style={{ margin: "0px 0px 0px auto", fontSize: "var(--font-size-small)" }}>
                   {" "}
@@ -202,14 +202,14 @@ class CColorpicker extends Component {
             </div>
           </div>
 
-          <div style={{ width: "90%", margin: "0vh 5% 1vh 5%", border: "var(--border-width) solid var(--borderColor-brightBG)" }}>
-            <div className="cl_row" style={{ width: "100%", borderBottom: "var(--border-width) solid var(--borderColor-brightBG)" }}>
+          <div style={{ width: "90%", margin: "0vh 5% 1vh 5%", border: "var(--border-width) solid var(--borderColor)" }}>
+            <div className="cl_row" style={{ width: "100%", borderBottom: "var(--border-width) solid var(--borderColor)" }}>
               {Object.entries(this.state.proposalSaturationColors).map(([name, rgbString]) => (
-                <div key={"id_proposalColorSaturation_" + name} style={{ background: rgbString }} className="cl_ColorProposal_Div" onClick={() => this.setColor(rgbString)}/>
+                <div key={"id_proposalColorSaturation_" + name} style={{ background: rgbString }} className="cl_ColorProposal_Div" onClick={() => this.setColor(rgbString)} />
               ))}
             </div>
-            <div className="cl_row" style={{ width: "100%", borderBottom: "var(--border-width) solid var(--borderColor-brightBG)" }}>
-              <div style={{ ...this.state.colorRGBString, ...{ width: "50%", height: "3vh", borderRight: "var(--border-width) solid var(--borderColor-brightBG)" } }}></div>
+            <div className="cl_row" style={{ width: "100%", borderBottom: "var(--border-width) solid var(--borderColor)" }}>
+              <div style={{ ...this.state.colorRGBString, ...{ width: "50%", height: "3vh", borderRight: "var(--border-width) solid var(--borderColor)" } }}></div>
               <div style={{ ...this.state.newColorRGBString, ...{ width: "50%", height: "3vh" } }}></div>
             </div>
             <div className="cl_row" style={{ width: "100%" }}>
@@ -245,7 +245,7 @@ class CColorpicker extends Component {
 
   setColor = (_rgbString) => {
     let subString = _rgbString.substring(4, _rgbString.length - 1);
-    let rgbComponents = subString.split(","); 
+    let rgbComponents = subString.split(",");
     if (rgbComponents.length === 3) {
       let updateColorJson = { space: "rgb", c1: Number(rgbComponents[0]) / 255, c2: Number(rgbComponents[1]) / 255, c3: Number(rgbComponents[2]) / 255 };
       this.setState({ newColor: updateColorJson, newColorRGBString: { background: _rgbString } });

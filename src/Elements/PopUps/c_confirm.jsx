@@ -19,10 +19,10 @@ class CConfirm extends Component {
           left: "0px",
           bottom: "0px",
           zIndex: "100",
-          background: "var(--bg-dark-alpha-50)",
+          background: "var(--bg-point-out-alpha-50)",
         }}
       >
-        <div style={{ margin: "auto", padding: "3vh 4vw", maxWidth: "50%", borderRadius: "var(--border-radius)", background: "var(--bg-bright)" }}>
+        <div style={{ margin: "auto", padding: "3vh 4vw", maxWidth: "50%", borderRadius: "var(--border-radius)", background: "var(--bg-app)" }}>
           <p>{this.props.children}</p>
 
           <div className="cl_row" style={{ marginTop: "2vh" }}>

@@ -131,11 +131,11 @@ class CPixelAnimation extends Component {
    ****************************************************/
 
   stopAnimationDark() {
-    this.stopAnimation(getComputedStyle(document.documentElement).getPropertyValue("--bg-dark-alpha-5"));
+    this.stopAnimation(getComputedStyle(document.documentElement).getPropertyValue("--bg-point-out-alpha-5"));
   }
 
   stopAnimationWarning() {
-    this.stopAnimation(getComputedStyle(document.documentElement).getPropertyValue("--bg-warning-alpha-10"));
+    this.stopAnimation(getComputedStyle(document.documentElement).getPropertyValue("--warning-alpha-10"));
   }
 
   stopAnimation(_color) {

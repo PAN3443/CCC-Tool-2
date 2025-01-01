@@ -11,8 +11,8 @@ class CCMSGroup extends Component {
         style={{
           width: "76vw",
           margin: "1vh auto",
-          background: "var(--bg-dark-alpha-5)",
-          border: "var(--border-width) solid var(--borderColor-brightBG)",
+          background: "var(--bg-point-out-alpha-5)",
+          border: "var(--border-width) solid var(--borderColor)",
           marginTop: "2.5vh",
           marginBottom: "2.5vh",
           borderRadius: "var(--border-radius)",
@@ -20,8 +20,8 @@ class CCMSGroup extends Component {
           overflow: "hidden",
         }}
       >
-        <div style={{ cursor: "pointer", width: "100%", flexDirection: "row", background: "var(--bg-dark)", borderBottom: "var(--border-width) solid var(--borderColor-brightBG)", padding: "0.5vh 2.5vw" }}>
-          <p style={{ color: "var(--font-color-darkBG)" }}>
+        <div style={{ cursor: "pointer", width: "100%", flexDirection: "row", background: "var(--bg-point-out)", borderBottom: "var(--border-width) solid var(--borderColor)", padding: "0.5vh 2.5vw" }}>
+          <p style={{ color: "var(--font-color-point-out)" }}>
             <strong>{"Group"}</strong>
             {": " + this.props.groupName}
           </p>

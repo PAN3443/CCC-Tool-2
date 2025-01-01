@@ -9,9 +9,9 @@ class CTheme extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
             <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "5vw" }}>
-              <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
+              <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
             </FNavigateButton>
             <h1
               style={{

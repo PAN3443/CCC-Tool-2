@@ -8,15 +8,15 @@ class CImpressum extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
             <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "5vw" }}>
-              <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
+              <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
             </FNavigateButton>
             <h1
               style={{
                 maxHeight: "25vh",
                 marginLeft: "0vw",
-                cursor: "default",
+                cursor: "default"
               }}
             >
               Impressum
@@ -25,29 +25,8 @@ class CImpressum extends Component {
         </CHeader>
         <div>
           <div style={{ width: "60vw", margin: "10vh auto" }}>
-            <h3>Impressum (nach § 5 Allgemeine Informationspflichten)</h3>
-            <p className="cl_textBlock">
-              Diese Internet Seite mit dem Domainname "ccctool.com" ist ein Angebot von der Universit&auml;t Leipzig (
-              <a target="_blank" rel="noreferrer" href="https://www.uni-leipzig.de/service/impressum.html">
-                Impressum Universit&auml;t Leipzig
-              </a>
-              ) und wurde in der Abteilung Bild- und Signalverarbeitung BSV (
-              <a target="_blank" rel="noreferrer" C_Home href="https://www.informatik.uni-leipzig.de/bsv/homepage/de/content/impressum">
-                Impressum BSV
-              </a>
-              ) von Pascal Nardini entwickelt.
-            </p>
-            <p className="cl_textBlock">
-              <strong>Postfachadresse:</strong> <br></br> Postfach 100920 <br></br> D-04009 Leipzig <br></br>
-            </p>
+            <h3 style={{color: "var(--font-color)"}}>Impressum (nach § 5 Allgemeine Informationspflichten)</h3>
 
-            <p className="cl_textBlock">
-              <strong>Hausadresse:</strong> <br></br> Ritterstraße 26 <br></br> D-04109 Leipzig <br></br>
-            </p>
-
-            <p className="cl_textBlock">
-              <strong>Kontakt:</strong> <br></br> Pascal Nardini <br></br> Telefon: +49 341 97-32255 <br></br> E-Mail: ccchelp'at'informatik.uni-leipzig.de <br></br>
-            </p>
             <p className="cl_textBlock">
               <strong>Haftungshinweis:</strong>
               <br></br> Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernehmen wir keine Haftung für die Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Wir &uuml;bernehmen

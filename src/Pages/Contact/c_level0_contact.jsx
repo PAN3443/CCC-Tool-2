@@ -3,6 +3,7 @@ import CHeader from "../../Elements/c_header";
 import CPerson from "./c_level1_person";
 import CAffiliation from "./c_level1_affiliation";
 import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
+import { Trans, withTranslation } from "react-i18next";
 
 class CContact extends Component {
   state = {
@@ -14,7 +15,7 @@ class CContact extends Component {
           email: "nardini'at'informatik.uni-leipzig.de",
           link: "https://www.informatik.uni-leipzig.de/bsv/homepage/de/people/pascal-nardini",
         },
-        affiliation: 0,
+        affiliation: -1,
         img: "/CCC-Tool-2/img/Persons/Pascal_Nardini.jpg",
       },
       {
@@ -47,8 +48,8 @@ class CContact extends Component {
         img: "/CCC-Tool-2/img/Persons/Francesca_Samsel.jpg",
       },
     ],
-    contacts: [0, 1],
-    partners: [2, 3, 4, 5],
+    contacts: [0],
+    partners: [1, 2, 3, 4, 5],
     affiliations: [
       { id: 0, name: "Leipiz University", contact: { adress: "Ritterstraße 26", postalNr: "D-04109", city: "Leipzig", country: "Germany", link: "https://www.uni-leipzig.de/en/" }, img: "/CCC-Tool-2/img/Logos/university_leipzig.png" },
       {
@@ -75,9 +76,9 @@ class CContact extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-            <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "5vw" }}>
-              <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+            <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "2vw" }}>
+              <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "23vh" }}></img>
             </FNavigateButton>
             <h1
               style={{
@@ -86,24 +87,37 @@ class CContact extends Component {
                 cursor: "default",
               }}
             >
-              Contact and Impressum
+              <Trans i18nKey="label_contact" />
             </h1>
           </div>
         </CHeader>
 
         <div style={{ width: "60%", widthMax: "80%", margin: "auto", marginTop: "5vh", marginBottom: "5vh" }}>
-          <h2>Contact</h2>
+          <h2 style={{ color: "var(--font-color)" }}>
+            {" "}
+            <Trans i18nKey="page_contact.creator" />
+          </h2>
           {this.state.contacts.map((c) => (
             <CPerson key={"id_contact_" + c} getAffiliation={this.getAffiliation} person={this.state.persons[c]} />
           ))}
-          <h2>Partner</h2>
+
+          <h2 style={{ color: "var(--font-color)", marginBottom: "3vh" }}>Partner</h2>
+          <p style={{ color: "var(--font-color-alpha-75)" }}>
+            <Trans
+              i18nKey="page_contact.partnerText"
+              components={{
+                0: <a href="https://ccctool.com" target="blank" />,
+              }}
+            />
+          </p>
+
           {this.state.partners.map((p) => (
             <CPerson key={"id_partner_" + p} getAffiliation={this.getAffiliation} person={this.state.persons[p]} />
           ))}
         </div>
-        <div style={{ width: "100%", widthMax: "100%", margin: "0px", background: "var(--bg-dark)"}}>
-          <h2 style={{color: "var(--font-color-darkBG)", marginLeft:"1vw"}}>Thanks to: </h2>
-          <div className="cl_row" style={{ width: "100%", justifyContent: "center", padding: "0vh 0vw 5vh 0vw", overflow: "hidden"}}>
+        <div style={{ width: "100%", widthMax: "100%", margin: "0px", background: "var(--bg-point-out)" }}>
+          <h2 style={{ color: "var(--font-color-point-out)", marginLeft: "1vw", marginTop: "1vh" }}><Trans i18nKey="page_contact.thanks" /></h2>
+          <div className="cl_row" style={{ width: "100%", justifyContent: "center", padding: "0vh 0vw 5vh 0vw", overflow: "hidden" }}>
             {this.state.affiliations.map((a) => (
               <CAffiliation key={"id_affiliations_" + a.id} affiliation={a} />
             ))}
@@ -123,4 +137,4 @@ class CContact extends Component {
     return undefined;
   };
 }
-export default CContact;
+export default withTranslation()(CContact);

@@ -1,7 +1,7 @@
 {
   "name": "ccc-tool-2",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,8 +12,12 @@
   },
   "dependencies": {
     "ccctool-lib": "^0.1.7",
+    "i18next": "^24.2.0",
+    "i18next-browser-languagedetector": "^8.0.2",
+    "i18next-http-backend": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.4.0",
     "react-router-dom": "^7.0.2",
     "structured-clone": "^0.2.2"
   },

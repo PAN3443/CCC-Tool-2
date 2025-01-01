@@ -21,16 +21,16 @@ class CTextBox extends Component {
           left: "0px",
           bottom: "0px",
           zIndex: "100",
-          background: "var(--bg-dark-alpha-50)",
+          background: "var(--bg-point-out-alpha-50)",
         }}
       >
-        <div style={{ margin: "auto", maxWidth: "50%", borderRadius: "var(--border-radius)", background: "var(--bg-bright)", overflow: "hidden", border: "var(--border-width) solid var(--borderColor-brightBG)" }}>
-          <div className="cl_row" style={{ padding: "1vh 4vw", background: "var(--bg-dark)", borderBottom: "var(--border-width) solid var(--borderColor-brightBG)" }}>
+        <div style={{ margin: "auto", maxWidth: "50%", borderRadius: "var(--border-radius)", background: "var(--bg-app)", overflow: "hidden", border: "var(--border-width) solid var(--borderColor)" }}>
+          <div className="cl_row" style={{ padding: "1vh 4vw", background: "var(--bg-point-out)", borderBottom: "var(--border-width) solid var(--borderColor)" }}>
             <svg
               title="Filter"
               className="cl_Icon_S_BrightBG cl_Icon_S"
               onClick={() => this.open_filer()}
-              style={{ height: "4vh", width: "4vh", margin: "auto", marginRight: "0vw", fill: "var(--bg-bright)", strokeWidth: "2", stroke: "var(--bg-bright)", strokeLinecap: "round", strokeLinejoin: "round" }}
+              style={{ height: "4vh", width: "4vh", margin: "auto", marginRight: "0vw", fill: "var(--bg-app)", strokeWidth: "2", stroke: "var(--bg-app)", strokeLinecap: "round", strokeLinejoin: "round" }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -38,13 +38,13 @@ class CTextBox extends Component {
               <circle cx="10" cy="17" r="1.5" />
             </svg>
 
-            <h3 style={{ margin: "auto 1vw", color: "var(--bg-bright)", lineHeight: "4vh", fontSize: "4vh" }}>{this.state.header}</h3>
+            <h3 style={{ margin: "auto 1vw", color: "var(--bg-app)", lineHeight: "4vh", fontSize: "4vh" }}>{this.state.header}</h3>
 
             <svg
               title="Filter"
               className="cl_Icon_S_BrightBG cl_Icon_S"
               onClick={() => this.open_filer()}
-              style={{ height: "4vh", width: "4vh", margin: "auto", marginLeft: "0vw", fill: "var(--bg-bright)", strokeWidth: "2", stroke: "var(--bg-bright)", strokeLinecap: "round", strokeLinejoin: "round" }}
+              style={{ height: "4vh", width: "4vh", margin: "auto", marginLeft: "0vw", fill: "var(--bg-app)", strokeWidth: "2", stroke: "var(--bg-app)", strokeLinecap: "round", strokeLinejoin: "round" }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >

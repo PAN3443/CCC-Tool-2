@@ -1,9 +1,30 @@
 import React, { Component } from "react";
 import CPixelAnimation from "../../Elements/ParticleAnimation/c_particleAnimation";
+import CLanguageDropdown from "./c_level1_languageDropdown";
 import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 import "../../Style/CSS/filter.css";
+import { Trans, withTranslation } from "react-i18next";
+
+// Button Images
+import BackgroundEditor from "./img/Editor-Button.jpeg";
+import BackgroundTestSuite from "./img/TestSuite-Button.jpeg";
+import BackgroundColorblindness from "./img/Colorblindness-Button.jpeg";
+import BackgroundAnalysis from "./img/Analysis-Button.jpeg";
+import BackgroundGit from "./img/Git-Button.jpeg";
+import BackgroundOptimization from "./img/Optimization-Button.jpeg";
+import BackgroundContact from "./img/Contact-Button.jpeg";
+import BackgroundDesign from "./img/Design-Button.jpeg";
+import BackgroundDocu from "./img/Docu-Button.jpeg";
 
 import "./home.css";
+
+const languages = [
+  { code: "en", name: "English", flag: "🇬🇧" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "it", name: "Italiano", flag: "🇮🇹" },
+];
 
 class CHome extends Component {
   constructor() {
@@ -12,51 +33,123 @@ class CHome extends Component {
   }
 
   render() {
+    const version = import.meta.env.APP_VERSION;
     return (
-      <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
-        <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark)", zIndex: "0", top: "0px", left: "0px" }}></div>
+      <div style={{ position: "relative", height: "100vh", width: "100vw", background: "var(--bg-app)" }}>
+        <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out)", zIndex: "0", top: "0px", left: "0px" }}></div>
         <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
-        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-          <img
-            src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"}
-            alt="CCC-Tool Logo"
-            style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}
-            // style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", marginLeft: "5vw", marginTop: "2vw", cursor: "pointer" }}
-          ></img>
+        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "23vh", margin: "auto", marginRight: "2vw", cursor: "pointer" }}></img>
           <h1
             style={{
-              maxHeight: "25vh",
-              fontSize: "8vh",
-              lineHeight: "25vh",
+              margin: "auto",
               marginLeft: "0vw",
-              cursor: "default",
             }}
           >
-            The CCC-Tool
+            <Trans i18nKey="label_welcome" />
           </h1>
         </div>
         <div className="cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "70vh", width: "100vw", zIndex: "2", top: "25vh", left: "0px", overflow: "auto" }}>
-          <div className="cl_HomeText_Div cl_blur">
-            <p className="cl_bigText" style={{ marginBottom: "1vh", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}>
-              Welcome
-            </p>
-          </div>
-
-          <div className="cl_row" style={{ width: "86vw", margin: "1vh auto" }}>
+          <div className="cl_row" style={{ width: "auto", margin: "auto" }}>
             <FNavigateButton navURL="/tool" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_HomeSelect_Div cl_blur">CCC-Tool</div>
+              <div className="cl_HomeSelect_Div">
+                <div
+                  style={{
+                    backgroundImage: `url(${BackgroundEditor})`,
+                  }}
+                ></div>
+                <p>
+                  <Trans i18nKey="label_editor" />
+                </p>
+              </div>
             </FNavigateButton>
+            <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div
+                style={{
+                  backgroundImage: `url(${BackgroundTestSuite})`,
+                }}
+              ></div>
+              <p>
+                <Trans i18nKey="label_testSuite" components={{ br: <br /> }} />
+              </p>
+            </div>
+            <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div
+                style={{
+                  backgroundImage: `url(${BackgroundAnalysis})`,
+                }}
+              ></div>
+              <p>
+                <Trans i18nKey="label_analysis" />
+              </p>
+            </div>
+            <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div
+                style={{
+                  backgroundImage: `url(${BackgroundOptimization})`,
+                }}
+              ></div>
+              <p>
+                <Trans i18nKey="label_optimization" />
+              </p>
+            </div>
+            <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div
+                style={{
+                  backgroundImage: `url(${BackgroundColorblindness})`,
+                }}
+              ></div>
+              <p>
+                <Trans i18nKey="label_colorBlindness" components={{ br: <br /> }} />
+              </p>
+            </div>
+          </div>
+          <div className="cl_row" style={{ width: "auto", margin: "auto", marginTop: "0px" }}>
             <FNavigateButton navURL="/theme" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_HomeSelect_Div cl_blur">Theme</div>
+              <div className="cl_HomeSelect_Div">
+                <div
+                  style={{
+                    backgroundImage: `url(${BackgroundDesign})`,
+                  }}
+                ></div>
+                <p>
+                  <Trans i18nKey="label_design" />
+                </p>
+              </div>
             </FNavigateButton>
-            <FNavigateButton navURL="/about" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_HomeSelect_Div cl_blur">About</div>
+            <FNavigateButton navURL="/docu" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+              <div className="cl_HomeSelect_Div">
+                <div
+                  style={{
+                    backgroundImage: `url(${BackgroundDocu})`,
+                  }}
+                ></div>
+                <p>
+                  <Trans i18nKey="label_docu" />
+                </p>
+              </div>
             </FNavigateButton>
             <FNavigateButton navURL="/contact" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_HomeSelect_Div cl_blur">Contact</div>
+              <div className="cl_HomeSelect_Div">
+                <div
+                  style={{
+                    backgroundImage: `url(${BackgroundContact})`,
+                  }}
+                ></div>
+                <p>
+                  <Trans i18nKey="label_contact" />
+                </p>
+              </div>
             </FNavigateButton>
             <FNavigateButton navURL="/git" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
-              <div className="cl_HomeSelect_Div cl_blur">Git</div>
+              <div className="cl_HomeSelect_Div">
+                <div
+                  style={{
+                    backgroundImage: `url(${BackgroundGit})`,
+                  }}
+                ></div>
+                <p>GitHub</p>
+              </div>
             </FNavigateButton>
           </div>
         </div>
@@ -71,16 +164,22 @@ class CHome extends Component {
             </svg>
           </FNavigateButton>
 
-          <p style={{ margin: "auto", marginLeft: "1vw", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}> Version: 0.1.0 </p>
+          <p style={{ margin: "auto", marginLeft: "1vw", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}>
+            {" "}
+            <Trans i18nKey="version" />: {version}{" "}
+          </p>
 
-          <FNavigateButton navURL="/impressum" style={{ margin: "auto", marginRight: "0.2vw" }}>
-            <p style={{ color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}> Impressum</p>
-          </FNavigateButton>
-          <p style={{ margin: "auto", marginRight: "2vw", marginLeft: "0vw", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}> / Copyright © 2022 </p>
+          <p style={{ margin: "auto", marginRight: "0.5vw", marginLeft: "0vw", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}> Copyright © 2024 </p>
+          <CLanguageDropdown languages={languages} />
         </div>
       </div>
     );
   }
+  /* 
+  <FNavigateButton navURL="/impressum" style={{ margin: "auto", marginRight: "0.2vw" }}>
+    <p style={{ color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}><Trans i18nKey="imprint" /> /</p>
+  </FNavigateButton> 
+  */
 
   particleStop = () => {
     const pAni = this.particleAni.current;
@@ -93,4 +192,4 @@ class CHome extends Component {
   };
 }
 
-export default CHome;
+export default withTranslation()(CHome);

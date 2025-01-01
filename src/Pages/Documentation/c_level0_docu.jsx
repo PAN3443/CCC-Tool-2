@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import CHeader from "../../Elements/c_header";
 import FNavigateButton from "../../Elements/Functionality/f_navigateButton";
 
-class CAbout extends Component {
+class CDocu extends Component {
   state = {};
   render() {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
             <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "5vw" }}>
-              <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
+              <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
             </FNavigateButton>
             <h1
               style={{
@@ -19,12 +19,12 @@ class CAbout extends Component {
                 cursor: "default",
               }}
             >
-              About
+              Documentation
             </h1>
           </div>
         </CHeader>
-        <div style={{ width: "100vw", height: "75vh", background: "var(--bg-dark-alpha-5)" }}>
-          <p style={{ color: "var(--borderColor-brightBG)", width: "fit-content", maxWidth: "50%", margin: "auto" }}>This Page is not implemented so far. Below you will find the "about" information from the old CCC-Tool.</p>
+        <div style={{ width: "100vw", height: "75vh", background: "var(--bg-point-out-alpha-5)" }}>
+          <p style={{ color: "var(--borderColor)", width: "fit-content", maxWidth: "50%", margin: "auto" }}>This Page is not implemented so far. Below you will find the "about" information from the old CCC-Tool.</p>
         </div>
 
         <div style={{ width: "75%", widthMax: "80%", margin: "auto", marginTop: "5vh", marginBottom: "5vh" }}>
@@ -122,4 +122,4 @@ class CAbout extends Component {
   }
 }
 
-export default CAbout;
+export default CDocu;

@@ -1,0 +1,19 @@
+{
+  "label_welcome": "Willkommen",
+  "label_editor": "Editor",
+  "label_testSuite": "Test<br>Daten",
+  "label_analysis": "Analysis",
+  "label_optimization": "Optimierung",
+  "label_colorBlindness": "Farb-<br>blindheit",
+  "label_design": "Design",
+  "label_docu": "Doku",
+  "label_contact": "Kontakt",
+  "version": "Version",
+  "imprint": "Immpressum",
+  "page_contact": {
+    "creator": "Ersteller",
+    "partner": "Partner",
+    "partnerText": "Partner der Webseite <0>ccctool.com</0> und den zugehörigen Veröffentlichungen",
+    "thanks": "Vielen Dank an:"
+  }
+}

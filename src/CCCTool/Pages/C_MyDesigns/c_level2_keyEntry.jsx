@@ -4,7 +4,6 @@ import "./myDesigns.css";
 import FKeyRendering from "../../Elements/f_keyRendering";
 
 class CKeyEntry extends Component {
-
   keyRender() {
     let keyInput = [];
     let backgroundColor = "none";
@@ -28,9 +27,9 @@ class CKeyEntry extends Component {
           topColor = this.props.cmsKey.getCL().getRGBString(false);
         }
         //topDiv
-        keyInput.push(React.createElement("div", { style: { height: "40%", width: "100%", borderBottom: "var(--border-width) solid var(--borderColor-brightBG)", background: topColor } }));
+        keyInput.push(React.createElement("div", { style: { height: "40%", width: "100%", borderBottom: "var(--border-width) solid var(--borderColor)", background: topColor } }));
         //leftDiv
-        keyInput.push(React.createElement("div", { style: { height: "60%", width: "50%", borderRight: "var(--border-width) solid var(--borderColor-brightBG)", background: this.props.cmsKey.getCL().getRGBString(false) } }));
+        keyInput.push(React.createElement("div", { style: { height: "60%", width: "50%", borderRight: "var(--border-width) solid var(--borderColor)", background: this.props.cmsKey.getCL().getRGBString(false) } }));
         break;
       case "dual":
         backgroundColor = this.props.cmsKey.getCL().getRGBString(false);
@@ -40,21 +39,21 @@ class CKeyEntry extends Component {
 
     return React.createElement(
       "div",
-      { style: { margin: "auto 1vw", height: "3vh", width: "3vh", border: "var(--border-width) solid var(--borderColor-brightBG)", borderRadius: "var(--border-radius)", overflow: "hidden", background: backgroundColor } },
+      { style: { margin: "auto 1vw", height: "3vh", width: "3vh", border: "var(--border-width) solid var(--borderColor)", borderRadius: "var(--border-radius)", overflow: "hidden", background: backgroundColor } },
       keyInput
     );
   }
 
   getNilKeySVG(doHalf, doMarginLeft) {
-    let style = { background: "var(--bg-bright)", stroke: "var(--font-color-brightBG)", width: "100%", margin: "0vh 0vw 0vh 0vw", borderLeft: "none", borderRight: "none", height: "100%" };
+    let style = { background: "var(--bg-app)", stroke: "var(--font-color)", width: "100%", margin: "0vh 0vw 0vh 0vw", borderLeft: "none", borderRight: "none", height: "100%" };
     if (doHalf) {
       style.width = "50%";
       if (doMarginLeft) {
         style.margin = "0vh 0vw 0vh auto";
-        style.borderLeft = "var(--border-width) solid var(--font-color-brightBG)";
+        style.borderLeft = "var(--border-width) solid var(--font-color)";
       } else {
         style.margin = "0vh auto 0vh 0vw";
-        style.borderRight = "var(--border-width) solid var(--font-color-brightBG)";
+        style.borderRight = "var(--border-width) solid var(--font-color)";
       }
     }
 

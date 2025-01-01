@@ -15,10 +15,10 @@ class CLogIn extends Component {
   render() {
     return (
       <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
-        <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark)", zIndex: "0", top: "0px", left: "0px" }}></div>
+        <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out)", zIndex: "0", top: "0px", left: "0px" }}></div>
         <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
-        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-dark-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
-          <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
+        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "20vh", margin: "auto", marginRight: "5vw", cursor: "pointer" }}></img>
           <h1
             style={{
               maxHeight: "25vh",
@@ -36,9 +36,9 @@ class CLogIn extends Component {
             onMouseLeave={() => this.particleStart()}
             onMouseEnter={() => this.particleStop()}
             className="cl_blur"
-            style={{ pointerEvents: "auto", margin: "auto", padding: "5vh 4vw", paddingBottom: "1vh", borderRadius: "var(--border-radius)", background: "var(--bg-bright-alpha-75)" }}
+            style={{ pointerEvents: "auto", margin: "auto", padding: "5vh 4vw", paddingBottom: "1vh", borderRadius: "var(--border-radius)", background: "var(--bg-alpha-alpha-75)" }}
           >
-            <p className="cl_bigText" style={{ marginBottom: "1vh", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}>
+            <p className="cl_bigText" style={{ marginBottom: "1vh", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}>
               Welcome
             </p>
             <input ref={this.emailInputRef} type="text" placeholder="E-Mail" style={{ width: "20vw", marginBottom: "1vh" }}></input>
@@ -83,8 +83,8 @@ class CLogIn extends Component {
             ></path>
           </svg>
 
-          <p style={{ margin: "auto", marginLeft: "1vw", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}> Version: 0.1.0 </p>
-          <p style={{ margin: "auto", marginRight: "2vw", color: "var(--font-color-brightBG)", fontFamily: "var(--font-family-SpecialText)" }}> Copyright © 2021 </p>
+          <p style={{ margin: "auto", marginLeft: "1vw", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}> Version: 0.1.0 </p>
+          <p style={{ margin: "auto", marginRight: "2vw", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}> Copyright © 2021 </p>
         </div>
       </div>
     );

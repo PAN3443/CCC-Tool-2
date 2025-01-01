@@ -29,7 +29,7 @@ class CPerson extends Component {
     if ("contact" in this.props.person) contactElement = this.getElement_Contact(this.props.person.contact, "person");
 
     return React.createElement("div", { key: "person_data_" + this.props.person.id, style: { width: "20vw", marginBottom: "auto", marginLeft: "3vw", marginRight: "3vw" } }, [
-      React.createElement("h3", { key: "person_contactLabel_" + this.props.person.id, style: { textAlign: "left" } }, name),
+      React.createElement("h3", { key: "person_contactLabel_" + this.props.person.id, style: { color:"var(--font-color)", textAlign: "left" } }, name),
       contactElement,
     ]);
   }
@@ -71,7 +71,7 @@ class CPerson extends Component {
         if ("contact" in affiliation) contactElement = this.getElement_Contact(affiliation.contact, "affiliation");
 
         return React.createElement("div", { key: "person_affiliation_" + this.props.person.id, style: { marginBottom: "auto", marginRight: "auto", width: "20vw", marginLeft: "auto" } }, [
-          React.createElement("h3", { key: "person_name_" + this.props.person.id, style: { textAlign: "left" } }, name),
+          React.createElement("h3", { key: "person_name_" + this.props.person.id, style: { color:"var(--font-color)", textAlign: "left" } }, name),
           contactElement,
         ]);
       }

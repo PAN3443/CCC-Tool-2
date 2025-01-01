@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-point-out);
 }
 
 li {
@@ -13,7 +13,7 @@ li {
 li a,
 .dropbtn {
   display: inline-block;
-  color: var(--font-color-darkBG);
+  color: var(--font-color-point-out);
   text-align: center;
   padding: 1vh 1vw;
   text-decoration: none;
@@ -21,7 +21,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: var(--bg-hover);
+  background-color: var(--hover);
 }
 
 li.dropdown {

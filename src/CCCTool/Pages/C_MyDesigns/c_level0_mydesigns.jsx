@@ -43,11 +43,11 @@ class CMyDesigns extends Component {
       <div>
         <CHeader style={{ height: "8vh", width: "100vw" }}>
           <FNavigateButton navURL="/" style={{ margin: "auto", marginLeft: "5vw", marginRight: "2vw" }}>
-            <img src={"/CCC-Tool-2/img/Logos/CCC-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", cursor: "pointer" }}></img>
+            <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "6vh", cursor: "pointer" }}></img>
           </FNavigateButton>
           <h2
             style={{
-              color: "var(--font-color-darkBG)",
+              color: "var(--font-color-point-out)",
               margin: "auto",
               marginLeft: "0vw",
               cursor: "default",
@@ -72,7 +72,7 @@ class CMyDesigns extends Component {
             handleSetFilter={this.props.handleSetFilter.bind(this)}
             filter={this.props.filter}
             selectedCMS={this.props.selectedCMS}
-            style={{ height: "92vh", maxHeight: "92vh", width: "20vw", background: "var(--bg-dark-alpha-5)" }}
+            style={{ height: "92vh", maxHeight: "92vh", width: "20vw", background: "var(--bg-point-out-alpha-5)" }}
           ></CSelectedView>
           <div style={{ height: "92vh", width: "80vw" }}>
             <div style={{ height: "82vh", maxHeight: "82vh" }}>
@@ -105,7 +105,7 @@ class CMyDesigns extends Component {
                 )}
               </div>
             </div>
-            <div className="cl_row" style={{ height: "10vh", width: "100%", background: "var(--bg-dark-alpha-5)" }}>
+            <div className="cl_row" style={{ height: "10vh", width: "100%", background: "var(--bg-point-out-alpha-5)" }}>
               <svg className="cl_Icon_S_BrightBG cl_Icon_S" onClick={() => this.props.handleExportSession()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <title>Save</title>
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
@@ -125,7 +125,7 @@ class CMyDesigns extends Component {
                 <line x1="2" y1="18" x2="18" y2="18" />
               </svg>
 
-              <svg className="cl_Icon_S_BrightBG_Disabled cl_Icon_S" onClick={() => this.open_filer()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw", fill: "var(--bg-bright)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <svg className="cl_Icon_S_BrightBG_Disabled cl_Icon_S" onClick={() => this.open_filer()} style={{ height: "5vh", width: "5vh", margin: "auto 1vw", fill: "var(--bg-app)" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                 <title>Filter</title>
                 <line x1="6" y1="2" x2="6" y2="28" />
                 <line x1="15" y1="2" x2="15" y2="28" />

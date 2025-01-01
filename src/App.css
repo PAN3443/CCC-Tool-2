@@ -6,44 +6,32 @@
 
 :root {
   /**************************************
-  **** background
+  **** App Variables
   ***************************************/
 
-  --bg-app: rgb(250, 250, 250);
+  --bg-app: var(--bg-brightmode);
+  --bg-alpha-5: var(--bg-brightmode-alpha-5);
+  --bg-alpha-25: var(--bg-brightmode-alpha-25);
+  --bg-alpha-50: var(--bg-brightmode-alpha-50);
+  --bg-alpha-75: var(--bg-brightmode-alpha-75);
+  --bg-gradient: var(--bg-brightmode-gradient);
+  --bg-point-out: var(--bg-point-out-brightmode);
+  --bg-point-out-alpha-5: var(--bg-point-out-brightmode-alpha-5);
+  --bg-point-out-alpha-25: var(--bg-point-out-brightmode-alpha-25);
+  --bg-point-out-alpha-50: var(--bg-point-out-brightmode-alpha-50);
+  --bg-point-out-alpha-75: var(--bg-point-out-brightmode-alpha-75);
+  --bg-point-out-gradient: var(--bg-point-out-brightmode-gradient);
 
-  --bg-dark: rgb(30, 30, 30);
-  --bg-bright: rgb(250, 250, 250);
+  --hover: rgb(255, 167, 126); /*rgb(255, 51, 0);*/
+  --active: rgb(255, 106, 51); /*rgb(255, 51, 0);*/
+  --warning: rgb(255, 51, 51);
+  --warning-alpha-5: rgba(255, 51, 51, 0.05);
+  --warning-alpha-10: rgba(255, 51, 51, 0.1);
+  --warning-alpha-25: rgba(255, 51, 51, 0.25);
+  --warning-alpha-50: rgba(255, 51, 51, 0.5);
+  --warning-alpha-75: rgba(255, 51, 51, 0.75);
 
-  --bg-dark-alpha-5: rgba(30, 30, 30, 0.05);
-  --bg-bright-alpha-5: rgba(250, 250, 250, 0.05);
-
-  --bg-dark-alpha-25: rgba(30, 30, 30, 0.25);
-  --bg-bright-alpha-25: rgba(250, 250, 250, 0.25);
-
-  --bg-dark-alpha-50: rgba(30, 30, 30, 0.5);
-  --bg-bright-alpha-50: rgba(250, 250, 250, 0.5);
-
-  --bg-dark-alpha-75: rgba(30, 30, 30, 0.75);
-  --bg-bright-alpha-75: rgba(250, 250, 250, 0.75);
-
-  --bg-dark-gradient: rgb(59, 31, 31);
-  --bg-bright-gradient: rgb(150, 150, 150);
-
-  --bg-hover: rgb(255, 167, 126); /*rgb(255, 51, 0);*/
-
-  --bg-active: rgb(255, 106, 51); /*rgb(255, 51, 0);*/
-
-  --bg-warning: rgb(255, 51, 51);
-  --bg-warning-alpha-5: rgba(255, 51, 51, 0.05);
-  --bg-warning-alpha-10: rgba(255, 51, 51, 0.1);
-  --bg-warning-alpha-25: rgba(255, 51, 51, 0.25);
-  --bg-warning-alpha-50: rgba(255, 51, 51, 0.5);
-  --bg-warning-alpha-75: rgba(255, 51, 51, 0.75);
-
-  /**************************************
-  **** Font
-  ***************************************/
-
+  /* Font Vars*/
   --font-size-small: 1.3vh;
   --line-height-small: 1.5vh;
 
@@ -53,14 +41,14 @@
   --font-size-big: 2.2vh;
   --line-height-big: 2.5vh;
 
-  --font-size-h3: 2.2vh;
-  --line-height-h3: 2.5vh;
+  --font-size-h3: 2.75vh;
+  --line-height-h3: 3vh;
 
   --font-size-h2: 4vh;
-  --line-height-h2: 6vh;
+  --line-height-h2: 5vh;
 
   --font-size-h1: 6vh;
-  --line-height-h1: 10vh;
+  --line-height-h1: 7vh;
 
   --font-family-text: "CCCTextFont";
   --font-family-button: "CCCButtonFont";
@@ -69,31 +57,79 @@
   --font-family-figCaption: "CCCFigCaption";
   --font-family-SpecialText: "CCCSpecialText";
 
-  --font-color-brightBG: var(--bg-dark); /*rgb(30, 30, 30);*/
-  --font-color-darkBG: var(--bg-bright); /*rgb(235, 235, 235);*/
-  --font-color-warning: var(--bg-warning); /*rgb(235, 235, 235);*/
+  --font-color: var(--font-color-brightmode);
+  --font-color-alpha-75: var(--font-color-brightmode-alpha-75);
+  --font-color-point-out: var(--font-color-point-out-brightmode);
+  --font-color-point-out-alpha-75: var(--font-color-point-out-brightmode-alpha-75);
+  --font-color-warning: var(--warning);
+
+  /**************************************
+  **** Brigth Mode
+  ***************************************/
+  --bg-brightmode: rgb(255, 255, 255);
+  --bg-brightmode-alpha-5: rgba(250, 250, 250, 0.05);
+  --bg-brightmode-alpha-25: rgba(250, 250, 250, 0.25);
+  --bg-brightmode-alpha-50: rgba(250, 250, 250, 0.5);
+  --bg-brightmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --bg-brightmode-gradient: rgb(150, 150, 150);
+  --bg-point-out-brightmode: rgb(30, 30, 30);
+  --bg-point-out-brightmode-alpha-5: rgba(30, 30, 30, 0.05);
+  --bg-point-out-brightmode-alpha-25: rgba(30, 30, 30, 0.25);
+  --bg-point-out-brightmode-alpha-50: rgba(30, 30, 30, 0.5);
+  --bg-point-out-brightmode-alpha-75: rgba(30, 30, 30, 0.75);
+  --bg-point-out-brightmode-gradient: rgb(59, 31, 31);
+  --font-color-brightmode: rgb(30, 30, 30);
+  --font-color-brightmode-alpha-75: rgba(30, 30, 30, 0.75);
+  --font-color-point-out-brightmode: rgb(250, 250, 250);
+  --font-color-point-out-brightmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --borderColor-brightmode: rgb(180, 180, 180);
+  --borderColor-point-out-brightmode: rgb(225, 225, 225);
+  --shadowColor-brightmode: rgba(30, 30, 30, 0.75);
+
+  /**************************************
+  **** Dark Mode
+  ***************************************/
+  --bg-darkmode: rgb(30, 30, 30);
+  --bg-darkmode-alpha-5: rgba(80, 80, 80, 0.05);
+  --bg-darkmode-alpha-25: rgba(80, 80, 80, 0.25);
+  --bg-darkmode-alpha-50: rgba(80, 80, 80, 0.5);
+  --bg-darkmode-alpha-75: rgba(80, 80, 80, 0.75);
+  --bg-darkmode-gradient: rgb(109, 81, 81);
+  --bg-point-out-darkmode: rgb(30, 30, 30);
+  --bg-point-out-darkmode-alpha-5: rgba(30, 30, 30, 0.05);
+  --bg-point-out-darkmode-alpha-25: rgba(30, 30, 30, 0.25);
+  --bg-point-out-darkmode-alpha-50: rgba(30, 30, 30, 0.5);
+  --bg-point-out-darkmode-alpha-75: rgba(30, 30, 30, 0.75);
+  --bg-point-out-darkmode-gradient: rgb(59, 31, 31);
+  --font-color-darkmode: rgb(250, 250, 250);
+  --font-color-darkmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --font-color-point-out-darkmode: rgb(250, 250, 250);
+  --font-color-point-out-darkmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --borderColor-darkmode: rgb(180, 180, 180);
+  --borderColor-point-out-darkmode: rgb(225, 225, 225);
+  --shadowColor-darkmode: rgba(235, 235, 235, 0.75);
 
   /**************************************
   **** Border
   ***************************************/
-
+  --border-solid: var(--border-width) solid var(--borderColor);
   --border-width: 1px;
   --border-width-bold: 2px;
   --border-radius: 0.5vh;
-  --borderColor-brightBG: rgb(30, 30, 30);
-  --borderColor-light-brightBG: rgb(180, 180, 180);
-  --borderColor-darkBG: rgb(225, 225, 225);
+  --borderColor: var(--borderColor-brightmode);
+  --borderColor-point-out: var(--borderColor-point-out-brightmode);
   --borderColor-active: rgb(178, 74, 35);
 
   /**************************************
   **** Other
   ***************************************/
-  --shadowColor-brightBG: rgba(30, 30, 30, 0.75);
-  --shadowColor-darkBG: rgba(235, 235, 235, 0.75);
+  --boxShadow: 0.1vw 0.2vh 0.4vh var(--shadowColor);
+
+  --shadowColor: var(--shadowColor-brightmode);
   --shadowColor-active: rgba(255, 106, 51, 0.75);
 
-  --disabledColor-brightBG: var(--bg-dark-alpha-50);
-  --disabledColor-BG-brightBG: var(--bg-dark-alpha-25);
+  --disabledColor-brightBG: var(--bg-point-out-alpha-50);
+  --disabledColor-BG-brightBG: var(--bg-point-out-alpha-25);
 }
 
 /*****************************************************
@@ -155,7 +191,7 @@ p {
   font-family: var(--font-family-text);
   font-size: var(--font-size-normal);
   line-height: var(--line-height-normal);
-  color: var(--font-color-brightBG);
+  color: var(--font-color);
   vertical-align: middle;
   text-align: left;
   margin: 0px;
@@ -169,12 +205,12 @@ p {
 }
 
 .cl_notSelectable {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .cl_textBlock {
@@ -194,24 +230,24 @@ a:link {
   font-family: var(--font-family-text);
   font-size: var(--font-size-normal);
   line-height: var(--line-height-normal);
-  color: var(--font-color-brightBG);
+  color: var(--font-color);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* visited link */
 a:visited {
-  color: var(--font-color-brightBG);
+  color: var(--font-color);
 }
 
 /* mouse over link */
 a:hover {
-  color: var(--font-color-brightBG);
+  color: var(--font-color);
 }
 
 /* selected link */
 a:active {
-  color: var(--font-color-brightBG);
+  color: var(--font-color);
 }
 
 h1 {
@@ -219,7 +255,7 @@ h1 {
   font-family: var(--font-family-cccLabel);
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
-  color: var(--font-color-darkBG);
+  color: var(--font-color-point-out);
   vertical-align: middle;
   margin: auto;
   overflow: hidden;
@@ -231,7 +267,7 @@ h2 {
   font-family: var(--font-family-section);
   font-size: var(--font-size-h2);
   line-height: var(--line-height-h2);
-  color: var(--font-color-brightBG);
+  color: var(--font-color-point-out);
   vertical-align: middle;
   margin: 0px;
   overflow: hidden;
@@ -243,7 +279,7 @@ h3 {
   font-family: var(--font-family-text);
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
-  color: var(--font-color-brightBG);
+  color: var(--font-color-point-out);
   vertical-align: middle;
   margin: 0px;
   overflow: hidden;
@@ -255,7 +291,7 @@ h4 {
   font-family: var(--font-family-text);
   font-size: var(--font-size-normal);
   line-height: var(--line-height-normal);
-  color: var(--font-color-brightBG);
+  color: var(--font-color-point-out);
   vertical-align: middle;
   margin: 0px;
   overflow: hidden;
@@ -263,7 +299,7 @@ h4 {
 }
 
 .cl_textBorder_Dark {
-  -webkit-text-stroke: 2px var(--bg-dark);
+  -webkit-text-stroke: 2px var(--bg-point-out);
 }
 
 div {
@@ -299,7 +335,7 @@ input {
 input {
   height: 3vh;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--borderColor-brightBG);
+  border: var(--border-width) solid var(--borderColor);
   padding-left: 1vw;
   font-size: var(--font-size-normal);
   line-height: var(--line-height-normal);
@@ -313,7 +349,7 @@ input:focus:hover {
 }
 
 input:hover {
-  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor);
 }*/
 
 /*input[type="range"][orient="vertical"] {
@@ -330,8 +366,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] label::after {
-  color: var(--bg-hover);
-  background: var(--bg-hover);
+  color: var(--hover);
+  background: var(--hover);
 }*/
 
 /* The cl_checkDiv */
@@ -371,26 +407,26 @@ input[type="checkbox"] label::after {
   left: 0;
   height: 2.5vh;
   width: 2.5vh;
-  border: var(--border-width) solid var(--borderColor-brightBG);
+  border: var(--border-width) solid var(--borderColor);
   background-color: var(--bg-app);
   border-radius: var(--border-radius);
 }
 
 /* On mouse-over, add a grey background color */
 .cl_checkDiv:hover input ~ .cl_checkSpan {
-  border: var(--border-width-bold) solid var(--borderColor-brightBG);
+  border: var(--border-width-bold) solid var(--borderColor);
 }
 
 /* When the checkbox is checked, add a blue background */
 .cl_checkDiv input:checked ~ .cl_checkSpan {
-  border: var(--border-width) solid var(--bg-hover);
+  border: var(--border-width) solid var(--hover);
   border-radius: var(--border-radius);
-  background-color: var(--bg-hover);
+  background-color: var(--hover);
 }
 
 .cl_checkDiv input:checked ~ .cl_checkSpan:hover {
-  border: var(--border-width-bold) solid var(--bg-hover);
-  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
+  border: var(--border-width-bold) solid var(--hover);
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor);
 }
 
 /* Create the cl_checkSpan/indicator (hidden when not checked) */
@@ -429,13 +465,13 @@ select {
   border-radius: var(--border-radius);
   min-width: 5vw;
   max-width: 10vw;
-  border: var(--border-width) solid var(--borderColor-brightBG);
+  border: var(--border-width) solid var(--borderColor);
   padding: 0.25vh 0.5vw;
   font-size: var(--font-size-normal);
   cursor: pointer;
   line-height: var(--line-height-normal);
-  background-color: var(--bg-bright);
-  background-image: linear-gradient(to top, var(--bg-bright), var(--bg-app) 33%);
+  background-color: var(--bg-app);
+  background-image: linear-gradient(to top, var(--bg-app), var(--bg-app) 33%);
 }
 
 select::after {
@@ -443,13 +479,13 @@ select::after {
   content: "";
   width: 1vw;
   height: 1vh;
-  background-color: var(--borderColor-brightBG);
+  background-color: var(--borderColor);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
   justify-self: end;
 }
 
 select:hover {
-  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor-brightBG);
+  box-shadow: 0.25vh 0.25vh 0.125vh var(--shadowColor);
 }
 
 select:focus,
@@ -491,9 +527,9 @@ button:focus {
 }
 
 button {
-  border: var(--border-width) solid var(--borderColor-brightBG);
-  background-color: var(--bg-dark);
-  color: var(--font-color-darkBG);
+  border: var(--border-width) solid var(--borderColor);
+  background-color: var(--bg-point-out);
+  color: var(--font-color-point-out);
   border-radius: var(--border-radius);
   /*padding: 0.5vh 1vw;*/
   font-size: var(--font-size-normal);
@@ -503,9 +539,9 @@ button {
 }
 
 .cl_button_Bright {
-  border: var(--border-width) solid var(--borderColor-darkBG);
-  background-color: var(--bg-bright);
-  color: var(--font-color-brightBG);
+  border: var(--border-width) solid var(--borderColor-point-out);
+  background-color: var(--bg-app);
+  color: var(--font-color);
   border-radius: var(--border-radius);
   /*padding: 0.5vh 1vw;*/
   font-size: var(--font-size-normal);
@@ -516,13 +552,13 @@ button {
 
 button:hover {
   border: none; /*var(--border-width) solid var(--borderColor-active);*/
-  background-color: var(--bg-hover);
+  background-color: var(--hover);
 }
 
 .cl_button_Bright:hover {
   border: var(--border-width) solid var(--borderColor-active);
-  background-color: var(--bg-hover);
-  color: var(--font-color-darkBG);
+  background-color: var(--hover);
+  color: var(--font-color-point-out);
 }
 
 button:disabled,
@@ -534,8 +570,8 @@ button[disabled] {
 }
 
 .cl_button_qa_Dark {
-  background-color: var(--bg-dark);
-  color: var(--font-color-darkBG);
+  background-color: var(--bg-point-out);
+  color: var(--font-color-point-out);
   height: 4vh;
   max-height: 4vw;
   width: 4vw;
@@ -547,7 +583,7 @@ button[disabled] {
 
 .cl_button_qa_Dark:hover {
   border: none;
-  background-color: var(--bg-hover);
+  background-color: var(--hover);
 }
 
 /*****************************************************
@@ -557,9 +593,9 @@ button[disabled] {
 /****************************************************/
 
 .cl_innerShadow {
-  -moz-box-shadow: inset 0 0 1vh var(--shadowColor-brightBG);
-  -webkit-box-shadow: inset 0 0 1vh var(--shadowColor-brightBG);
-  box-shadow: inset 0 0 1vh var(--shadowColor-brightBG);
+  -moz-box-shadow: inset 0 0 1vh var(--shadowColor);
+  -webkit-box-shadow: inset 0 0 1vh var(--shadowColor);
+  box-shadow: inset 0 0 1vh var(--shadowColor);
 }
 
 /*****************************************************
@@ -595,42 +631,42 @@ button[disabled] {
 }
 
 .cl_Icon_F_BrightBG {
-  fill: var(--bg-dark);
+  fill: var(--bg-point-out);
 }
 
 .cl_Icon_F_BrightBG:hover {
-  fill: var(--bg-hover);
+  fill: var(--hover);
 }
 
 .cl_Icon_S_BrightBG {
-  stroke: var(--bg-dark);
+  stroke: var(--bg-point-out);
 }
 
 .cl_Icon_S_BrightBG:hover {
-  stroke: var(--bg-hover);
+  stroke: var(--hover);
 }
 
 .cl_Icon_F_DarkBG {
-  fill: var(--bg-bright);
+  fill: var(--bg-app);
 }
 
 .cl_Icon_F_DarkBG:hover {
-  fill: var(--bg-hover);
+  fill: var(--hover);
 }
 
 .cl_Icon_S_DarkBG {
-  stroke: var(--bg-bright);
+  stroke: var(--bg-app);
 }
 
 .cl_Icon_S_DarkBG:hover {
-  stroke: var(--bg-hover);
+  stroke: var(--hover);
 }
 
 .cl_Icon_S_BrightBG_Disabled {
-  stroke: var(--bg-dark);
+  stroke: var(--bg-point-out);
   cursor: not-allowed;
 }
 
 .cl_Icon_S_BrightBG_Activated {
-  stroke: var(--bg-active);
+  stroke: var(--active);
 }

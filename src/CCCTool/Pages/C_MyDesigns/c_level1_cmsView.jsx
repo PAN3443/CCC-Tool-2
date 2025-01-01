@@ -39,9 +39,9 @@ class CCMSView extends Component {
   render() {
     return (
       <div className="cl_CMSView_Div" onClick={() => this.props.handleSelectCMS(this.props.cmsObjID, this.props.cmsID)}>
-        <div ref={this.ref_Div} style={{ width: "95%", marginLeft: "2.5%", marginTop: "2.5vh", marginBottom: "2.5vh", border: "var(--border-width) solid var(--borderColor-brightBG)", borderRadius: "var(--border-radius)", overflow: "hidden" }}>
-          <div style={{ width: "100%", flexDirection: "row", background: "var(--bg-dark)", borderBottom: "var(--border-width) solid var(--borderColor-brightBG)", padding: "0.5vh 2.5vw" }}>
-            <p style={{ color: "var(--font-color-darkBG)", maxHeight: "var(--line-height-normal)" }} title={"CMS : " + this.props.cms.name + " (Type: " + this.determineType() + ")"}>
+        <div ref={this.ref_Div} style={{ width: "95%", marginLeft: "2.5%", marginTop: "2.5vh", marginBottom: "2.5vh", border: "var(--border-width) solid var(--borderColor)", borderRadius: "var(--border-radius)", overflow: "hidden" }}>
+          <div style={{ width: "100%", flexDirection: "row", background: "var(--bg-point-out)", borderBottom: "var(--border-width) solid var(--borderColor)", padding: "0.5vh 2.5vw" }}>
+            <p style={{ color: "var(--font-color-point-out)", maxHeight: "var(--line-height-normal)" }} title={"CMS : " + this.props.cms.name + " (Type: " + this.determineType() + ")"}>
               <strong>{"CMS"}</strong>
               {": " + this.props.cms.name + " (Type: " + this.determineType() + ")"}
             </p>

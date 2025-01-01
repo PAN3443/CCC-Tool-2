@@ -36,7 +36,7 @@ class CCMSRendering extends Component {
       return (
         <svg
           style={{
-            ...{ background: "var(--bg-bright)", stroke: "var(--font-color-brightBG)" },
+            ...{ background: "var(--bg-app)", stroke: "var(--font-color)" },
             ...this.props.style,
           }}
           xmlns="http://www.w3.org/2000/svg"

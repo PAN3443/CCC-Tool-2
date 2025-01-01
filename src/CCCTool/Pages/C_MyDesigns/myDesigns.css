@@ -6,7 +6,7 @@
 }
 
 .cl_CMSView_Div:hover {
-  box-shadow: 0.2vw var(--border-width) 1vh var(--shadowColor-brightBG);
+  box-shadow: 0.2vw var(--border-width) 1vh var(--shadowColor);
 }
 
 .cl_CMSGroup_Div {
@@ -41,6 +41,6 @@
   height: 3vh;
   width: 3vh;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--borderColor-brightBG);
+  border: var(--border-width) solid var(--borderColor);
   margin-top: 0.5vh;
 }

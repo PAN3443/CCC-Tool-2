@@ -1,23 +1,57 @@
 .cl_HomeSelect_Div {
-  width: 24vw;
-  height: 20vh;
-  line-height: 20vh;
+  position: relative;
+  overflow: hidden;
+  width: 15vw;
+  max-width: 25vh;
+  height: 25vh;
+  max-height: 15vw;
+  padding: auto;
   pointer-events: auto;
   cursor: pointer;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-  margin-left: 4vw;
+  margin: 0vh 1vw;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--borderColor-light-brightBG);
-  background: var(--bg-bright-alpha-75);
-  font-size: var(--font-size-big);
-  
-  text-align: center;
-  font-weight: bold;
+  border: var(--border-width) solid var(--borderColor);
+  box-shadow: var(--boxShadow);
 }
 
-.cl_HomeSelect_Div:hover {
-  scale: 1.05;
+.cl_HomeSelect_Div div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: var(--bg-url);
+  background: var(--bg-alpha-alpha-50);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  transition: opacity 1.5s ease;
+}
+
+.cl_HomeSelect_Div p {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin: auto;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  text-align: center;
+  color: var(--bg-app);
+  text-shadow: -1px -1px 0 var(--font-color), /* Oben links */ 1px -1px 0 var(--font-color), /* Oben rechts */ -1px 1px 0 var(--font-color), /* Unten links */ 1px 1px 0 var(--font-color); /* Unten rechts */
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.cl_HomeSelect_Div:hover div {
+  opacity: 1;
+}
+
+.cl_HomeSelect_Div:hover p {
+  opacity: 0;
 }
 
 .cl_HomeText_Div {
@@ -26,7 +60,57 @@
   margin: 3vh auto;
   padding: 5vh 4vw;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--borderColor-light-brightBG);
-  background: var(--bg-bright);
-  
+  border: var(--border-width) solid var(--borderColor);
+  background: var(--bg-app);
+}
+
+.cl_language_Button {
+  width: 2vw;
+  height: 4vh;
+  margin-top: 0.5vh;
+  margin-right: 2vw;
+  border-radius: var(--border-radius);
+  border: var(--border-solid);
+  background-color: var(--bg-app);
+  color: var(--font-color);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: var(--boxShadow);
+}
+
+.cl_language_DropDownBox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 4.2vh;
+  left: -13vw;
+  width: 15vw;
+  max-height: 40vh;
+  overflow-y: auto;
+  border: var(--border-solid);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-app);
+  z-index: 1000;
+  box-shadow: var(--boxShadow);
+}
+
+.cl_language_DropDownElement {
+  display: flex;
+  align-items: center;
+  padding: 0.5vh;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cl_language_DropDownElement span {
+  margin-right: 0.4vw;
+}
+
+.cl_language_DropDownElement:hover {
+  background-color: var(--hover);
 }

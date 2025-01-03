@@ -76,7 +76,7 @@ class CContact extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-90)", zIndex: "2", top: "0px", left: "0px" }}>
             <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "2vw" }}>
               <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "23vh" }}></img>
             </FNavigateButton>
@@ -102,7 +102,7 @@ class CContact extends Component {
           ))}
 
           <h2 style={{ color: "var(--font-color)", marginBottom: "3vh" }}>Partner</h2>
-          <p style={{ color: "var(--font-color-alpha-75)" }}>
+          <p style={{ color: "var(--font-color-alpha-90)" }}>
             <Trans
               i18nKey="page_contact.partnerText"
               components={{
@@ -116,7 +116,9 @@ class CContact extends Component {
           ))}
         </div>
         <div style={{ width: "100%", widthMax: "100%", margin: "0px", background: "var(--bg-point-out)" }}>
-          <h2 style={{ color: "var(--font-color-point-out)", marginLeft: "1vw", marginTop: "1vh" }}><Trans i18nKey="page_contact.thanks" /></h2>
+          <h2 style={{ color: "var(--font-color-point-out)", marginLeft: "1vw", marginTop: "1vh" }}>
+            <Trans i18nKey="page_contact.thanks" />
+          </h2>
           <div className="cl_row" style={{ width: "100%", justifyContent: "center", padding: "0vh 0vw 5vh 0vw", overflow: "hidden" }}>
             {this.state.affiliations.map((a) => (
               <CAffiliation key={"id_affiliations_" + a.id} affiliation={a} />

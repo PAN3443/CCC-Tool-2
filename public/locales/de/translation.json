@@ -5,7 +5,6 @@
   "label_analysis": "Analysis",
   "label_optimization": "Optimierung",
   "label_colorBlindness": "Farb-<br>blindheit",
-  "label_design": "Design",
   "label_docu": "Doku",
   "label_contact": "Kontakt",
   "version": "Version",
@@ -15,5 +14,20 @@
     "partner": "Partner",
     "partnerText": "Partner der Webseite <0>ccctool.com</0> und den zugehörigen Veröffentlichungen",
     "thanks": "Vielen Dank an:"
+  },
+  "page_settings": {
+    "label": "Einstellungen",
+    "general": "Generel",
+    "design": "Darstellung",
+    "advanced": "Experten"
+  },
+  "page_openSource": {
+    "label": "Open Source"
+  },
+  "page_tool_start": {
+    "label": "Start"
+  },
+  "page_tool_newCMS": {
+    "label": "Neue CMS"
   }
 }

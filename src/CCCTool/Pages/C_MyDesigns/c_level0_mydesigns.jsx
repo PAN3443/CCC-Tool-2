@@ -14,7 +14,6 @@ import { CMS } from "ccctool-lib/lib/cms/class_cms";
 class CMyDesigns extends Component {
   constructor() {
     super();
-    this.ref_Confirm_LogOut = React.createRef();
     this.ref_CMS_Container = React.createRef();
     this.ref_Confirm_ClearSession = React.createRef();
 
@@ -83,7 +82,7 @@ class CMyDesigns extends Component {
                       key={"id_cmsG_" + filteredObj[1]}
                       handleSelectCMS={this.props.handleSelectCMS.bind(this)}
                       selectedCMSObjIndex={this.props.selectedCMSObjIndex}
-                      selectedCMSIndex={this.props.selectedCMSIndex}
+                      selectedCMSUniqueId={this.props.selectedCMSUniqueId}
                       cmsObjID={filteredObj[1]}
                       groupName={this.props.session[filteredObj[1]].groupName}
                       cmsObjects={this.props.session[filteredObj[1]].cmsObjects}
@@ -95,7 +94,7 @@ class CMyDesigns extends Component {
                       key={"id_cmsV_" + filteredObj[1] + "_" + filteredObj[2]}
                       handleSelectCMS={this.props.handleSelectCMS.bind(this)}
                       selectedCMSObjIndex={this.props.selectedCMSObjIndex}
-                      selectedCMSIndex={this.props.selectedCMSIndex}
+                      selectedCMSUniqueId={this.props.selectedCMSUniqueId}
                       cmsObjID={filteredObj[1]}
                       cmsID={filteredObj[1]}
                       cms={this.props.session[filteredObj[1]].cms}
@@ -111,7 +110,7 @@ class CMyDesigns extends Component {
                 <polyline points="8 2 2 2 2 18 18 18 18 10 8 10 8 2 18 2 18 10" />
               </svg>
 
-              <FNavigateButton navURL="/tool/generate" style={{ margin: "auto 1vw" }}>
+              <FNavigateButton navURL="/tool/new" style={{ margin: "auto 1vw" }}>
                 <svg title="New" className="cl_Icon_S_BrightBG cl_Icon_S" style={{ height: "5vh", width: "5vh" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <line x1="2" y1="10" x2="18" y2="10" />
                   <line x1="10" y1="2" x2="10" y2="18" />
@@ -143,10 +142,6 @@ class CMyDesigns extends Component {
             </div>
           </div>
         </div>
-        <CConfirm ref={this.ref_Confirm_LogOut} accept={() => this.props.logout()}>
-          You are about to log out. All locale storage from the MyDesigns section will be deleted. In case of a guest login the data is irrevocably gone. Make sure that you have saved all data in a session file. Click on <strong>"Accept"</strong> to
-          continue the log out process.
-        </CConfirm>
         <CConfirm ref={this.ref_Confirm_ClearSession} accept={() => this.props.handleClearSession()}>
           You are about to clear this session. All data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the process.
         </CConfirm>

@@ -23,7 +23,7 @@
   height: 100%;
   overflow: hidden;
   background-image: var(--bg-url);
-  background: var(--bg-alpha-alpha-50);
+  background: var(--bg-alpha-alpha-80);
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,7 +35,7 @@
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   margin: auto;
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);

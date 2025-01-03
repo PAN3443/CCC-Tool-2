@@ -38,7 +38,7 @@ class CHome extends Component {
       <div style={{ position: "relative", height: "100vh", width: "100vw", background: "var(--bg-app)" }}>
         <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out)", zIndex: "0", top: "0px", left: "0px" }}></div>
         <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
-        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-90)", zIndex: "2", top: "0px", left: "0px" }}>
           <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "23vh", margin: "auto", marginRight: "2vw", cursor: "pointer" }}></img>
           <h1
             style={{
@@ -105,7 +105,7 @@ class CHome extends Component {
             </div>
           </div>
           <div className="cl_row" style={{ width: "auto", margin: "auto", marginTop: "0px" }}>
-            <FNavigateButton navURL="/theme" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+            <FNavigateButton navURL="/settings" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
               <div className="cl_HomeSelect_Div">
                 <div
                   style={{
@@ -113,7 +113,7 @@ class CHome extends Component {
                   }}
                 ></div>
                 <p>
-                  <Trans i18nKey="label_design" />
+                  <Trans i18nKey="page_settings.label" />
                 </p>
               </div>
             </FNavigateButton>
@@ -148,7 +148,9 @@ class CHome extends Component {
                     backgroundImage: `url(${BackgroundGit})`,
                   }}
                 ></div>
-                <p>GitHub</p>
+                <p>
+                  <Trans i18nKey="page_openSource.label" />
+                </p>
               </div>
             </FNavigateButton>
           </div>

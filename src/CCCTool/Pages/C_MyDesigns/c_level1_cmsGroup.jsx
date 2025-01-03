@@ -32,7 +32,7 @@ class CCMSGroup extends Component {
             <CCMSView
               key={"id_cmsV_" + this.props.cmsObjID + "_" + filteredIndex}
               selectedCMSObjIndex={this.props.selectedCMSObjIndex}
-              selectedCMSIndex={this.props.selectedCMSIndex}
+              selectedCMSUniqueId={this.props.selectedCMSUniqueId}
               handleSelectCMS={this.props.handleSelectCMS.bind(this)}
               cmsObjID={this.props.cmsObjID}
               cmsID={filteredIndex}

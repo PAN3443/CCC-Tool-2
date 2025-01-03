@@ -22,14 +22,14 @@ class CCMSView extends Component {
   componentDidUpdate(prevProps, prevState) {
     //console.log("prevProps", prevProps);
     //console.log("prevState", prevState);
-    if (prevProps.selectedCMSObjIndex !== this.props.selectedCMSObjIndex || prevProps.selectedCMSIndex !== this.props.selectedCMSIndex) {
+    if (prevProps.selectedCMSObjIndex !== this.props.selectedCMSObjIndex || prevProps.selectedCMSUniqueId !== this.props.selectedCMSUniqueId) {
       this.isSelected();
     }
   }
 
   isSelected() {
-    //console.log(this.props.selectedCMSObjIndex + "==" + this.props.cmsObjID + " && " + this.props.selectedCMSIndex + "==" + this.props.cmsID);
-    if (this.props.selectedCMSObjIndex === this.props.cmsObjID && this.props.selectedCMSIndex === this.props.cmsID) {
+    //console.log(this.props.selectedCMSObjIndex + "==" + this.props.cmsObjID + " && " + this.props.selectedCMSUniqueId + "==" + this.props.cmsID);
+    if (this.props.selectedCMSObjIndex === this.props.cmsObjID && this.props.selectedCMSUniqueId === this.props.cmsID) {
       this.ref_Div.current.classList.add("cl_selectedCMS");
     } else {
       this.ref_Div.current.classList.remove("cl_selectedCMS");

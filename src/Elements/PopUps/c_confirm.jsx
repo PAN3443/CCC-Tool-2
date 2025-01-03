@@ -19,7 +19,7 @@ class CConfirm extends Component {
           left: "0px",
           bottom: "0px",
           zIndex: "100",
-          background: "var(--bg-point-out-alpha-50)",
+          background: "var(--bg-point-out-alpha-80)",
         }}
       >
         <div style={{ margin: "auto", padding: "3vh 4vw", maxWidth: "50%", borderRadius: "var(--border-radius)", background: "var(--bg-app)" }}>

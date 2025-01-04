@@ -120,6 +120,7 @@ class AppWrapper extends Component {
   componentDidMount() {
     window.addEventListener("focus", this.onFocus);
     window.addEventListener("storage", this.onStorageEvent);
+    this.loadLocalStroageCssVariables();
 
     let stateUpdate = {};
     stateUpdate.selectedCMSUniqueId = undefined;
@@ -177,13 +178,13 @@ class AppWrapper extends Component {
 
     //Change Page Style
     if (event.key === "ccc_pageCSSVariablesUpdate") {
-      this.updateCssVariables();
+      this.loadLocalStroageCssVariables();
     }
   };
 
-  updateCssVariables() {
+  loadLocalStroageCssVariables() {
     const cssVariablesString = window.localStorage.getItem("ccc_pageCSSVariablesUpdate");
-    if (ls_session !== null) {
+    if (cssVariablesString !== null) {
       const cssVariablesJSON = JSON.parse(cssVariablesString);
       for (const [key, value] of Object.entries(cssVariablesJSON)) {
         document.documentElement.style.setProperty(key, value);
@@ -226,25 +227,25 @@ class AppWrapper extends Component {
 
   render() {
     return (
-      <div style={{background: "var(--bg-app)"}}>
+      <div style={{ background: "var(--bg-app)" }}>
         <Router basename="/CCC-Tool-2">
-        <Routes>
-          <Route path="/" element={<CHome />}></Route>
-          <Route path="/git" element={<CGitInfo />}></Route>
-          <Route path="/contact" element={<CContact />}></Route>
-          <Route path="/docu" element={<CDocu />}></Route>
-          <Route path="/impressum" element={<CImpressum />}></Route>
-          <Route path="/settings" element={<CSettings />}></Route>
-          <Route path="/tool/start" element={<C_ToolStart />}></Route>
-          <Route path="*" element={<CError404 />}></Route>
-        </Routes>
-        <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
+          <Routes>
+            <Route path="/" element={<CHome />}></Route>
+            <Route path="/git" element={<CGitInfo />}></Route>
+            <Route path="/contact" element={<CContact />}></Route>
+            <Route path="/docu" element={<CDocu />}></Route>
+            <Route path="/impressum" element={<CImpressum />}></Route>
+            <Route path="/settings" element={<CSettings />}></Route>
+            <Route path="/tool/start" element={<C_ToolStart />}></Route>
+            <Route path="*" element={<CError404 />}></Route>
+          </Routes>
+          <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
 
-        <CConfirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
-          You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
-        </CConfirm>
-        <CTextBox ref={this.ref_WarningBox} warnText="Warning Text"></CTextBox>
-      </Router>
+          <CConfirm ref={this.ref_Confirm_LoadSession} accept={() => this.overwriteSession()}>
+            You are about to load another session. The current session will be replaced and all data will be lost. Make sure that you have saved your data. Click on <strong>"Accept"</strong> to continue the load process.
+          </CConfirm>
+          <CTextBox ref={this.ref_WarningBox} warnText="Warning Text"></CTextBox>
+        </Router>
       </div>
     );
   }

@@ -36,7 +36,7 @@ class CLogIn extends Component {
             onMouseLeave={() => this.particleStart()}
             onMouseEnter={() => this.particleStop()}
             className="cl_blur"
-            style={{ pointerEvents: "auto", margin: "auto", padding: "5vh 4vw", paddingBottom: "1vh", borderRadius: "var(--border-radius)", background: "var(--bg-alpha-alpha-90)" }}
+            style={{ pointerEvents: "auto", margin: "auto", padding: "5vh 4vw", paddingBottom: "1vh", borderRadius: "var(--border-radius)", background: "var(--bg-app-alpha-90)" }}
           >
             <p className="cl_bigText" style={{ marginBottom: "1vh", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}>
               Welcome

@@ -39,9 +39,11 @@ class CDesignSettings extends Component {
       "--font-color-alpha-90": "var(--font-color-brightmode-alpha-90)",
       "--font-color-point-out": "var(--font-color-point-out-brightmode)",
       "--font-color-point-out-alpha-90": "var(--font-color-point-out-brightmode-alpha-90)",
+      "--active-background": "var(--active-background-brightmode)",
+      "--active-background-alpha-0": "var(--active-background-brightmode-alpha-0)",
     };
-    /*window.localStorage.setItem("ccc_pageDesingMode", "bright");
-    window.localStorage.setItem("ccc_pageCSSVariablesUpdate", JSON.stringify(this.styleJson));*/
+    window.localStorage.setItem("ccc_pageDesingMode", "bright");
+    window.localStorage.setItem("ccc_pageCSSVariablesUpdate", JSON.stringify(this.styleJson));
     for (const [key, value] of Object.entries(this.styleJson)) {
       document.documentElement.style.setProperty(key, value);
     }
@@ -64,10 +66,11 @@ class CDesignSettings extends Component {
       "--font-color-alpha-90": "var(--font-color-darkmode-alpha-90)",
       "--font-color-point-out": "var(--font-color-point-out-darkmode)",
       "--font-color-point-out-alpha-90": "var(--font-color-point-out-darkmode-alpha-90)",
+      "--active-background": "var(--active-background-darkmode)",
+      "--active-background-alpha-0": "var(--active-background-darkmode-alpha-0)",
     };
-    /*window.localStorage.setItem("ccc_pageDesingMode", "dark");
+    window.localStorage.setItem("ccc_pageDesingMode", "dark");
     window.localStorage.setItem("ccc_pageCSSVariablesUpdate", JSON.stringify(this.styleJson));
-    console.log(window.localStorage.getItem("ccc_pageCSSVariablesUpdate"));*/
     for (const [key, value] of Object.entries(this.styleJson)) {
       document.documentElement.style.setProperty(key, value);
     }

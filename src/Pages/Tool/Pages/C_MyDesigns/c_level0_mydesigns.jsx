@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 // Components
-import CHeader from "../../../Elements/c_header";
-import CConfirm from "../../../Elements/PopUps/c_confirm";
+import CHeader from "../../../../Elements/c_header";
+import CConfirm from "../../../../Elements/PopUps/c_confirm";
 import CCMSView from "./c_level1_cmsView";
 import CCMSGroup from "./c_level1_cmsGroup";
 import CSelectedView from "./c_level1_selectedView";
-import FNavigateButton from "../../../Elements/Functionality/f_navigateButton";
+import FNavigateButton from "../../../../Elements/Functionality/f_navigateButton";
 
 // Libs
 import { CMS } from "ccctool-lib/lib/cms/class_cms";

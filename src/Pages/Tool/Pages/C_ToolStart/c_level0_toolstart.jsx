@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CHeader from "../../../Elements/c_header";
-import FNavigateButton from "../../../Elements/Functionality/f_navigateButton";
+import CHeader from "../../../../Elements/c_header";
+import FNavigateButton from "../../../../Elements/Functionality/f_navigateButton";
 import { Trans, withTranslation } from "react-i18next";
 
 class C_ToolStart extends Component {

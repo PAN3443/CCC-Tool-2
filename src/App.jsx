@@ -12,11 +12,10 @@ import CImpressum from "./Pages/Impressum/c_level0_impressum.jsx";
 import CError404 from "./Pages/Error/c_level0_error404.jsx";
 import CSettings from "./Pages/Settings/c_level0_settings.jsx";
 // Pages Tool
-import C_ToolStart from "./CCCTool/Pages/C_ToolStart/c_level0_toolstart";
-import C_NewCMS from "./CCCTool/Pages/C_NewCMS/c_level0_newCMS";
-import CMyDesigns from "./CCCTool/Pages/C_MyDesigns/c_level0_mydesigns";
-import CEdit from "./CCCTool/Pages/C_Edit/c_edit";
-import CExport from "./CCCTool/Pages/C_Export/c_export";
+import C_NewCMS from "./Pages/Tool/Pages/C_NewCMS/c_level0_newCMS";
+import CMyDesigns from "./Pages/Tool/Pages/C_MyDesigns/c_level0_mydesigns";
+import CEdit from "./Pages/Tool/Pages/C_Edit/c_edit";
+import CExport from "./Pages/Tool/Pages/C_Export/c_export";
 // Components
 import CConfirm from "./Elements/PopUps/c_confirm";
 import CTextBox from "./Elements/PopUps/c_textBox";
@@ -132,7 +131,7 @@ class AppWrapper extends Component {
     this.lastSessionUpdateInMs = parseInt(window.localStorage.getItem("ccc_lastSessionUpdate"), 10);
     this.lastSessionUpdateInMs = this.lastSessionUpdateInMs == null ? Date.now() : this.lastSessionUpdateInMs;
     if (ls_session !== null) stateUpdate.session = JSON.parse(ls_session);
-    this.sessionUpdated = true;
+    this.sessionUpdated = false;
     this.setState(stateUpdate);
   }
 
@@ -171,7 +170,8 @@ class AppWrapper extends Component {
   };
 
   onStorageEvent = (event) => {
-    alert(event.key);
+    console.log("StorageEvent", event);
+
     if (event.key === "ccc_lastSessionUpdate") {
       this.loadLocalStorageSession();
     }
@@ -236,7 +236,6 @@ class AppWrapper extends Component {
             <Route path="/docu" element={<CDocu />}></Route>
             <Route path="/impressum" element={<CImpressum />}></Route>
             <Route path="/settings" element={<CSettings />}></Route>
-            <Route path="/tool/start" element={<C_ToolStart />}></Route>
             <Route path="*" element={<CError404 />}></Route>
           </Routes>
           <input ref={this.ref_Loader} type="file" onChange={this.startLoadFile.bind(this)} style={{ display: "none" }} accept=".csv, .xml, .json"></input>
@@ -249,9 +248,10 @@ class AppWrapper extends Component {
       </div>
     );
   }
+
   /*
   <Route
-            path="/tool/mydesigns"
+            path="/Pages/Tool/Pages/mydesigns"
             element={
               <CMyDesigns
                 handleSelectCMS={this.handleSelectCMS}
@@ -270,9 +270,9 @@ class AppWrapper extends Component {
               />
             }
           />
-          <Route path="/tool/new" element={<C_NewCMS />}></Route>
-          <Route path="/tool/edit" render={() => (this.isCMSSelected() ? <CEdit selectedCMS={this.state.selectedCMS} /> : <Navigate to="/tool/mydesigns" />)} />
-          <Route path="/tool/export" render={() => (this.isCMSSelected() ? <CExport handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} /> : <Navigate to="/tool/mydesigns" />)} />
+          <Route path="/Pages/Tool/Pages/new" element={<C_NewCMS />}></Route>
+          <Route path="/Pages/Tool/Pages/edit" render={() => (this.isCMSSelected() ? <CEdit selectedCMS={this.state.selectedCMS} /> : <Navigate to="/Pages/Tool/Pages/mydesigns" />)} />
+          <Route path="/Pages/Tool/Pages/export" render={() => (this.isCMSSelected() ? <CExport handleOpenTextBox={this.handleOpenTextBox} selectedCMS={this.state.selectedCMS} /> : <Navigate to="/Pages/Tool/Pages/mydesigns" />)} />
         
   */
 

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 // Components
-import CHeader from "../../../Elements/c_header";
-import CCMSRendering from "../../../Elements/ColorRelated/c_cmsRendering";
+import CHeader from "../../../../Elements/c_header";
+import CCMSRendering from "../../../../Elements/ColorRelated/c_cmsRendering";
 
 // Style
 import "./export.css";

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 // Components
-import CHeader from "../../../Elements/c_header";
-import CCMSRendering from "../../../Elements/ColorRelated/c_cmsRendering";
+import CHeader from "../../../../Elements/c_header";
+import CCMSRendering from "../../../../Elements/ColorRelated/c_cmsRendering";
 
 // Style
 import "./export.css";
@@ -175,7 +175,7 @@ class C_Export extends Component {
         </CHeader>
 
         <div className="cl_row cl_marginTB_0_5" style={{ height: "80vh", width: "100vw" }}>
-          <div style={{ overflow: "hidden", margin: "auto", width: "25vw", height: "70vh", borderRadius: "var(--border-radius)", background: "var(--bg-alpha-alpha-75)", border: "var(--border-width) solid var(--borderColor)" }}>
+          <div style={{ overflow: "hidden", margin: "auto", width: "25vw", height: "70vh", borderRadius: "var(--border-radius)", background: "var(--bg-app-alpha-90)", border: "var(--border-width) solid var(--borderColor)" }}>
             <h2 style={{ background: "var(--borderColor)", width: "100%", color: "var(--font-color-point-out)" }}>Options</h2>
 
             <div className="cl_row cl_marginTB_0_5">
@@ -256,7 +256,7 @@ class C_Export extends Component {
               width: "60vw",
               height: "70vh",
               borderRadius: "var(--border-radius)",
-              background: "var(--bg-alpha-alpha-75)",
+              background: "var(--bg-app-alpha-90)",
               border: "var(--border-width) solid var(--borderColor)",
             }}
           >

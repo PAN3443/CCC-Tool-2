@@ -8,7 +8,7 @@ class CImpressum extends Component {
     return (
       <div>
         <CHeader style={{ height: "25vh", width: "100vw" }}>
-          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+          <div className="cl_blur cl_row cl_noMark" style={{ position: "absolute", height: "25vh", width: "100vw", zIndex: "2", top: "0px", left: "0px" }}>
             <FNavigateButton navURL="/" style={{ margin: "auto", marginRight: "5vw" }}>
               <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ height: "20vh" }}></img>
             </FNavigateButton>
@@ -16,7 +16,7 @@ class CImpressum extends Component {
               style={{
                 maxHeight: "25vh",
                 marginLeft: "0vw",
-                cursor: "default"
+                cursor: "default",
               }}
             >
               Impressum
@@ -25,7 +25,7 @@ class CImpressum extends Component {
         </CHeader>
         <div>
           <div style={{ width: "60vw", margin: "10vh auto" }}>
-            <h3 style={{color: "var(--font-color)"}}>Impressum (nach § 5 Allgemeine Informationspflichten)</h3>
+            <h3 style={{ color: "var(--font-color)" }}>Impressum (nach § 5 Allgemeine Informationspflichten)</h3>
 
             <p className="cl_textBlock">
               <strong>Haftungshinweis:</strong>

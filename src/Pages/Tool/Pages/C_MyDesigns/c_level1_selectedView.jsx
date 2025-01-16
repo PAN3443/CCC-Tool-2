@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 // Components
-import CConfirm from "../../../Elements/PopUps/c_confirm";
-import CCMSRendering from "../../../Elements/ColorRelated/c_cmsRendering";
+import CConfirm from "../../../../Elements/PopUps/c_confirm";
+import CCMSRendering from "../../../../Elements/ColorRelated/c_cmsRendering";
 import CKeyEntry from "./c_level2_keyEntry";
-import FNavigateButton from "../../../Elements/Functionality/f_navigateButton";
+import FNavigateButton from "../../../../Elements/Functionality/f_navigateButton";
 // Functions
-import { helper_dateToString } from "../../../Helpers/other";
+import { helper_dateToString } from "../../../../Helpers/other";
 // style
 import "./myDesigns.css";
 // Lib

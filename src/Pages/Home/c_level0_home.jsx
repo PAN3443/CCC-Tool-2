@@ -38,7 +38,7 @@ class CHome extends Component {
       <div style={{ position: "relative", height: "100vh", width: "100vw", background: "var(--bg-app)" }}>
         <div style={{ position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out)", zIndex: "0", top: "0px", left: "0px" }}></div>
         <CPixelAnimation ref={this.particleAni} style={{ position: "absolute", height: "100vh", width: "100vw", top: "0px", left: "0px", zIndex: "1" }} numParticles={150}></CPixelAnimation>
-        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-75)", zIndex: "2", top: "0px", left: "0px" }}>
+        <div className="cl_blur cl_row cl_noMark" style={{ pointerEvents: "none", overflow: "hidden", position: "absolute", height: "25vh", width: "100vw", background: "var(--bg-point-out-alpha-80)", zIndex: "2", top: "0px", left: "0px" }}>
           <img src={"/CCC-Tool-2/img/Logos/CCC-2-LOGO.png"} alt="CCC-Tool Logo" style={{ pointerEvents: "auto", height: "23vh", margin: "auto", marginRight: "2vw", cursor: "pointer" }}></img>
           <h1
             style={{
@@ -49,11 +49,13 @@ class CHome extends Component {
             <Trans i18nKey="label_welcome" />
           </h1>
         </div>
-        <div className="cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "70vh", width: "100vw", zIndex: "2", top: "25vh", left: "0px", overflow: "auto" }}>
+        <div className="cl_blur cl_noMark" style={{ pointerEvents: "none", position: "absolute", height: "70vh", width: "100vw", zIndex: "2", top: "25vh", left: "0px", overflow: "auto" }}>
           <div className="cl_row" style={{ width: "auto", margin: "auto" }}>
             <FNavigateButton navURL="/tool" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
               <div className="cl_HomeSelect_Div">
+                <div></div>
                 <div
+                  className="cl_HomeSelectImg"
                   style={{
                     backgroundImage: `url(${BackgroundEditor})`,
                   }}
@@ -64,7 +66,9 @@ class CHome extends Component {
               </div>
             </FNavigateButton>
             <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div></div>
               <div
+                className="cl_HomeSelectImg"
                 style={{
                   backgroundImage: `url(${BackgroundTestSuite})`,
                 }}
@@ -74,7 +78,9 @@ class CHome extends Component {
               </p>
             </div>
             <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div></div>
               <div
+                className="cl_HomeSelectImg"
                 style={{
                   backgroundImage: `url(${BackgroundAnalysis})`,
                 }}
@@ -84,7 +90,9 @@ class CHome extends Component {
               </p>
             </div>
             <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div></div>
               <div
+                className="cl_HomeSelectImg"
                 style={{
                   backgroundImage: `url(${BackgroundOptimization})`,
                 }}
@@ -94,7 +102,9 @@ class CHome extends Component {
               </p>
             </div>
             <div className="cl_HomeSelect_Div" style={{ cursor: "not-allowed" }}>
+              <div></div>
               <div
+                className="cl_HomeSelectImg"
                 style={{
                   backgroundImage: `url(${BackgroundColorblindness})`,
                 }}
@@ -105,21 +115,25 @@ class CHome extends Component {
             </div>
           </div>
           <div className="cl_row" style={{ width: "auto", margin: "auto", marginTop: "0px" }}>
-            <FNavigateButton navURL="/theme" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
+            <FNavigateButton navURL="/settings" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
               <div className="cl_HomeSelect_Div">
+                <div></div>
                 <div
+                  className="cl_HomeSelectImg"
                   style={{
                     backgroundImage: `url(${BackgroundDesign})`,
                   }}
                 ></div>
                 <p>
-                  <Trans i18nKey="label_design" />
+                  <Trans i18nKey="page_settings.label" />
                 </p>
               </div>
             </FNavigateButton>
             <FNavigateButton navURL="/docu" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
               <div className="cl_HomeSelect_Div">
+                <div></div>
                 <div
+                  className="cl_HomeSelectImg"
                   style={{
                     backgroundImage: `url(${BackgroundDocu})`,
                   }}
@@ -131,7 +145,9 @@ class CHome extends Component {
             </FNavigateButton>
             <FNavigateButton navURL="/contact" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
               <div className="cl_HomeSelect_Div">
+                <div></div>
                 <div
+                  className="cl_HomeSelectImg"
                   style={{
                     backgroundImage: `url(${BackgroundContact})`,
                   }}
@@ -143,20 +159,26 @@ class CHome extends Component {
             </FNavigateButton>
             <FNavigateButton navURL="/git" onMouseLeave={() => this.particleStart()} onMouseEnter={() => this.particleStop()}>
               <div className="cl_HomeSelect_Div">
+                <div></div>
                 <div
+                  className="cl_HomeSelectImg"
                   style={{
                     backgroundImage: `url(${BackgroundGit})`,
                   }}
                 ></div>
-                <p>GitHub</p>
+                <p>
+                  <Trans i18nKey="page_openSource.label" />
+                </p>
               </div>
             </FNavigateButton>
           </div>
         </div>
 
-        <div className="cl_row cl_noMark" style={{ position: "absolute", height: "5vh", width: "100vw", zIndex: "2", top: "95vh", left: "0px" }}>
-          <FNavigateButton navURL="/git" style={{ marginLeft: "2vw", marginTop: "0.5vh" }}>
-            <svg className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "4vh" }} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
+        <div className="cl_row cl_noMark" style={{ position: "absolute", width: "100vw", zIndex: "2", top: "95vh", left: "0px" }}>
+          
+          <div className="cl_row" style={{height: "5vh", marginRight: "auto", padding: "0 1vw", background: "var(--bg-app)"}}>
+          <FNavigateButton navURL="/git" style={{marginTop: "0.5vh" }}>
+            <svg className="cl_Icon_F_BrightBG cl_Icon_F" style={{ height: "4vh", fill: "var(--font-color)"}} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
               <path
                 fillRule={"evenodd"}
                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
@@ -168,9 +190,11 @@ class CHome extends Component {
             {" "}
             <Trans i18nKey="version" />: {version}{" "}
           </p>
-
-          <p style={{ margin: "auto", marginRight: "0.5vw", marginLeft: "0vw", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}> Copyright © 2024 </p>
-          <CLanguageDropdown languages={languages} />
+          </div>
+          
+          <div className="cl_row" style={{height: "5vh", padding: "0 1vw", background: "var(--bg-app)"}}><p style={{ margin: "auto", marginRight: "0.5vw", marginLeft: "0vw", color: "var(--font-color)", fontFamily: "var(--font-family-SpecialText)" }}> Copyright © 2024 </p>
+          <CLanguageDropdown languages={languages} /></div>
+          
         </div>
       </div>
     );

@@ -12,24 +12,25 @@
   --bg-app: var(--bg-brightmode);
   --bg-alpha-5: var(--bg-brightmode-alpha-5);
   --bg-alpha-25: var(--bg-brightmode-alpha-25);
-  --bg-alpha-50: var(--bg-brightmode-alpha-50);
-  --bg-alpha-75: var(--bg-brightmode-alpha-75);
+  --bg-alpha-80: var(--bg-brightmode-alpha-80);
+  --bg-alpha-90: var(--bg-brightmode-alpha-90);
   --bg-gradient: var(--bg-brightmode-gradient);
   --bg-point-out: var(--bg-point-out-brightmode);
-  --bg-point-out-alpha-5: var(--bg-point-out-brightmode-alpha-5);
-  --bg-point-out-alpha-25: var(--bg-point-out-brightmode-alpha-25);
   --bg-point-out-alpha-50: var(--bg-point-out-brightmode-alpha-50);
-  --bg-point-out-alpha-75: var(--bg-point-out-brightmode-alpha-75);
+  --bg-point-out-alpha-80: var(--bg-point-out-brightmode-alpha-80);
+  --bg-point-out-alpha-90: var(--bg-point-out-brightmode-alpha-90);
   --bg-point-out-gradient: var(--bg-point-out-brightmode-gradient);
 
   --hover: rgb(255, 167, 126); /*rgb(255, 51, 0);*/
   --active: rgb(255, 106, 51); /*rgb(255, 51, 0);*/
+  --active-background: var(--active-background-brightmode);
+  --active-background-alpha-0: var(--active-background-brightmode-alpha-0);
   --warning: rgb(255, 51, 51);
   --warning-alpha-5: rgba(255, 51, 51, 0.05);
   --warning-alpha-10: rgba(255, 51, 51, 0.1);
   --warning-alpha-25: rgba(255, 51, 51, 0.25);
-  --warning-alpha-50: rgba(255, 51, 51, 0.5);
-  --warning-alpha-75: rgba(255, 51, 51, 0.75);
+  --warning-alpha-80: rgba(255, 51, 51, 0.5);
+  --warning-alpha-90: rgba(255, 51, 51, 0.75);
 
   /* Font Vars*/
   --font-size-small: 1.3vh;
@@ -40,6 +41,7 @@
 
   --font-size-big: 2.2vh;
   --line-height-big: 2.5vh;
+  --line-height-big-button: 5vh;
 
   --font-size-h3: 2.75vh;
   --line-height-h3: 3vh;
@@ -58,56 +60,55 @@
   --font-family-SpecialText: "CCCSpecialText";
 
   --font-color: var(--font-color-brightmode);
-  --font-color-alpha-75: var(--font-color-brightmode-alpha-75);
+  --font-color-alpha-90: var(--font-color-brightmode-alpha-90);
   --font-color-point-out: var(--font-color-point-out-brightmode);
-  --font-color-point-out-alpha-75: var(--font-color-point-out-brightmode-alpha-75);
+  --font-color-point-out-alpha-90: var(--font-color-point-out-brightmode-alpha-90);
   --font-color-warning: var(--warning);
+  --font-glowing-activ: "0 0 10px var(--active), 0 0 20px var(--active), 0 0 30px var(--active), 0 0 40px var(--active)";
 
   /**************************************
   **** Brigth Mode
   ***************************************/
   --bg-brightmode: rgb(255, 255, 255);
-  --bg-brightmode-alpha-5: rgba(250, 250, 250, 0.05);
-  --bg-brightmode-alpha-25: rgba(250, 250, 250, 0.25);
-  --bg-brightmode-alpha-50: rgba(250, 250, 250, 0.5);
-  --bg-brightmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --bg-brightmode-alpha-80: rgba(250, 250, 250, 0.8);
+  --bg-brightmode-alpha-90: rgba(250, 250, 250, 0.9);
   --bg-brightmode-gradient: rgb(150, 150, 150);
   --bg-point-out-brightmode: rgb(30, 30, 30);
-  --bg-point-out-brightmode-alpha-5: rgba(30, 30, 30, 0.05);
-  --bg-point-out-brightmode-alpha-25: rgba(30, 30, 30, 0.25);
   --bg-point-out-brightmode-alpha-50: rgba(30, 30, 30, 0.5);
-  --bg-point-out-brightmode-alpha-75: rgba(30, 30, 30, 0.75);
+  --bg-point-out-brightmode-alpha-80: rgba(30, 30, 30, 0.8);
+  --bg-point-out-brightmode-alpha-90: rgba(30, 30, 30, 0.9);
   --bg-point-out-brightmode-gradient: rgb(59, 31, 31);
   --font-color-brightmode: rgb(30, 30, 30);
-  --font-color-brightmode-alpha-75: rgba(30, 30, 30, 0.75);
+  --font-color-brightmode-alpha-90: rgba(30, 30, 30, 0.75);
   --font-color-point-out-brightmode: rgb(250, 250, 250);
-  --font-color-point-out-brightmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --font-color-point-out-brightmode-alpha-90: rgba(250, 250, 250, 0.75);
   --borderColor-brightmode: rgb(180, 180, 180);
   --borderColor-point-out-brightmode: rgb(225, 225, 225);
   --shadowColor-brightmode: rgba(30, 30, 30, 0.75);
+  --active-background-brightmode: rgb(253, 239, 235);
+  --active-background-brightmode-alpha-0: rgb(253, 239, 235, 0);
 
   /**************************************
   **** Dark Mode
   ***************************************/
   --bg-darkmode: rgb(30, 30, 30);
-  --bg-darkmode-alpha-5: rgba(80, 80, 80, 0.05);
-  --bg-darkmode-alpha-25: rgba(80, 80, 80, 0.25);
-  --bg-darkmode-alpha-50: rgba(80, 80, 80, 0.5);
-  --bg-darkmode-alpha-75: rgba(80, 80, 80, 0.75);
+  --bg-darkmode-alpha-80: rgba(80, 80, 80, 0.5);
+  --bg-darkmode-alpha-90: rgba(80, 80, 80, 0.75);
   --bg-darkmode-gradient: rgb(109, 81, 81);
-  --bg-point-out-darkmode: rgb(30, 30, 30);
-  --bg-point-out-darkmode-alpha-5: rgba(30, 30, 30, 0.05);
-  --bg-point-out-darkmode-alpha-25: rgba(30, 30, 30, 0.25);
-  --bg-point-out-darkmode-alpha-50: rgba(30, 30, 30, 0.5);
-  --bg-point-out-darkmode-alpha-75: rgba(30, 30, 30, 0.75);
+  --bg-point-out-darkmode: rgb(10, 10, 10);
+  --bg-point-out-darkmode-alpha-50: rgba(10, 10, 10, 0.5);
+  --bg-point-out-darkmode-alpha-80: rgba(10, 10, 10, 0.8);
+  --bg-point-out-darkmode-alpha-90: rgba(10, 10, 10, 0.9);
   --bg-point-out-darkmode-gradient: rgb(59, 31, 31);
-  --font-color-darkmode: rgb(250, 250, 250);
-  --font-color-darkmode-alpha-75: rgba(250, 250, 250, 0.75);
-  --font-color-point-out-darkmode: rgb(250, 250, 250);
-  --font-color-point-out-darkmode-alpha-75: rgba(250, 250, 250, 0.75);
+  --font-color-darkmode: rgb(200, 200, 200);
+  --font-color-darkmode-alpha-90: rgba(200, 200, 200, 0.75);
+  --font-color-point-out-darkmode: rgb(200, 200, 200);
+  --font-color-point-out-darkmode-alpha-90: rgba(200, 200, 200, 0.75);
   --borderColor-darkmode: rgb(180, 180, 180);
   --borderColor-point-out-darkmode: rgb(225, 225, 225);
   --shadowColor-darkmode: rgba(235, 235, 235, 0.75);
+  --active-background-darkmode: rgb(41, 30, 27);
+  --active-background-darkmode-alpha-0: rgb(41, 30, 27, 0);
 
   /**************************************
   **** Border
@@ -128,7 +129,7 @@
   --shadowColor: var(--shadowColor-brightmode);
   --shadowColor-active: rgba(255, 106, 51, 0.75);
 
-  --disabledColor-brightBG: var(--bg-point-out-alpha-50);
+  --disabledColor-brightBG: var(--bg-point-out-alpha-80);
   --disabledColor-BG-brightBG: var(--bg-point-out-alpha-25);
 }
 
@@ -137,46 +138,6 @@
 /* App css
 /*
 /****************************************************/
-
-.App {
-  text-align: center;
-  background-color: var(--bg-app);
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 *,
 *::before,
